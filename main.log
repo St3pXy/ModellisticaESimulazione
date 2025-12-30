@@ -1,0 +1,4751 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.30)  30 DEC 2025 21:00
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/Users/step/File/Universita/ModellisticaESimulazione/main.tex
+(/Users/step/File/Universita/ModellisticaESimulazione/main.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count196
+\c@section=\count197
+\c@subsection=\count198
+\c@subsubsection=\count199
+\c@paragraph=\count266
+\c@subparagraph=\count267
+\c@figure=\count268
+\c@table=\count269
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen142
+\Gin@req@width=\dimen143
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/imakeidx/imakeidx.sty
+Package: imakeidx 2016/10/15 v1.3e Package for typesetting indices in a synchronous mode
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks18
+\XKV@tempa@toks=\toks19
+)
+\XKV@depth=\count270
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)) (/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2024/09/14 v1.9i multicolumn formatting (FMi)
+\c@tracingmulticols=\count271
+\mult@box=\box52
+\multicol@leftmargin=\dimen144
+\c@unbalance=\count272
+\c@collectmore=\count273
+\doublecol@number=\count274
+\multicoltolerance=\count275
+\multicolpretolerance=\count276
+\full@width=\dimen145
+\page@free=\dimen146
+\premulticols=\dimen147
+\postmulticols=\dimen148
+\multicolsep=\skip51
+\multicolbaselineskip=\skip52
+\partial@page=\box53
+\last@line=\box54
+\mc@boxedresult=\box55
+\maxbalancingoverflow=\dimen149
+\mult@rightbox=\box56
+\mult@grightbox=\box57
+\mult@firstbox=\box58
+\mult@gfirstbox=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\c@minrows=\count277
+\c@columnbadness=\count278
+\c@finalcolumnbadness=\count279
+\last@try=\dimen150
+\multicolovershoot=\dimen151
+\multicolundershoot=\dimen152
+\mult@nat@firstbox=\box96
+\colbreak@box=\box97
+\mc@col@check@num=\count280
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2024/11/05 v2.17t AMS math features
+\@mathmargin=\skip53
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks20
+\ex@=\dimen153
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen154
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count281
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count282
+\leftroot@=\count283
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count284
+\DOTSCASE@=\count285
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box98
+\strutbox@=\box99
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen155
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count286
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count287
+\dotsspace@=\muskip17
+\c@parentequation=\count288
+\dspbrk@lvl=\count289
+\tag@help=\toks21
+\row@=\count290
+\column@=\count291
+\maxfields@=\count292
+\andhelp@=\toks22
+\eqnshift@=\dimen156
+\alignsep@=\dimen157
+\tagshift@=\dimen158
+\tagwidth@=\dimen159
+\totwidth@=\dimen160
+\lineht@=\dimen161
+\@envbody=\toks23
+\multlinegap=\skip54
+\multlinetaggap=\skip55
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen162
+\WF@size=\dimen163
+\c@WF@wrappedlines=\count293
+\WF@box=\box100
+\WF@everypar=\toks25
+Package: wrapfig 2003/01/31  v 3.6
+)
+\main@idxfile=\write3
+\openout3 = `main.idx'.
+
+
+Writing index file main.idx
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count294
+\l__pdf_internal_box=\box101
+)
+No file main.aux.
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count295
+\scratchdimen=\dimen164
+\scratchbox=\box102
+\nofMPsegments=\count296
+\nofMParguments=\count297
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count298
+\MPscratchDim=\dimen165
+\MPnumerator=\count299
+\makeMPintoPDFobject=\count300
+\everyMPtoPDFconversion=\toks27
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+<copetina.jpg, id=1, 3083.52pt x 2055.68pt>
+File: copetina.jpg Graphic file (type jpg)
+<use copetina.jpg>
+Package pdftex.def Info: copetina.jpg  used on input line 21.
+(pdftex.def)             Requested size: 345.0pt x 229.98366pt.
+
+
+[1
+
+{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./copetina.jpg>]
+No file main.toc.
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+
+
+[2]
+Overfull \hbox (0.43687pt too wide) in paragraph at lines 41--43
+ \OT1/cmr/bx/n/10 Es-em-pio:[] \OT1/cmr/m/n/10 pal-lina su pi-atto che si in-clina. Se ho sovrae-longazione nella risposta
+ []
+
+
+
+[1{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 77--87
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--87
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--87
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--87
+
+ []
+
+
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 89--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+
+ []
+
+
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 106--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--112
+
+ []
+
+
+Overfull \hbox (1.41617pt too wide) in paragraph at lines 114--115
+\OT1/cmr/m/n/10 I mod-elli lien-ari sono ben de-scritti da equazioni dif-feren-ziali o sis-temi di equazioni
+ []
+
+
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 138--146
+
+ []
+
+
+Overfull \hbox (77.7548pt too wide) detected at line 161
+[]
+ []
+
+
+
+[5]
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--223
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--223
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--223
+
+ []
+
+
+
+[7]
+Overfull \hbox (16.69507pt too wide) in paragraph at lines 269--270
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
+
+ []
+
+
+
+[8]
+Overfull \hbox (0.30609pt too wide) in paragraph at lines 281--282
+[]\OT1/cmr/m/n/10 se il pro-cesso si sta os-ser-vando ha di-men-sioni pic-cole rispetto alla lunghezza
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--284
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--296
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 297--299
+
+ []
+
+
+
+[9
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 306--309
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--316
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--319
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--322
+
+ []
+
+
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 340--341
+
+ []
+
+
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 355--359
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--359
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--365
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--377
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--377
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--377
+
+ []
+
+
+Overfull \hbox (2.93161pt too wide) in paragraph at lines 389--394
+\OT1/cmr/bx/n/10 edo a co-ef-fi-ci-enti costanti\OT1/cmr/m/n/10 : sono edo che as-so-ciano soltanto co-ef-fi-ci-enti costanti
+ []
+
+
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 396--399
+
+ []
+
+
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 406--409
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--414
+
+ []
+
+
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 416--418
+
+ []
+
+
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 438--443
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 438--443
+
+ []
+
+
+
+[16]
+Overfull \hbox (42.86996pt too wide) detected at line 466
+ \OMS/cmsy/m/n/10 ([])  [] \OML/cmm/m/it/10 a[] [] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 b[] []
+ []
+
+
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 469--470
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 470--473
+
+ []
+
+
+Overfull \hbox (51.66049pt too wide) detected at line 477
+\OML/cmm/m/it/10 Y\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 ) = [] \OMS/cmsy/m/n/10 ^^A \OML/cmm/m/it/10 U\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 ) + []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 485--486
+
+ []
+
+
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 495--496
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 496--499
+
+ []
+
+
+
+[19]
+Overfull \hbox (92.65257pt too wide) detected at line 523
+[]  \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )  \OML/cmm/m/it/10 y[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = 8\OML/cmm/m/it/10 e[] \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 5\OML/cmm/m/it/10 e[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 sin\OT1/cmr/m/n/10 (2\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 3\OML/cmm/m/it/10 cos\OT1/cmr/m/n/10 (2\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )
+ []
+
+<Xnip2025-10-25_22-07-10.jpg, id=88, 2156.055pt x 475.7775pt>
+File: Xnip2025-10-25_22-07-10.jpg Graphic file (type jpg)
+<use Xnip2025-10-25_22-07-10.jpg>
+Package pdftex.def Info: Xnip2025-10-25_22-07-10.jpg  used on input line 526.
+(pdftex.def)             Requested size: 310.4979pt x 68.5177pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 524--527
+
+ []
+
+
+
+[20 <./Xnip2025-10-25_22-07-10.jpg>]
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:543: LaTeX Error: Unicode character ⋯ (U+22EF)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.543 ...rmine noto u(t) } ossia : $a_ny^{(n)}+⋯
+                                                  +a_0y=b_mu^{(m)}+⋯+b_0u$
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:543: LaTeX Error: Unicode character ⋯ (U+22EF)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.543 ...sia : $a_ny^{(n)}+⋯+a_0y=b_mu^{(m)}+⋯
+                                                  +b_0u$
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Overfull \hbox (75.17181pt too wide) detected at line 547
+[] \OML/cmm/m/it/10 a[][] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )  \OMS/cmsy/m/n/10 ([])  [] \OML/cmm/m/it/10 a[][] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]x[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )  \OMS/cmsy/m/n/10 ([])  [] \OML/cmm/m/it/10 a[][][] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]x[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )
+ []
+
+
+
+[21]
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:558: Package amsmath Error: \begin{align*} allowed only in paragraph mode.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.558 \begin{align*}
+                    
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:566: Misplaced \crcr.
+\endaligned ->\crcr 
+                    \egroup \restorecolumn@ \egroup 
+l.566 \end{aligned}
+                   
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:566: Extra }, or forgotten $.
+\endaligned ->\crcr \egroup 
+                            \restorecolumn@ \egroup 
+l.566 \end{aligned}
+                   
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:566: Extra }, or forgotten $.
+\endaligned ...cr \egroup \restorecolumn@ \egroup 
+                                                  
+l.566 \end{aligned}
+                   
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:566: LaTeX Error: \begin{document} ended by \end{aligned}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.566 \end{aligned}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:566: Missing $ inserted.
+<inserted text> 
+                $
+l.566 \end{aligned}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:566: Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.566 \end{aligned}
+                   
+Things are pretty mixed up, but I think the worst is over.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:568: Missing $ inserted.
+<inserted text> 
+                $
+l.568 \newpage
+              
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 582--587
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 582--587
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 582--587
+
+ []
+
+
+Overfull \hbox (0.84789pt too wide) in paragraph at lines 593--593
+[]\OT1/cmr/m/it/10 faccio un cam-bio di cor-di-nate nello spazio di stato dipen-dente dall'operatore
+ []
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:594: Undefined control sequence.
+<recently read> \bm 
+                    
+l.594 \textbf{Notazione}: $\bm
+                              {D}$ denotà l'operatore di derivazione.\\\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 594--596
+
+ []
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:648: Undefined control sequence.
+l.648             \end{bmatrix}\bm
+                                  {D}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:660: Undefined control sequence.
+l.660             \bm
+                     {D}^m
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (135.8757pt too wide) detected at line 674
+[]
+ []
+
+
+
+[23]
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:685: Undefined control sequence.
+l.685     \dot{\xi}=A\xi+B(\bm
+                              {D})u\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Runaway argument?
+ 
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:690: Paragraph ended before \gather* was complete.
+<to be read again> 
+                   \par 
+l.690 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:690: Missing $ inserted.
+<inserted text> 
+                $
+l.690 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:690: Missing } inserted.
+<inserted text> 
+                }
+l.690 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:690: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.690 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:690: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.690 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:690: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.690 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:691: Undefined control sequence.
+l.691 B(\bm
+           {D)}=B_0+B_1\bm{D}+...+B_m\bm{D}^m\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:691: Missing $ inserted.
+<inserted text> 
+                $
+l.691 B(\bm{D)}=B_
+                  0+B_1\bm{D}+...+B_m\bm{D}^m\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:691: Undefined control sequence.
+l.691 B(\bm{D)}=B_0+B_1\bm
+                          {D}+...+B_m\bm{D}^m\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:691: Undefined control sequence.
+l.691 B(\bm{D)}=B_0+B_1\bm{D}+...+B_m\bm
+                                        {D}^m\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:695: Misplaced \cr.
+\math@cr@@@ ->\cr 
+                  
+l.695 \end{gather*}
+                   
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:695: Misplaced \noalign.
+\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
+                                                  {\vskip #1\relax }
+l.695 \end{gather*}
+                   
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:695: Missing $ inserted.
+<inserted text> 
+                $
+l.695 \end{gather*}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:695: Missing } inserted.
+<inserted text> 
+                }
+l.695 \end{gather*}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:695: Extra }, or forgotten \endgroup.
+\math@cr@@ ...th@cr@@@ \noalign {\vskip #1\relax }
+                                                  
+l.695 \end{gather*}
+                   
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:695: Misplaced \noalign.
+\black@ #1->\noalign 
+                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
+l.695 \end{gather*}
+                   
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+Overfull \hbox (65.98389pt too wide) detected at line 695
+[]
+ []
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:695: Extra }, or forgotten \endgroup.
+\endgather ->\math@cr \black@ \totwidth@ \egroup 
+                                                 $$\ignorespacesafterend 
+l.695 \end{gather*}
+                   
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:695: Missing $ inserted.
+<inserted text> 
+                $
+l.695 \end{gather*}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:695: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.695 \end{gather*}
+                   
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+
+[24]
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:698: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.698 E
+       ffettuando ora un cambio di coordinate ,tale per cui $x= \xi -k(\bm{D...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:698: Undefined control sequence.
+l.698 ...i coordinate ,tale per cui $x= \xi -k(\bm
+                                                  {D})$, occorre dunque dete...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:698: Undefined control sequence.
+l.698 ...m{D})$, occorre dunque determinare $k(\bm
+                                                  {D})$,si ha allora :
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:700: Undefined control sequence.
+l.700     x= \xi -k(\bm
+                       {D}) \iff \dot{x}=\dot{\xi}-\bm{D}k(\bm{D})u =A\xi+B(...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:700: Undefined control sequence.
+l.700 ...\xi -k(\bm{D}) \iff \dot{x}=\dot{\xi}-\bm
+                                                  {D}k(\bm{D})u =A\xi+B(\bm{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:700: Undefined control sequence.
+l.700 ...bm{D}) \iff \dot{x}=\dot{\xi}-\bm{D}k(\bm
+                                                  {D})u =A\xi+B(\bm{D})u-\bm...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:700: Undefined control sequence.
+l.700 ...x}=\dot{\xi}-\bm{D}k(\bm{D})u =A\xi+B(\bm
+                                                  {D})u-\bm{D}k(\bm{D})u =\]...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:700: Undefined control sequence.
+l.700 ...xi}-\bm{D}k(\bm{D})u =A\xi+B(\bm{D})u-\bm
+                                                  {D}k(\bm{D})u =\]\[=A\xi+B...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:700: Undefined control sequence.
+l.700 ...D}k(\bm{D})u =A\xi+B(\bm{D})u-\bm{D}k(\bm
+                                                  {D})u =\]\[=A\xi+B(\bm{D})...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:700: Undefined control sequence.
+l.700 ...bm{D})u-\bm{D}k(\bm{D})u =\]\[=A\xi+B(\bm
+                                                  {D})u-\bm{D}k(\bm{D})u=Ax+...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:700: Undefined control sequence.
+l.700 ...bm{D}k(\bm{D})u =\]\[=A\xi+B(\bm{D})u-\bm
+                                                  {D}k(\bm{D})u=Ax+[B(\bm{D}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:700: Undefined control sequence.
+l.700 ...bm{D})u =\]\[=A\xi+B(\bm{D})u-\bm{D}k(\bm
+                                                  {D})u=Ax+[B(\bm{D})+Ak(\bm...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:700: Undefined control sequence.
+l.700 ...\xi+B(\bm{D})u-\bm{D}k(\bm{D})u=Ax+[B(\bm
+                                                  {D})+Ak(\bm{D})-\bm{D}k(\b...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:700: Undefined control sequence.
+l.700 ...})u-\bm{D}k(\bm{D})u=Ax+[B(\bm{D})+Ak(\bm
+                                                  {D})-\bm{D}k(\bm{D)}]u
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:700: Undefined control sequence.
+l.700 ...D}k(\bm{D})u=Ax+[B(\bm{D})+Ak(\bm{D})-\bm
+                                                  {D}k(\bm{D)}]u
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:700: Undefined control sequence.
+l.700 ...D})u=Ax+[B(\bm{D})+Ak(\bm{D})-\bm{D}k(\bm
+                                                  {D)}]u
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:702: Undefined control sequence.
+l.702     \[y=Cx+Ck(\bm
+                       {D)}u\]\\\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:703: LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.703     \mathbf
+                 {Def} (\textbf{Matrice di ingresso} ) = $[B(\bm{D})+Ak(\bm{...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:703: Undefined control sequence.
+l.703 ...(\textbf{Matrice di ingresso} ) = $[B(\bm
+                                                  {D})+Ak(\bm{D})-\bm{D}k(\b...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:703: Undefined control sequence.
+l.703 ...trice di ingresso} ) = $[B(\bm{D})+Ak(\bm
+                                                  {D})-\bm{D}k(\bm{D)}]$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:703: Undefined control sequence.
+l.703 ... ingresso} ) = $[B(\bm{D})+Ak(\bm{D})-\bm
+                                                  {D}k(\bm{D)}]$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:703: Undefined control sequence.
+l.703 ...o} ) = $[B(\bm{D})+Ak(\bm{D})-\bm{D}k(\bm
+                                                  {D)}]$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:704: Undefined control sequence.
+l.704     \\\\Occorre dunque scegliere $k(\bm
+                                             {D}) $ in modo che  i termini a...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:704: Undefined control sequence.
+l.704 ...ociati ad u(t) in $\dot{x}$ ossia $[B(\bm
+                                                  {D})+Ak(\bm{D})-\bm{D}k(\b...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:704: Undefined control sequence.
+l.704 ...(t) in $\dot{x}$ ossia $[B(\bm{D})+Ak(\bm
+                                                  {D})-\bm{D}k(\bm{D)}]$ ed ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:704: Undefined control sequence.
+l.704 ...\dot{x}$ ossia $[B(\bm{D})+Ak(\bm{D})-\bm
+                                                  {D}k(\bm{D)}]$ ed in $y$ o...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:704: Undefined control sequence.
+l.704 ... ossia $[B(\bm{D})+Ak(\bm{D})-\bm{D}k(\bm
+                                                  {D)}]$ ed in $y$ ossia $Ck...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:704: Undefined control sequence.
+l.704 ...\bm{D}k(\bm{D)}]$ ed in $y$ ossia $Ck(\bm
+                                                  {D})$ siano indipendenti d...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:708: Undefined control sequence.
+l.708     Precedentemente abbiamo definito $B(\bm
+                                                 {D)}=B_0+B_1\bm{D}+...+B_m\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:708: Undefined control sequence.
+l.708 ...te abbiamo definito $B(\bm{D)}=B_0+B_1\bm
+                                                  {D}+...+B_m\bm{D}^m$ essen...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:708: Undefined control sequence.
+l.708 ...inito $B(\bm{D)}=B_0+B_1\bm{D}+...+B_m\bm
+                                                  {D}^m$ essendo ora m=1 si ha:
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--709
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--709
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--709
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--709
+
+ []
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:709: Undefined control sequence.
+l.709     \[B(\bm
+                 {D})=B_0+B_1\bm{D}\] mentre la matrice di ingresso assume f...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:709: Undefined control sequence.
+l.709     \[B(\bm{D})=B_0+B_1\bm
+                                {D}\] mentre la matrice di ingresso assume f...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:709: Undefined control sequence.
+l.709 ...atrice di ingresso assume forma : \[B(\bm
+                                                  {D})+Ak(\bm{D})-\bm{D}k(\b...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:709: Undefined control sequence.
+l.709 ...ngresso assume forma : \[B(\bm{D})+Ak(\bm
+                                                  {D})-\bm{D}k(\bm{D)}\]post...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:709: Undefined control sequence.
+l.709 ...assume forma : \[B(\bm{D})+Ak(\bm{D})-\bm
+                                                  {D}k(\bm{D)}\]posto ora $K...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:709: Undefined control sequence.
+l.709 ...orma : \[B(\bm{D})+Ak(\bm{D})-\bm{D}k(\bm
+                                                  {D)}\]posto ora $K(\bm{D})...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:709: Undefined control sequence.
+l.709 ...\bm{D})-\bm{D}k(\bm{D)}\]posto ora $K(\bm
+                                                  {D})=B_1$ la matrice di us...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:709: Undefined control sequence.
+l.709 ...ice di uscita assume forma : \[B_0+B_1\bm
+                                                  {D}+AB_1-B_1D = B_0+AB_1\]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 709--711
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 709--711
+
+ []
+
+
+
+[25]
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:713: Undefined control sequence.
+l.713     \[B(\bm
+                 {D}) = B_0+B_1\bm{D}+B_2\bm{D}^2\implies matrice \:\:ingres...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:713: Undefined control sequence.
+l.713     \[B(\bm{D}) = B_0+B_1\bm
+                                  {D}+B_2\bm{D}^2\implies matrice \:\:ingres...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:713: Undefined control sequence.
+l.713     \[B(\bm{D}) = B_0+B_1\bm{D}+B_2\bm
+                                            {D}^2\implies matrice \:\:ingres...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:713: Undefined control sequence.
+l.713 ...implies matrice \:\:ingresso = B_0+B_1\bm
+                                                  {D}+B_2\bm{D}^2+Ak(\bm{D})...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:713: Undefined control sequence.
+l.713 ...trice \:\:ingresso = B_0+B_1\bm{D}+B_2\bm
+                                                  {D}^2+Ak(\bm{D})-\bm{D}k(\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:713: Undefined control sequence.
+l.713 ...gresso = B_0+B_1\bm{D}+B_2\bm{D}^2+Ak(\bm
+                                                  {D})-\bm{D}k(\bm{D})\] sce...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:713: Undefined control sequence.
+l.713 ... B_0+B_1\bm{D}+B_2\bm{D}^2+Ak(\bm{D})-\bm
+                                                  {D}k(\bm{D})\] scelto dunq...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:713: Undefined control sequence.
+l.713 ...\bm{D}+B_2\bm{D}^2+Ak(\bm{D})-\bm{D}k(\bm
+                                                  {D})\] scelto dunque $k(\b...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (53.5116pt too wide) detected at line 713
+\OML/cmm/m/it/10 B\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 D\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 B[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 B[]D \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 B[]D[]  \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )  \OML/cmm/m/it/10 matrice  ingresso \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 B[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 B[]D \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 B[]D[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 Ak\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 D\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 Dk\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 D\OT1/cmr/m/n/10 )
+ []
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:713: Undefined control sequence.
+l.713 ...})-\bm{D}k(\bm{D})\] scelto dunque $k(\bm
+                                                  {D})=B_2\bm{D}+k_0$ dove $...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:713: Undefined control sequence.
+l.713 ...\bm{D})\] scelto dunque $k(\bm{D})=B_2\bm
+                                                  {D}+k_0$ dove $k_0$ è un ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:714: Undefined control sequence.
+l.714     \[B_0+B_1\bm
+                      {D}+B_2\bm{D}^2+AB_2\bm{D}+Ak_0-B_2\bm{D}^2-\bm{D}k_0=...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:714: Undefined control sequence.
+l.714     \[B_0+B_1\bm{D}+B_2\bm
+                                {D}^2+AB_2\bm{D}+Ak_0-B_2\bm{D}^2-\bm{D}k_0=...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:714: Undefined control sequence.
+l.714     \[B_0+B_1\bm{D}+B_2\bm{D}^2+AB_2\bm
+                                             {D}+Ak_0-B_2\bm{D}^2-\bm{D}k_0=...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:714: Undefined control sequence.
+l.714 ...\bm{D}+B_2\bm{D}^2+AB_2\bm{D}+Ak_0-B_2\bm
+                                                  {D}^2-\bm{D}k_0= B_0+B_1D+...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:714: Undefined control sequence.
+l.714 ...2\bm{D}^2+AB_2\bm{D}+Ak_0-B_2\bm{D}^2-\bm
+                                                  {D}k_0= B_0+B_1D+AB_2D+Ak_...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (13.87753pt too wide) detected at line 714
+\OML/cmm/m/it/10 B[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 B[]D \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 B[]D[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 AB[]D \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 Ak[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 B[]D[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 Dk[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 B[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 B[]D \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 AB[]D \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 Ak[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 Dk[]
+ []
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:716: Undefined control sequence.
+<recently read> \bm 
+                    
+l.716 ...do così l'equazione indipendente da $\bm
+                                                  {D}$.\\\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 716--719
+
+ []
+
+
+
+[26]
+Overfull \hbox (10.0488pt too wide) detected at line 737
+\OT1/cmr/m/n/10 = \OML/cmm/m/it/10 B[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 B[]D \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 B[]D[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 AB[]D[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 A\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 B[]D \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 AB[]D \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 D\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 B[]D \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 AB[]D \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 k[]\OT1/cmr/m/n/10 ) =
+ []
+
+
+Overfull \hbox (7.56528pt too wide) detected at line 739
+\OT1/cmr/m/n/10 = \OML/cmm/m/it/10 B[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 B[]D \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 AB[]D \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 A[]B[]D \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 A\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 B[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 AB[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 A[]B[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 D\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 B[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 AB[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 A[]B[]\OT1/cmr/m/n/10 ) =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 751--755
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 751--755
+
+ []
+
+
+
+[27]
+<oscillatoresemplice.png, id=114, 568.1225pt x 197.73875pt>
+File: oscillatoresemplice.png Graphic file (type png)
+<use oscillatoresemplice.png>
+Package pdftex.def Info: oscillatoresemplice.png  used on input line 792.
+(pdftex.def)             Requested size: 113.85063pt x 39.62549pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 787--794
+
+ []
+
+
+
+[28
+
+ <./oscillatoresemplice.png>]
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 826--829
+
+ []
+
+
+Overfull \hbox (4.20197pt too wide) detected at line 845
+[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 acos^^^ x[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 asin^^^  \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )  [] \OT1/cmr/m/n/10 = [] = [] = [] = \OML/cmm/m/it/10 tan\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 )  \OMS/cmsy/m/n/10 ([]) 
+ []
+
+
+
+[30]
+<oscillatoresmorzato.png, id=127, 585.18625pt x 210.7875pt>
+File: oscillatoresmorzato.png Graphic file (type png)
+<use oscillatoresmorzato.png>
+Package pdftex.def Info: oscillatoresmorzato.png  used on input line 854.
+(pdftex.def)             Requested size: 172.5pt x 62.13673pt.
+
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:876: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.876 \\ N
+          otiamo che nel caso pseudoperiodico la soluzione all'equazione è :
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+
+[31 <./oscillatoresmorzato.png>]
+Overfull \hbox (76.64494pt too wide) detected at line 900
+ \OMS/cmsy/m/n/10 ([])  []  ([])  []
+ []
+
+
+Overfull \hbox (17.52847pt too wide) in paragraph at lines 900--906
+\OT1/cmr/m/n/10 Ci siamo trovati l'equazione dell'evoluzione lib-era dell'oscillatore ar-mon-ico smorzato. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 900--906
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 900--906
+
+ []
+
+<smorzamento.png, id=132, 380.42125pt x 354.32375pt>
+File: smorzamento.png Graphic file (type png)
+<use smorzamento.png>
+Package pdftex.def Info: smorzamento.png  used on input line 910.
+(pdftex.def)             Requested size: 172.5pt x 160.6715pt.
+
+
+[32 <./smorzamento.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 913--915
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 930--932
+
+ []
+
+
+
+[33]
+<energia_oscillatore.png, id=140, 442.65375pt x 264.99pt>
+File: energia_oscillatore.png Graphic file (type png)
+<use energia_oscillatore.png>
+Package pdftex.def Info: energia_oscillatore.png  used on input line 948.
+(pdftex.def)             Requested size: 172.5pt x 103.2648pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 944--952
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 944--952
+
+ []
+
+<smorzamento2.png, id=141, 442.65375pt x 264.99pt>
+File: smorzamento2.png Graphic file (type png)
+<use smorzamento2.png>
+Package pdftex.def Info: smorzamento2.png  used on input line 960.
+(pdftex.def)             Requested size: 172.5pt x 103.2648pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[34 <./energia_oscillatore.png>]
+<oscillatoresmorzatoforzato.png, id=146, 582.175pt x 207.77625pt>
+File: oscillatoresmorzatoforzato.png Graphic file (type png)
+<use oscillatoresmorzatoforzato.png>
+Package pdftex.def Info: oscillatoresmorzatoforzato.png  used on input line 966.
+(pdftex.def)             Requested size: 172.5pt x 61.56294pt.
+
+Overfull \hbox (38.71182pt too wide) detected at line 978
+[]  \OMS/cmsy/m/n/10 ([])  []\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 ![][]e[] \OMS/cmsy/m/n/10 ^   ^^@\OML/cmm/m/it/10 ![][]e[] \OT1/cmr/m/n/10 + 2\OML/cmm/m/it/10 i![]e[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ![][]e[] \OT1/cmr/m/n/10 = []\OML/cmm/m/it/10 e[]
+ []
+
+
+
+[35 <./smorzamento2.png> <./oscillatoresmorzatoforzato.png>]
+Overfull \hbox (36.91902pt too wide) detected at line 981
+[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ![] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ![] \OT1/cmr/m/n/10 + 2\OML/cmm/m/it/10 !i\OT1/cmr/m/n/10 ) = []  \OMS/cmsy/m/n/10 ([])  [] \OT1/cmr/m/n/10 = []  =[]\OMS/cmsy/m/n/10 )  []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = []\OML/cmm/m/it/10 e[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 985--988
+
+ []
+
+
+Overfull \hbox (64.60706pt too wide) detected at line 990
+\OML/cmm/m/it/10 ! \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 ![]  \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )  j[]j \OT1/cmr/m/n/10 = [] = [] = [][] = \OML/cmm/m/it/10 x[]Q Ilfattore di merito funge da risonatore
+ []
+
+<bode_modulo_smorzato_forzato.png, id=153, 1164.35pt x 528.97626pt>
+File: bode_modulo_smorzato_forzato.png Graphic file (type png)
+<use bode_modulo_smorzato_forzato.png>
+Package pdftex.def Info: bode_modulo_smorzato_forzato.png  used on input line 994.
+(pdftex.def)             Requested size: 172.5pt x 78.36635pt.
+
+
+[36 <./bode_modulo_smorzato_forzato.png>]
+<bode_fase_smorzatoforzato.png, id=158, 783.92876pt x 337.26pt>
+File: bode_fase_smorzatoforzato.png Graphic file (type png)
+<use bode_fase_smorzatoforzato.png>
+Package pdftex.def Info: bode_fase_smorzatoforzato.png  used on input line 1008.
+(pdftex.def)             Requested size: 172.5pt x 74.21286pt.
+
+Overfull \hbox (19.1396pt too wide) in paragraph at lines 1011--1012
+\OT1/cmr/m/n/10 Vogliamo ora trovare l'energia per unit^^Ra di tempo ce-duta dalla forzante all'oscillatore.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1017--1020
+
+ []
+
+
+Overfull \hbox (124.91624pt too wide) detected at line 1020
+\OML/cmm/m/it/10 < P >\OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@[] [][] \OML/cmm/m/it/10 a!f[] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 !t\OT1/cmr/m/n/10 ) [](\OML/cmm/m/it/10 !t \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 dt \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@[] [][] \OML/cmm/m/it/10 a [] dt  \OMS/cmsy/m/n/10 ([]) 
+ []
+
+
+
+[37 <./bode_fase_smorzatoforzato.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1022--1026
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1022--1026
+
+ []
+
+
+
+[38]
+<pendolo.png, id=167, 732.7375pt x 760.8425pt>
+File: pendolo.png Graphic file (type png)
+<use pendolo.png>
+Package pdftex.def Info: pendolo.png  used on input line 1053.
+(pdftex.def)             Requested size: 172.5pt x 179.11147pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1057--1061
+
+ []
+
+
+
+[39 <./pendolo.png>]
+<approx_angoli.jpeg, id=172, 1606.0pt x 556.0775pt>
+File: approx_angoli.jpeg Graphic file (type jpg)
+<use approx_angoli.jpeg>
+Package pdftex.def Info: approx_angoli.jpeg  used on input line 1065.
+(pdftex.def)             Requested size: 172.5pt x 59.72624pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1067--1069
+
+ []
+
+
+
+[40 <./approx_angoli.jpeg>]
+Overfull \hbox (31.49829pt too wide) detected at line 1091
+[]  \OMS/cmsy/m/n/10 ([])  \OML/cmm/m/it/10 ml[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 mg\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Y \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^^R\OT1/cmr/m/n/10 ) = 0  =[]\OMS/cmsy/m/n/10 )  []
+ []
+
+
+
+[41]
+
+[42]
+Overfull \hbox (108.24216pt too wide) detected at line 1156
+[][] \OMS/cmsy/m/n/10 ) [] ) []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1165--1167
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1181--1182
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1182--1183
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1185--1188
+
+ []
+
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:1190: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1190 
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1223--1244
+
+ []
+
+
+
+[43]
+
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 1268--1291
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1268--1291
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1268--1291
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1268--1291
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1268--1291
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1299--1300
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1305--1306
+
+ []
+
+
+
+[45
+
+]
+<alterazioni_cos_sin_oscillatori_accoppiati.png, id=192, 465.74pt x 333.245pt>
+File: alterazioni_cos_sin_oscillatori_accoppiati.png Graphic file (type png)
+<use alterazioni_cos_sin_oscillatori_accoppiati.png>
+Package pdftex.def Info: alterazioni_cos_sin_oscillatori_accoppiati.png  used on input line 1324.
+(pdftex.def)             Requested size: 345.0pt x 246.86185pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1327--1330
+
+ []
+
+
+
+[46 <./alterazioni_cos_sin_oscillatori_accoppiati.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1340--1341
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1341--1342
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1342--1343
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1343--1344
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1348--1349
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1349--1350
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1350--1351
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1359--1362
+
+ []
+
+
+
+[47
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1368--1369
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1369--1370
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1370--1371
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1373--1381
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1382--1386
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1387--1389
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1390--1393
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1396--1397
+
+ []
+
+
+
+[48
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1397--1398
+
+ []
+
+<esempio_modello_partizione_cocleare.png, id=205, 303.1325pt x 184.69pt>
+File: esempio_modello_partizione_cocleare.png Graphic file (type png)
+<use esempio_modello_partizione_cocleare.png>
+Package pdftex.def Info: esempio_modello_partizione_cocleare.png  used on input line 1405.
+(pdftex.def)             Requested size: 345.0pt x 210.20213pt.
+
+Overfull \hbox (35.13516pt too wide) detected at line 1413
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1415--1416
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1417--1419
+
+ []
+
+
+
+[49 <./esempio_modello_partizione_cocleare.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1426--1427
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1427--1428
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1428--1429
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1429--1430
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1430--1431
+
+ []
+
+<esempio_pid_pendolo_inverso.png, id=210, 389.455pt x 264.99pt>
+File: esempio_pid_pendolo_inverso.png Graphic file (type png)
+<use esempio_pid_pendolo_inverso.png>
+Package pdftex.def Info: esempio_pid_pendolo_inverso.png  used on input line 1436.
+(pdftex.def)             Requested size: 345.0pt x 234.74863pt.
+
+
+[50
+
+ <./esempio_pid_pendolo_inverso.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1444
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1444--1445
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1445--1446
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1446--1447
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1450--1451
+
+ []
+
+
+Overfull \hbox (9.42908pt too wide) detected at line 1477
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1479--1484
+
+ []
+
+
+
+[51
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1485--1486
+
+ []
+
+
+Overfull \hbox (23.25967pt too wide) detected at line 1520
+[]
+ []
+
+
+
+[52]
+Underfull \hbox (badness 10000) in paragraph at lines 1522--1525
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1531--1534
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1535--1537
+
+ []
+
+
+
+[53]
+<grafico_nyquist_esempio_pid_pendolo_inverso.png, id=225, 1601.985pt x 829.0975pt>
+File: grafico_nyquist_esempio_pid_pendolo_inverso.png Graphic file (type png)
+<use grafico_nyquist_esempio_pid_pendolo_inverso.png>
+Package pdftex.def Info: grafico_nyquist_esempio_pid_pendolo_inverso.png  used on input line 1562.
+(pdftex.def)             Requested size: 345.0pt x 178.54346pt.
+
+Overfull \hbox (15.86172pt too wide) in paragraph at lines 1591--1594
+\OT1/cmr/m/n/10 La fun-zione di trasfer-i-mento com-p-lessiva del sis-tema ad anello chiuso con retroazione
+ []
+
+
+
+[54
+
+ <./grafico_nyquist_esempio_pid_pendolo_inverso.png>]
+
+[55]
+Underfull \hbox (badness 10000) in paragraph at lines 1616--1617
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1617--1618
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1618--1619
+
+ []
+
+
+
+[56
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1651--1653
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1651--1653
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1653--1655
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1653--1655
+
+ []
+
+
+
+[57]
+
+[58
+
+]
+
+[59
+
+]
+
+[60
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1747--1748
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1748--1749
+
+ []
+
+<sfera_su_sbarra_1.jpeg, id=249, 1606.0pt x 631.35875pt>
+File: sfera_su_sbarra_1.jpeg Graphic file (type jpg)
+<use sfera_su_sbarra_1.jpeg>
+Package pdftex.def Info: sfera_su_sbarra_1.jpeg  used on input line 1768.
+(pdftex.def)             Requested size: 172.5pt x 67.81194pt.
+
+
+[61
+
+ <./sfera_su_sbarra_1.jpeg>]
+<sfera_su_sbarra_2.jpeg, id=253, 1083.04625pt x 940.51375pt>
+File: sfera_su_sbarra_2.jpeg Graphic file (type jpg)
+<use sfera_su_sbarra_2.jpeg>
+Package pdftex.def Info: sfera_su_sbarra_2.jpeg  used on input line 1779.
+(pdftex.def)             Requested size: 172.5pt x 149.79642pt.
+
+
+[62 <./sfera_su_sbarra_2.jpeg>]
+Overfull \hbox (11.1362pt too wide) in paragraph at lines 1803--1805
+\OT1/cmr/m/n/10 Osserviamo che $[][][]$ la si pu^^Ro im-mag-inare come una en-er-gia ci-net-ica traslazionale
+ []
+
+
+Overfull \hbox (104.95956pt too wide) detected at line 1806
+\OT1/cmr/m/n/10 = []\OML/cmm/m/it/10 I[] \OT1/cmr/m/n/10 + [][][] + []\OML/cmm/m/it/10 m []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1808--1813
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1808--1813
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1808--1813
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1813--1815
+
+ []
+
+
+
+[63]
+Underfull \hbox (badness 10000) in paragraph at lines 1817--1818
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1826--1829
+
+ []
+
+
+
+[64]
+<halfcar.png, id=263, 902.37125pt x 583.17876pt>
+File: halfcar.png Graphic file (type png)
+<use halfcar.png>
+Package pdftex.def Info: halfcar.png  used on input line 1858.
+(pdftex.def)             Requested size: 241.49895pt x 156.07219pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1855--1865
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1855--1865
+
+ []
+
+
+
+[65 <./halfcar.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1866--1868
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1869--1871
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1869--1871
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1874--1876
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1874--1876
+
+ []
+
+
+Overfull \hbox (110.45168pt too wide) detected at line 1880
+[][] \OMS/cmsy/m/n/10 ^^@ [] \OT1/cmr/m/n/10 = 0  =[]\OMS/cmsy/m/n/10 )  []  \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )  []
+ []
+
+
+Overfull \hbox (110.45168pt too wide) detected at line 1886
+[][] \OMS/cmsy/m/n/10 ^^@ [] \OT1/cmr/m/n/10 = 0  =[]\OMS/cmsy/m/n/10 )  []  \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 )  []
+ []
+
+
+
+[66]
+Overfull \hbox (80.16043pt too wide) detected at line 1906
+[]
+ []
+
+
+
+[67]
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:1914: Undefined control sequence.
+l.1914 ...ega)=RI(i\omega)$ dove ($sC$ e $i\omegaC
+                                                  $ sono le impedenze)
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:1919: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1919 \textit
+              {Approfondimento sulle impedenze :}\\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1925--1930
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1930--1933
+
+ []
+
+<resistenza_reale.png, id=275, 763.85374pt x 358.33875pt>
+File: resistenza_reale.png Graphic file (type png)
+<use resistenza_reale.png>
+Package pdftex.def Info: resistenza_reale.png  used on input line 1941.
+(pdftex.def)             Requested size: 172.5pt x 80.92346pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1938--1943
+
+ []
+
+
+
+[68]
+Underfull \hbox (badness 10000) in paragraph at lines 1945--1948
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1945--1948
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1945--1948
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1950--1954
+
+ []
+
+
+
+[69 <./resistenza_reale.png>]
+<condensatore_reale.png, id=283, 939.51pt x 402.50375pt>
+File: condensatore_reale.png Graphic file (type png)
+<use condensatore_reale.png>
+Package pdftex.def Info: condensatore_reale.png  used on input line 1959.
+(pdftex.def)             Requested size: 172.5pt x 73.89699pt.
+<grafico_condensatore_reale.png, id=284, 668.4975pt x 570.13pt>
+File: grafico_condensatore_reale.png Graphic file (type png)
+<use grafico_condensatore_reale.png>
+Package pdftex.def Info: grafico_condensatore_reale.png  used on input line 1972.
+(pdftex.def)             Requested size: 172.5pt x 147.11678pt.
+
+
+[70 <./condensatore_reale.png> <./grafico_condensatore_reale.png>]
+<Induttore_reale.png, id=290, 1061.9675pt x 469.755pt>
+File: Induttore_reale.png Graphic file (type png)
+<use Induttore_reale.png>
+Package pdftex.def Info: Induttore_reale.png  used on input line 1978.
+(pdftex.def)             Requested size: 172.5pt x 76.30202pt.
+<RC.png, id=291, 756.8275pt x 485.815pt>
+File: RC.png Graphic file (type png)
+<use RC.png>
+Package pdftex.def Info: RC.png  used on input line 1992.
+(pdftex.def)             Requested size: 172.5pt x 110.72693pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1989--1995
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1989--1995
+
+ []
+
+
+
+[71 <./Induttore_reale.png> <./RC.png>]
+<RLC_serie.png, id=298, 756.8275pt x 428.60126pt>
+File: RLC_serie.png Graphic file (type png)
+<use RLC_serie.png>
+Package pdftex.def Info: RLC_serie.png  used on input line 2004.
+(pdftex.def)             Requested size: 172.5pt x 97.68678pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1998--2007
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1998--2007
+
+ []
+
+
+
+[72 <./RLC_serie.png>]
+<circuito_3gradi.png, id=303, 671.50874pt x 247.92625pt>
+File: circuito_3gradi.png Graphic file (type png)
+<use circuito_3gradi.png>
+Package pdftex.def Info: circuito_3gradi.png  used on input line 2022.
+(pdftex.def)             Requested size: 172.5pt x 63.68756pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2019--2025
+
+ []
+
+
+Overfull \hbox (12.57486pt too wide) detected at line 2054
+\OML/cmm/m/it/10 ^^UI \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = []  =[]\OMS/cmsy/m/n/10 )  \OML/cmm/m/it/10 rk\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^UI \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 A\OT1/cmr/m/n/10 ) = (\OML/cmm/m/it/10 ^^U \OT1/cmr/m/n/10 + [])(\OML/cmm/m/it/10 ^^U[] \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 ^^U \OT1/cmr/m/n/10 + [])
+ []
+
+
+
+[73 <./circuito_3gradi.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2060--2066
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2060--2066
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2060--2066
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2060--2066
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2067--2069
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2067--2069
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2067--2069
+
+ []
+
+
+Overfull \hbox (93.42976pt too wide) detected at line 2069
+\OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 Z[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 I\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 ) [1]  \OMS/cmsy/m/n/10 ([])  \OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 Z[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 I\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 Z[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 I\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 )  \OMS/cmsy/m/n/10 ([])  \OML/cmm/m/it/10 I\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 ) = [] [2]
+ []
+
+
+Overfull \hbox (91.69548pt too wide) detected at line 2071
+\OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 ) = []\OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 )  =[]\OMS/cmsy/m/n/10 )  \OML/cmm/m/it/10 W\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 ) = [] = []  =[]\OMS/cmsy/m/n/10 )  []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2071--2074
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2071--2074
+
+ []
+
+
+
+[74]
+Underfull \hbox (badness 10000) in paragraph at lines 2075--2083
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2075--2083
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2075--2083
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2075--2083
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2075--2083
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2094--2096
+
+ []
+
+
+
+[75]
+<passa_bass.png, id=314, 1140.26pt x 671.50874pt>
+File: passa_bass.png Graphic file (type png)
+<use passa_bass.png>
+Package pdftex.def Info: passa_bass.png  used on input line 2101.
+(pdftex.def)             Requested size: 137.9979pt x 81.26407pt.
+<passa_alto.png, id=315, 1140.26pt x 671.50874pt>
+File: passa_alto.png Graphic file (type png)
+<use passa_alto.png>
+Package pdftex.def Info: passa_alto.png  used on input line 2107.
+(pdftex.def)             Requested size: 137.9979pt x 81.26407pt.
+<passa_banda.png, id=316, 903.375pt x 650.43pt>
+File: passa_banda.png Graphic file (type png)
+<use passa_banda.png>
+Package pdftex.def Info: passa_banda.png  used on input line 2112.
+(pdftex.def)             Requested size: 137.9979pt x 99.35666pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2097--2114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2097--2114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2097--2114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2097--2114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2097--2114
+
+ []
+
+
+
+[76 <./passa_bass.png> <./passa_alto.png> <./passa_banda.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2115--2118
+
+ []
+
+<bode_cr_.pdf, id=323, 521.7406pt x 218.10042pt>
+File: bode_cr_.pdf Graphic file (type pdf)
+<use bode_cr_.pdf>
+Package pdftex.def Info: bode_cr_.pdf  used on input line 2121.
+(pdftex.def)             Requested size: 172.5pt x 72.10979pt.
+<circuito_LR.png, id=324, 274.02374pt x 186.6975pt>
+File: circuito_LR.png Graphic file (type png)
+<use circuito_LR.png>
+Package pdftex.def Info: circuito_LR.png  used on input line 2127.
+(pdftex.def)             Requested size: 103.50105pt x 70.51846pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2118--2130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2130--2134
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2130--2134
+
+ []
+
+
+
+[77 <./bode_cr_.pdf> <./circuito_LR.png>]
+File: RLC_serie.png Graphic file (type png)
+<use RLC_serie.png>
+Package pdftex.def Info: RLC_serie.png  used on input line 2138.
+(pdftex.def)             Requested size: 103.50105pt x 58.61076pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2135--2142
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2142--2145
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2145--2148
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2151--2154
+
+ []
+
+
+
+[78]
+<thevenin_1.png, id=336, 819.06pt x 437.635pt>
+File: thevenin_1.png Graphic file (type png)
+<use thevenin_1.png>
+Package pdftex.def Info: thevenin_1.png  used on input line 2163.
+(pdftex.def)             Requested size: 103.50105pt x 55.29855pt.
+<thevenin_2.png, id=337, 893.3375pt x 437.635pt>
+File: thevenin_2.png Graphic file (type png)
+<use thevenin_2.png>
+Package pdftex.def Info: thevenin_2.png  used on input line 2169.
+(pdftex.def)             Requested size: 103.50105pt x 50.70425pt.
+<thevenin_3.png, id=338, 639.38875pt x 437.635pt>
+File: thevenin_3.png Graphic file (type png)
+<use thevenin_3.png>
+Package pdftex.def Info: thevenin_3.png  used on input line 2174.
+(pdftex.def)             Requested size: 103.50105pt x 70.8377pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2159--2176
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2159--2176
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2159--2176
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2159--2176
+
+ []
+
+
+
+[79 <./thevenin_1.png> <./thevenin_2.png> <./thevenin_3.png>]
+<thevenin_4.png, id=345, 494.84875pt x 411.5375pt>
+File: thevenin_4.png Graphic file (type png)
+<use thevenin_4.png>
+Package pdftex.def Info: thevenin_4.png  used on input line 2181.
+(pdftex.def)             Requested size: 103.50105pt x 86.07376pt.
+
+
+[80 <./thevenin_4.png>]
+
+[81]
+Underfull \hbox (badness 10000) in paragraph at lines 2209--2218
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2209--2218
+
+ []
+
+<foto_motore_cc.png, id=353, 581.17125pt x 230.8625pt>
+File: foto_motore_cc.png Graphic file (type png)
+<use foto_motore_cc.png>
+Package pdftex.def Info: foto_motore_cc.png  used on input line 2221.
+(pdftex.def)             Requested size: 345.0pt x 137.0496pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2224--2229
+
+ []
+
+
+
+[82
+
+ <./foto_motore_cc.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2232--2238
+
+ []
+
+<foto_teorema_di_equivalenza_di_ampere.png, id=358, 340.27126pt x 184.69pt>
+File: foto_teorema_di_equivalenza_di_ampere.png Graphic file (type png)
+<use foto_teorema_di_equivalenza_di_ampere.png>
+Package pdftex.def Info: foto_teorema_di_equivalenza_di_ampere.png  used on input line 2245.
+(pdftex.def)             Requested size: 345.0pt x 187.2653pt.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:2249: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2249 \\
+         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:2250: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2250 \textbf
+              {Legge di Faraday - Neumann (induzione elettromagnetica)}\\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2262--2265
+
+ []
+
+
+
+[83 <./foto_teorema_di_equivalenza_di_ampere.png>]
+<foto_principio_funzionamento_motore_elettrrico_cc_singola_spira.png, id=364, 622.325pt x 217.81375pt>
+File: foto_principio_funzionamento_motore_elettrrico_cc_singola_spira.png Graphic file (type png)
+<use foto_principio_funzionamento_motore_elettrrico_cc_singola_spira.png>
+Package pdftex.def Info: foto_principio_funzionamento_motore_elettrrico_cc_singola_spira.png  used on input line 2271.
+(pdftex.def)             Requested size: 345.0pt x 120.75179pt.
+
+
+[84 <./foto_principio_funzionamento_motore_elettrrico_cc_singola_spira.png>]
+<foto_principio_funzionamento_motore_elettrrico_cc_doppia_spira.png, id=369, 622.325pt x 194.7275pt>
+File: foto_principio_funzionamento_motore_elettrrico_cc_doppia_spira.png Graphic file (type png)
+<use foto_principio_funzionamento_motore_elettrrico_cc_doppia_spira.png>
+Package pdftex.def Info: foto_principio_funzionamento_motore_elettrrico_cc_doppia_spira.png  used on input line 2281.
+(pdftex.def)             Requested size: 345.0pt x 107.9532pt.
+<foto_principio_funzionamento_motore_elettrrico_cc_tante_spire.png, id=370, 622.325pt x 234.8775pt>
+File: foto_principio_funzionamento_motore_elettrrico_cc_tante_spire.png Graphic file (type png)
+<use foto_principio_funzionamento_motore_elettrrico_cc_tante_spire.png>
+Package pdftex.def Info: foto_principio_funzionamento_motore_elettrrico_cc_tante_spire.png  used on input line 2291.
+(pdftex.def)             Requested size: 345.0pt x 130.21161pt.
+<foto_riconsiderazioni_molte_spire_singola_spira.png, id=371, 622.325pt x 152.57pt>
+File: foto_riconsiderazioni_molte_spire_singola_spira.png Graphic file (type png)
+<use foto_riconsiderazioni_molte_spire_singola_spira.png>
+Package pdftex.def Info: foto_riconsiderazioni_molte_spire_singola_spira.png  used on input line 2299.
+(pdftex.def)             Requested size: 345.0pt x 84.5819pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[85
+
+ <./foto_principio_funzionamento_motore_elettrrico_cc_doppia_spira.png> <./foto_principio_funzionamento_motore_elettrrico_cc_tante_spire.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2324--2329
+
+ []
+
+<foto_riconsiderazioni_molte_spire.png, id=377, 622.325pt x 200.75pt>
+File: foto_riconsiderazioni_molte_spire.png Graphic file (type png)
+<use foto_riconsiderazioni_molte_spire.png>
+Package pdftex.def Info: foto_riconsiderazioni_molte_spire.png  used on input line 2332.
+(pdftex.def)             Requested size: 345.0pt x 111.29196pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2335--2342
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2335--2342
+
+ []
+
+
+
+[86 <./foto_riconsiderazioni_molte_spire_singola_spira.png> <./foto_riconsiderazioni_molte_spire.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2343--2344
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2344--2345
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2345--2346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2365--2369
+
+ []
+
+
+
+[87]
+Overfull \hbox (10.78915pt too wide) in paragraph at lines 2397--2399
+\OML/cmm/m/it/10 nL[]$\OT1/cmr/m/n/10 , costante carat-ter-is-tica del par-ti-co-lare mo-tore elet-trica. L'equazione
+ []
+
+
+
+[88]
+<foto_schema_di_controllo_motore_elettrico_corrente_continua.png, id=389, 718.685pt x 415.5525pt>
+File: foto_schema_di_controllo_motore_elettrico_corrente_continua.png Graphic file (type png)
+<use foto_schema_di_controllo_motore_elettrico_corrente_continua.png>
+Package pdftex.def Info: foto_schema_di_controllo_motore_elettrico_corrente_continua.png  used on input line 2441.
+(pdftex.def)             Requested size: 345.0pt x 199.4883pt.
+<foto_schema_di_controllo_laplace_motore_elettrico_corrente_continua.png, id=390, 718.685pt x 194.7275pt>
+File: foto_schema_di_controllo_laplace_motore_elettrico_corrente_continua.png Graphic file (type png)
+<use foto_schema_di_controllo_laplace_motore_elettrico_corrente_continua.png>
+Package pdftex.def Info: foto_schema_di_controllo_laplace_motore_elettrico_corrente_continua.png  used on input line 2455.
+(pdftex.def)             Requested size: 345.0pt x 93.48001pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[89 <./foto_schema_di_controllo_motore_elettrico_corrente_continua.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2471--2474
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2481--2483
+
+ []
+
+<foto_schema_di_controllo_semplificato_motore_elettrico_corrente_continua.png, id=396, 718.685pt x 180.675pt>
+File: foto_schema_di_controllo_semplificato_motore_elettrico_corrente_continua.png Graphic file (type png)
+<use foto_schema_di_controllo_semplificato_motore_elettrico_corrente_continua.png>
+Package pdftex.def Info: foto_schema_di_controllo_semplificato_motore_elettrico_corrente_continua.png  used on input line 2488.
+(pdftex.def)             Requested size: 345.0pt x 86.73402pt.
+
+
+[90 <./foto_schema_di_controllo_laplace_motore_elettrico_corrente_continua.png> <./foto_schema_di_controllo_semplificato_motore_elettrico_corrente_continua.png>]
+
+[91]
+Overfull \hbox (0.77835pt too wide) in paragraph at lines 2519--2527
+\OT1/cmr/m/n/10 tica lin-eare, che per^^Ro sono di-versi dall'elettronica di con-sumo, perch^^Se l'elettronica
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2519--2527
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2519--2527
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2528--2529
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2529--2530
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2530--2531
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2533--2535
+
+ []
+
+
+Overfull \hbox (0.25233pt too wide) in paragraph at lines 2536--2536
+[]\OT1/cmr/bx/n/10 Progettazione di un as-servi-mento di po-sizione (Poten-ziometro) 
+ []
+
+
+Overfull \hbox (4.9173pt too wide) in paragraph at lines 2537--2538
+\OT1/cmr/m/n/10 La pro-get-tazione di un as-servi-mento di po-sizione, viene svolta svol-gendo i seguenti
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2539--2540
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2540--2541
+
+ []
+
+
+
+[92
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 2541--2542
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2542--2543
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2545--2550
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2551--2552
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2552--2553
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2553--2554
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2554--2555
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2555--2556
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2559--2562
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2563--2564
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2564--2565
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2566--2567
+
+ []
+
+
+
+[93]
+<potenziometro_schema_blocchi.png, id=411, 718.685pt x 180.675pt>
+File: potenziometro_schema_blocchi.png Graphic file (type png)
+<use potenziometro_schema_blocchi.png>
+Package pdftex.def Info: potenziometro_schema_blocchi.png  used on input line 2577.
+(pdftex.def)             Requested size: 345.0pt x 86.73402pt.
+<potenziometro_collegamento_potenziometro_motore.png, id=412, 718.685pt x 149.55875pt>
+File: potenziometro_collegamento_potenziometro_motore.png Graphic file (type png)
+<use potenziometro_collegamento_potenziometro_motore.png>
+Package pdftex.def Info: potenziometro_collegamento_potenziometro_motore.png  used on input line 2596.
+(pdftex.def)             Requested size: 345.0pt x 71.79651pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2599--2604
+
+ []
+
+
+
+[94 <./potenziometro_schema_blocchi.png> <./potenziometro_collegamento_potenziometro_motore.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2608--2614
+
+ []
+
+<potenziometro_sistema_di_controllo_semplificato.png, id=418, 718.685pt x 187.70125pt>
+File: potenziometro_sistema_di_controllo_semplificato.png Graphic file (type png)
+<use potenziometro_sistema_di_controllo_semplificato.png>
+Package pdftex.def Info: potenziometro_sistema_di_controllo_semplificato.png  used on input line 2617.
+(pdftex.def)             Requested size: 345.0pt x 90.10703pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2633--2636
+
+ []
+
+
+
+[95 <./potenziometro_sistema_di_controllo_semplificato.png>]
+<potenziometro_bode_pre_comensatrice.png, id=424, 723.70375pt x 302.12875pt>
+File: potenziometro_bode_pre_comensatrice.png Graphic file (type png)
+<use potenziometro_bode_pre_comensatrice.png>
+Package pdftex.def Info: potenziometro_bode_pre_comensatrice.png  used on input line 2647.
+(pdftex.def)             Requested size: 345.0pt x 144.02898pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2650--2653
+
+ []
+
+<potenziometro_rete_compensatrice.png, id=425, 723.70375pt x 230.8625pt>
+File: potenziometro_rete_compensatrice.png Graphic file (type png)
+<use potenziometro_rete_compensatrice.png>
+Package pdftex.def Info: potenziometro_rete_compensatrice.png  used on input line 2656.
+(pdftex.def)             Requested size: 345.0pt x 110.05536pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2660--2664
+
+ []
+
+
+
+[96 <./potenziometro_bode_pre_comensatrice.png> <./potenziometro_rete_compensatrice.png>]
+<potenziometro_bode_post_compensatrice.png, id=431, 723.70375pt x 284.06125pt>
+File: potenziometro_bode_post_compensatrice.png Graphic file (type png)
+<use potenziometro_bode_post_compensatrice.png>
+Package pdftex.def Info: potenziometro_bode_post_compensatrice.png  used on input line 2678.
+(pdftex.def)             Requested size: 345.0pt x 135.41594pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2681--2685
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2681--2685
+
+ []
+
+<potenziometro_controllore_elettronico_fisico.png, id=432, 723.70375pt x 214.8025pt>
+File: potenziometro_controllore_elettronico_fisico.png Graphic file (type png)
+<use potenziometro_controllore_elettronico_fisico.png>
+Package pdftex.def Info: potenziometro_controllore_elettronico_fisico.png  used on input line 2688.
+(pdftex.def)             Requested size: 345.0pt x 102.39934pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2691--2694
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2691--2694
+
+ []
+
+
+
+[97 <./potenziometro_bode_post_compensatrice.png>]
+
+[98 <./potenziometro_controllore_elettronico_fisico.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2723--2725
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2725--2726
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2731--2732
+
+ []
+
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:2735: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2735 S
+        olitamente quindi, nei power system, possiamo riconoscere le seguent...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2737--2738
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2738--2739
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2740--2743
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2743--2748
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2743--2748
+
+ []
+
+
+
+[99
+
+]
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:2750: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2750 P
+        ossiamo dunque osservare graficamente un power system come una cosa ...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<power_systems_esempio_rappresentazione_base.png, id=445, 929.4725pt x 750.805pt>
+File: power_systems_esempio_rappresentazione_base.png Graphic file (type png)
+<use power_systems_esempio_rappresentazione_base.png>
+Package pdftex.def Info: power_systems_esempio_rappresentazione_base.png  used on input line 2754.
+(pdftex.def)             Requested size: 345.0pt x 278.67563pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2758--2764
+
+ []
+
+
+
+[100 <./power_systems_esempio_rappresentazione_base.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2765--2766
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2766--2767
+
+ []
+
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:2769: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2769 P
+        er soddisfare questi criteri, entra in gioco il sistema di controllo...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<power_systems_schema_di_controllo.png, id=450, 933.4875pt x 740.7675pt>
+File: power_systems_schema_di_controllo.png Graphic file (type png)
+<use power_systems_schema_di_controllo.png>
+Package pdftex.def Info: power_systems_schema_di_controllo.png  used on input line 2777.
+(pdftex.def)             Requested size: 345.0pt x 273.77449pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2782--2783
+
+ []
+
+
+
+[101 <./power_systems_schema_di_controllo.png>]
+Overfull \hbox (11.4729pt too wide) in paragraph at lines 2783--2784
+\OT1/cmr/m/n/10 il suo ruolo ^^Re quello di bi-lan-ciare do-manda ed of-ferta, in fun-zione dell'aumento
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2783--2784
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2784--2785
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2785--2786
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2790--2794
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2798--2799
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2799--2800
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2800--2801
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2801--2802
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2804--2807
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2804--2807
+
+ []
+
+
+
+[102]
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:2808: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2808 I
+        l mercato del giorno prima apre una settimana prima del giorno inter...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2808--2824
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2808--2824
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2808--2824
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2808--2824
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2808--2824
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2808--2824
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2808--2824
+
+ []
+
+<power_systems_mercato_del_giorno_prima.png, id=459, 753.81625pt x 419.5675pt>
+File: power_systems_mercato_del_giorno_prima.png Graphic file (type png)
+<use power_systems_mercato_del_giorno_prima.png>
+Package pdftex.def Info: power_systems_mercato_del_giorno_prima.png  used on input line 2828.
+(pdftex.def)             Requested size: 345.0pt x 192.02386pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[103]
+
+[104 <./power_systems_mercato_del_giorno_prima.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2834--2850
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2834--2850
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2834--2850
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2834--2850
+
+ []
+
+
+
+[105
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 2854--2857
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2858--2859
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2859--2860
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2860--2861
+
+ []
+
+<power_systems_smart_grids.png, id=470, 755.82375pt x 469.755pt>
+File: power_systems_smart_grids.png Graphic file (type png)
+<use power_systems_smart_grids.png>
+Package pdftex.def Info: power_systems_smart_grids.png  used on input line 2867.
+(pdftex.def)             Requested size: 345.0pt x 214.4198pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2871--2875
+
+ []
+
+
+
+[106
+
+ <./power_systems_smart_grids.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2889--2893
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2889--2893
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2899--2908
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2899--2908
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2899--2908
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2899--2908
+
+ []
+
+
+
+[107]
+Underfull \hbox (badness 10000) in paragraph at lines 2911--2912
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2912--2913
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2915--2916
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2917--2918
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2918--2919
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2921--2922
+
+ []
+
+
+Overfull \hbox (11.81323pt too wide) in paragraph at lines 2926--2926
+[]\OT1/cmr/bx/n/10 Interpretazione Fisica dell'Energia Reat-tiva at-traversi l'analogica
+ []
+
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:2928: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2928 P
+        er poter meglio comprendere il concetto dietro alla potenza reattiva...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2928--2931
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2937--2949
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2937--2949
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2937--2949
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2937--2949
+
+ []
+
+
+
+[108]
+Underfull \hbox (badness 10000) in paragraph at lines 2952--2957
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2952--2957
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2963--2971
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2963--2971
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2977--2986
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2977--2986
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2977--2986
+
+ []
+
+
+
+[109]
+Underfull \hbox (badness 10000) in paragraph at lines 2988--2992
+
+ []
+
+
+Overfull \hbox (11.78064pt too wide) in paragraph at lines 2993--2994
+[]\OT1/cmr/m/n/10 il \OT1/cmr/bx/n/10 com-p-lessore \OT1/cmr/m/n/10 rap-p-re-senta il vet-tore $\OML/cmm/m/it/10 X$ \OT1/cmr/m/n/10 che ruota in senso orario all'avanzare
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2993--2994
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2994--2995
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2995--2996
+
+ []
+
+
+
+[110]
+Underfull \hbox (badness 10000) in paragraph at lines 3029--3033
+
+ []
+
+<power_systems_fasori_trifase.png, id=488, 721.69624pt x 222.8325pt>
+File: power_systems_fasori_trifase.png Graphic file (type png)
+<use power_systems_fasori_trifase.png>
+Package pdftex.def Info: power_systems_fasori_trifase.png  used on input line 3050.
+(pdftex.def)             Requested size: 345.0pt x 106.52316pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3060--3063
+
+ []
+
+
+
+[111 <./power_systems_fasori_trifase.png>]
+<power_systems_analisi_fase_fase_circuito_semplice_trifase.png, id=493, 902.37125pt x 410.53375pt>
+File: power_systems_analisi_fase_fase_circuito_semplice_trifase.png Graphic file (type png)
+<use power_systems_analisi_fase_fase_circuito_semplice_trifase.png>
+Package pdftex.def Info: power_systems_analisi_fase_fase_circuito_semplice_trifase.png  used on input line 3066.
+(pdftex.def)             Requested size: 345.0pt x 156.9566pt.
+
+Runaway argument?
+ \underline {I_a} = \frac {\underline {V_a} - \underline {I_n}(R_n + \ETC.
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3090: Paragraph ended before \align* was complete.
+<to be read again> 
+                   \par 
+l.3090 
+       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3090: Missing $ inserted.
+<inserted text> 
+                $
+l.3090 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3090: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.3090 
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3090: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.3090 
+       
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3091: Missing $ inserted.
+<inserted text> 
+                $
+l.3091     \underline{I_b}
+                           = \frac{\underline{V_b} - \underline{I_n}(R_n + j...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3091: Extra }, or forgotten $.
+\underline  ...{#1}\else $\@@underline {\hbox {#1}
+                                                  }\m@th $\relax \fi 
+l.3091     \underline{I_b}
+                           = \frac{\underline{V_b} - \underline{I_n}(R_n + j...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3091: Extra }, or forgotten $.
+\underline  ...#1}\else $\@@underline {\hbox {#1}}
+                                                  \m@th $\relax \fi 
+l.3091     \underline{I_b}
+                           = \frac{\underline{V_b} - \underline{I_n}(R_n + j...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3091: Missing $ inserted.
+<inserted text> 
+                $
+l.3091 ...X_n)}{(R_S + jX_s) + (R_{Lb} + jX_{Lb})}
+                                                   \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3091: Extra }, or forgotten $.
+\underline  ...{#1}\else $\@@underline {\hbox {#1}
+                                                  }\m@th $\relax \fi 
+l.3091 ...X_n)}{(R_S + jX_s) + (R_{Lb} + jX_{Lb})}
+                                                   \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3091: Extra }, or forgotten $.
+\underline  ...#1}\else $\@@underline {\hbox {#1}}
+                                                  \m@th $\relax \fi 
+l.3091 ...X_n)}{(R_S + jX_s) + (R_{Lb} + jX_{Lb})}
+                                                   \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3091: Missing $ inserted.
+<inserted text> 
+                $
+l.3091 ...X_n)}{(R_S + jX_s) + (R_{Lb} + jX_{Lb})}
+                                                   \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3091: Extra }, or forgotten $.
+\underline  ...{#1}\else $\@@underline {\hbox {#1}
+                                                  }\m@th $\relax \fi 
+l.3091 ...X_n)}{(R_S + jX_s) + (R_{Lb} + jX_{Lb})}
+                                                   \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3091: Extra }, or forgotten $.
+\underline  ...#1}\else $\@@underline {\hbox {#1}}
+                                                  \m@th $\relax \fi 
+l.3091 ...X_n)}{(R_S + jX_s) + (R_{Lb} + jX_{Lb})}
+                                                   \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3091: Missing $ inserted.
+<inserted text> 
+                $
+l.3091 ...X_n)}{(R_S + jX_s) + (R_{Lb} + jX_{Lb})}
+                                                   \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3091: Missing $ inserted.
+<inserted text> 
+                $
+l.3091 ...X_n)}{(R_S + jX_s) + (R_{Lb} + jX_{Lb})}
+                                                   \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3091: Missing } inserted.
+<inserted text> 
+                }
+l.3091 ...X_n)}{(R_S + jX_s) + (R_{Lb} + jX_{Lb})}
+                                                   \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3091: Missing } inserted.
+<inserted text> 
+                }
+l.3091 ...X_n)}{(R_S + jX_s) + (R_{Lb} + jX_{Lb})}
+                                                   \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3091: Missing $ inserted.
+<inserted text> 
+                $
+l.3091 ...X_n)}{(R_S + jX_s) + (R_{Lb} + jX_{Lb})}
+                                                   \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3091: Missing } inserted.
+<inserted text> 
+                }
+l.3091 ...X_n)}{(R_S + jX_s) + (R_{Lb} + jX_{Lb})}
+                                                   \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3091: Missing } inserted.
+<inserted text> 
+                }
+l.3091 ...X_n)}{(R_S + jX_s) + (R_{Lb} + jX_{Lb})}
+                                                   \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3091: Missing $ inserted.
+<inserted text> 
+                $
+l.3091 ...X_n)}{(R_S + jX_s) + (R_{Lb} + jX_{Lb})}
+                                                   \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3091: Missing $ inserted.
+<inserted text> 
+                $
+l.3091 ...X_n)}{(R_S + jX_s) + (R_{Lb} + jX_{Lb})}
+                                                   \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3091: Extra }, or forgotten $.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.3091 ...X_n)}{(R_S + jX_s) + (R_{Lb} + jX_{Lb})}
+                                                   \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3092: Missing $ inserted.
+<inserted text> 
+                $
+l.3092 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3093: Missing $ inserted.
+<inserted text> 
+                $
+l.3093     \underline{I_c}
+                           = \frac{\underline{V_c} - \underline{I_n}(R_n + j...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3093: Extra }, or forgotten $.
+\underline  ...{#1}\else $\@@underline {\hbox {#1}
+                                                  }\m@th $\relax \fi 
+l.3093     \underline{I_c}
+                           = \frac{\underline{V_c} - \underline{I_n}(R_n + j...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3093: Extra }, or forgotten $.
+\underline  ...#1}\else $\@@underline {\hbox {#1}}
+                                                  \m@th $\relax \fi 
+l.3093     \underline{I_c}
+                           = \frac{\underline{V_c} - \underline{I_n}(R_n + j...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3093: Missing $ inserted.
+<inserted text> 
+                $
+l.3093 ...X_n)}{(R_S + jX_s) + (R_{Lc} + jX_{Lc})}
+                                                   \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3093: Extra }, or forgotten $.
+\underline  ...{#1}\else $\@@underline {\hbox {#1}
+                                                  }\m@th $\relax \fi 
+l.3093 ...X_n)}{(R_S + jX_s) + (R_{Lc} + jX_{Lc})}
+                                                   \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3093: Extra }, or forgotten $.
+\underline  ...#1}\else $\@@underline {\hbox {#1}}
+                                                  \m@th $\relax \fi 
+l.3093 ...X_n)}{(R_S + jX_s) + (R_{Lc} + jX_{Lc})}
+                                                   \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3093: Missing $ inserted.
+<inserted text> 
+                $
+l.3093 ...X_n)}{(R_S + jX_s) + (R_{Lc} + jX_{Lc})}
+                                                   \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3093: Extra }, or forgotten $.
+\underline  ...{#1}\else $\@@underline {\hbox {#1}
+                                                  }\m@th $\relax \fi 
+l.3093 ...X_n)}{(R_S + jX_s) + (R_{Lc} + jX_{Lc})}
+                                                   \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3093: Extra }, or forgotten $.
+\underline  ...#1}\else $\@@underline {\hbox {#1}}
+                                                  \m@th $\relax \fi 
+l.3093 ...X_n)}{(R_S + jX_s) + (R_{Lc} + jX_{Lc})}
+                                                   \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3093: Missing $ inserted.
+<inserted text> 
+                $
+l.3093 ...X_n)}{(R_S + jX_s) + (R_{Lc} + jX_{Lc})}
+                                                   \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3093: Missing $ inserted.
+<inserted text> 
+                $
+l.3093 ...X_n)}{(R_S + jX_s) + (R_{Lc} + jX_{Lc})}
+                                                   \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3093: Missing } inserted.
+<inserted text> 
+                }
+l.3093 ...X_n)}{(R_S + jX_s) + (R_{Lc} + jX_{Lc})}
+                                                   \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3093: Missing } inserted.
+<inserted text> 
+                }
+l.3093 ...X_n)}{(R_S + jX_s) + (R_{Lc} + jX_{Lc})}
+                                                   \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3093: Missing $ inserted.
+<inserted text> 
+                $
+l.3093 ...X_n)}{(R_S + jX_s) + (R_{Lc} + jX_{Lc})}
+                                                   \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3093: Missing } inserted.
+<inserted text> 
+                }
+l.3093 ...X_n)}{(R_S + jX_s) + (R_{Lc} + jX_{Lc})}
+                                                   \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3093: Missing } inserted.
+<inserted text> 
+                }
+l.3093 ...X_n)}{(R_S + jX_s) + (R_{Lc} + jX_{Lc})}
+                                                   \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3093: Missing $ inserted.
+<inserted text> 
+                $
+l.3093 ...X_n)}{(R_S + jX_s) + (R_{Lc} + jX_{Lc})}
+                                                   \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3093: Missing $ inserted.
+<inserted text> 
+                $
+l.3093 ...X_n)}{(R_S + jX_s) + (R_{Lc} + jX_{Lc})}
+                                                   \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3093: Extra }, or forgotten $.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.3093 ...X_n)}{(R_S + jX_s) + (R_{Lc} + jX_{Lc})}
+                                                   \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3094: Misplaced \cr.
+\math@cr@@@ ->\cr 
+                  
+l.3094 \end{align*}
+                   
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3094: Misplaced \noalign.
+\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
+                                                  {\vskip #1\relax }
+l.3094 \end{align*}
+                   
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3094: Missing $ inserted.
+<inserted text> 
+                $
+l.3094 \end{align*}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3094: Missing } inserted.
+<inserted text> 
+                }
+l.3094 \end{align*}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3094: Missing } inserted.
+<inserted text> 
+                }
+l.3094 \end{align*}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3094: Missing } inserted.
+<inserted text> 
+                }
+l.3094 \end{align*}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3094: Missing $ inserted.
+<inserted text> 
+                $
+l.3094 \end{align*}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3094: Missing } inserted.
+<inserted text> 
+                }
+l.3094 \end{align*}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3094: Missing } inserted.
+<inserted text> 
+                }
+l.3094 \end{align*}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3094: Missing } inserted.
+<inserted text> 
+                }
+l.3094 \end{align*}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3094: Missing $ inserted.
+<inserted text> 
+                $
+l.3094 \end{align*}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3094: Missing } inserted.
+<inserted text> 
+                }
+l.3094 \end{align*}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (61.37357pt too wide) in paragraph at lines 3091--3094
+[]$[]$ 
+ []
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3094: Extra }, or forgotten \endgroup.
+\math@cr@@ ...th@cr@@@ \noalign {\vskip #1\relax }
+                                                  
+l.3094 \end{align*}
+                   
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3094: Misplaced \noalign.
+\black@ #1->\noalign 
+                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
+l.3094 \end{align*}
+                   
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+Overfull \hbox (277.27065pt too wide) detected at line 3094
+[]
+ []
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3094: Extra }, or forgotten \endgroup.
+\endalign ->\math@cr \black@ \totwidth@ \egroup 
+                                                \ifingather@ \restorealignst...
+l.3094 \end{align*}
+                   
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3094: Missing $ inserted.
+<inserted text> 
+                $
+l.3094 \end{align*}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3094: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.3094 \end{align*}
+                   
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+
+[112 <./power_systems_analisi_fase_fase_circuito_semplice_trifase.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 3096--3100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3113--3116
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3128--3137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3128--3137
+
+ []
+
+
+
+[113]
+Underfull \hbox (badness 10000) in paragraph at lines 3138--3139
+
+ []
+
+
+Overfull \hbox (0.29222pt too wide) in paragraph at lines 3139--3140
+[]\OT1/cmr/m/n/10 Guasto Fase-Fase: una delle li-nee ^^Re di-ret-ta-mente col-le-gata al filo di un'altra
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3139--3140
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3145--3149
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3145--3149
+
+ []
+
+<power_system_esempio_analisi_trifase_regime_permanente.png, id=502, 734.745pt x 175.65625pt>
+File: power_system_esempio_analisi_trifase_regime_permanente.png Graphic file (type png)
+<use power_system_esempio_analisi_trifase_regime_permanente.png>
+Package pdftex.def Info: power_system_esempio_analisi_trifase_regime_permanente.png  used on input line 3152.
+(pdftex.def)             Requested size: 345.0pt x 82.48071pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3155--3162
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3155--3162
+
+ []
+
+
+
+[114 <./power_system_esempio_analisi_trifase_regime_permanente.png>]
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3163: Undefined control sequence.
+l.3163     \item Coinduttanza $b = \ohm
+                                        \cdot C$: modellizza le perdite che ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3163--3164
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3164--3165
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3165--3166
+
+ []
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3166: Undefined control sequence.
+l.3166     \item Reattanza $X = \ohm
+                                     \cdot L$ \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3166--3167
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3167--3168
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3168--3169
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3169--3170
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3170--3171
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3173--3174
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3179--3183
+
+ []
+
+<power_systems_circuito_equivalente_analisi_trifase.png, id=507, 446.66875pt x 174.6525pt>
+File: power_systems_circuito_equivalente_analisi_trifase.png Graphic file (type png)
+<use power_systems_circuito_equivalente_analisi_trifase.png>
+Package pdftex.def Info: power_systems_circuito_equivalente_analisi_trifase.png  used on input line 3192.
+(pdftex.def)             Requested size: 345.0pt x 134.90123pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<power_systems_rappresentazione_fasori_circuito_equivalente.png, id=508, 345.29pt x 240.9pt>
+File: power_systems_rappresentazione_fasori_circuito_equivalente.png Graphic file (type png)
+<use power_systems_rappresentazione_fasori_circuito_equivalente.png>
+Package pdftex.def Info: power_systems_rappresentazione_fasori_circuito_equivalente.png  used on input line 3201.
+(pdftex.def)             Requested size: 345.0pt x 240.7009pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3195--3203
+
+ []
+
+
+
+[115]
+Underfull \hbox (badness 10000) in paragraph at lines 3204--3205
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3206--3211
+
+ []
+
+
+
+[116 <./power_systems_circuito_equivalente_analisi_trifase.png> <./power_systems_rappresentazione_fasori_circuito_equivalente.png>]
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3215: Undefined control sequence.
+<argument> ...}}}) = \\ &= \underline {V} + (\ohm 
+                                                  \cdot L \cdot I) 
+l.3215 \end{align*}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/step/File/Universita/ModellisticaESimulazione/main.tex:3215: Undefined control sequence.
+<argument> ...}}}) = \\ &= \underline {V} + (\ohm 
+                                                  \cdot L \cdot I) 
+l.3215 \end{align*}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3217--3227
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3217--3227
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3217--3227
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3230--3234
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3230--3234
+
+ []
+
+
+Overfull \hbox (10.83395pt too wide) in paragraph at lines 3244--3259
+\OT1/cmr/m/n/10 Questa equazione chia-mata re-lazione potenza-angolo ^^Re un'espressione della potenza
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3244--3259
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3244--3259
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3244--3259
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3244--3259
+
+ []
+
+
+
+[117]
+Underfull \hbox (badness 10000) in paragraph at lines 3269--3275
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3269--3275
+
+ []
+
+
+Overfull \hbox (4.83394pt too wide) in paragraph at lines 3277--3282
+\OT1/cmr/m/n/10 Data una power net-work con carichi di potenza com-p-lessi e noti (noto il fabisogno)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3277--3282
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3277--3282
+
+ []
+
+
+
+[118]
+Underfull \hbox (badness 10000) in paragraph at lines 3283--3284
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3284--3285
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3285--3286
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3288--3291
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3292--3293
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3293--3294
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3294--3295
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3295--3296
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3296--3297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3297--3298
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3298--3299
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3303--3304
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3304--3305
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3305--3306
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3306--3307
+
+ []
+
+
+
+[119]
+<power_systems_power_flow_analysis_caso_studio.png, id=527, 686.565pt x 192.72pt>
+File: power_systems_power_flow_analysis_caso_studio.png Graphic file (type png)
+<use power_systems_power_flow_analysis_caso_studio.png>
+Package pdftex.def Info: power_systems_power_flow_analysis_caso_studio.png  used on input line 3314.
+(pdftex.def)             Requested size: 345.0pt x 96.84203pt.
+<power_systems_power_flow_analysis_caso_studio_rappresentazione_grafo.png, id=528, 694.595pt x 181.67876pt>
+File: power_systems_power_flow_analysis_caso_studio_rappresentazione_grafo.png Graphic file (type png)
+<use power_systems_power_flow_analysis_caso_studio_rappresentazione_grafo.png>
+Package pdftex.def Info: power_systems_power_flow_analysis_caso_studio_rappresentazione_grafo.png  used on input line 3321.
+(pdftex.def)             Requested size: 345.0pt x 90.24034pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3326--3327
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3327--3328
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3328--3329
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3339--3340
+
+ []
+
+
+
+[120 <./power_systems_power_flow_analysis_caso_studio.png> <./power_systems_power_flow_analysis_caso_studio_rappresentazione_grafo.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 3360--3364
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3368--3369
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3375--3379
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3375--3379
+
+ []
+
+
+Overfull \hbox (161.33861pt too wide) detected at line 3387
+[]
+ []
+
+
+
+[121]
+Underfull \hbox (badness 10000) in paragraph at lines 3395--3396
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3400--3401
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3401--3402
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3402--3403
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3403--3404
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3404--3405
+
+ []
+
+
+
+[122]
+Underfull \hbox (badness 10000) in paragraph at lines 3407--3409
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3407--3409
+
+ []
+
+
+Overfull \hbox (16.74945pt too wide) detected at line 3416
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3416--3419
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3416--3419
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3420--3423
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3420--3423
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3424--3431
+
+ []
+
+
+Overfull \hbox (7.91669pt too wide) in paragraph at lines 3432--3434
+\OT1/cmr/m/n/10 dopo, o an-che per ri-sol-vere even-tu-ali cam-bia ef-fet-tuati, si usa il \OT1/cmr/bx/n/10 Metodo Newton-
+ []
+
+
+Overfull \hbox (1.27832pt too wide) in paragraph at lines 3437--3442
+\OT1/cmr/m/n/10 Per questo mo-tivo si preferisce model-lare i sot-to-prob-lemi di in-ter-esse per l'analisi. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3437--3442
+
+ []
+
+
+
+[123]
+Underfull \hbox (badness 10000) in paragraph at lines 3443--3444
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3444--3445
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3445--3446
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3446--3447
+
+ []
+
+<power_systems_classificazione_macromeccaniche.png, id=543, 781.92125pt x 301.125pt>
+File: power_systems_classificazione_macromeccaniche.png Graphic file (type png)
+<use power_systems_classificazione_macromeccaniche.png>
+Package pdftex.def Info: power_systems_classificazione_macromeccaniche.png  used on input line 3453.
+(pdftex.def)             Requested size: 345.0pt x 132.86298pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3457--3460
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3461--3462
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3467--3468
+
+ []
+
+
+
+[124 <./power_systems_classificazione_macromeccaniche.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 3468--3469
+
+ []
+
+
+
+[125]
+runsystem(makeindex main.idx)...executed safely (allowed).
+
+ (./main.ind) (./main.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 3753 strings out of 473190
+ 67769 string characters out of 5715800
+ 455539 words of memory out of 5000000
+ 26965 multiletter control sequences out of 15000+600000
+ 569057 words of font info for 74 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,19n,65p,594b,289s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (127 pages, 10132830 bytes).
+PDF statistics:
+ 637 PDF objects out of 1000 (max. 8388607)
+ 344 compressed objects within 4 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 321 words of extra memory for PDF output out of 10000 (max. 10000000)
+

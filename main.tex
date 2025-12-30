@@ -1,0 +1,3473 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{imakeidx}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{wrapfig}
+
+
+\title{Modellistica e Simulazione}
+\author{Tiberio Cesaretti  \quad Stefan Dascalescu}
+\date{Anno accademico 2025/2026}
+\makeindex
+\renewcommand{\contentsname}{Indice}
+
+\begin{document}
+\maketitle
+\vspace{2cm}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{copetina.jpg} % nome identico al file caricato
+\end{figure}
+\thispagestyle{empty}
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section{Introduzione alla modellistica}
+Obiettivo di questo corso è capire i principi fondamentali della modellistica e le basi per effettuarvi delle simulazioni.\\
+Sulla base dell'idea che esistono una moltitudine di modelli matematici che , a gradi di dettaglio variabili, ben descrivono il sistema studiato ;\\ Adotteremo un approccio che consisterà nella definizione di un modello  , seguita da una fase di simulazione ove verificheremo il carattere comportamentale del modello stesso .\\Lavoreremo principalmente a problemi conformi alla teoria lineare , toccheremo casi non lineari , in particolare quelli linearizzabili.
+
+
+\subsection{Il problema del controllo}
+il problema del controllo consiste nell'individuare l'andamento temporale delle grandezze controllanti (LEGGE DI CONTROLLO) tale che, le leggi controllate assumano valori prestabiliti nel tempo
+
+\paragraph{Esempio:}
+pallina su piatto che si inclina.
+Se ho sovraelongazione nella risposta indiciale , la pallina cadrà dal piatto.
+
+\subsubsection{Tipologie di sistemi di controllo }
+Si individuano generalmente 3 grandi categorie:
+\begin{itemize}
+    \item sistemi unidimensionali ( 1 uscita)
+    \item sistemi multidimensionali ( poche uscite)
+    \item sistemi complessi (tante uscite)
+    
+\end{itemize}
+\leavevmode
+L'approccio risolutivo può essere:
+\begin{itemize}
+    \item (Per sistemi uni / multi - dimensionali) \textbf{ Sistematico} ossia : definizione di modello , controllo secondo la teoria lineare
+    \item (Per sistemi complessi) \textbf{Euristico} ossia :  strategia non analitica e pensata ad hoc.
+\end{itemize}
+
+
+\newpage
+
+\subsection{Cosa significa Modellare?}
+Nell'Ingegneria Automatica modellare un sistema fisico significa: costruire un ogetto matematico in grado di riprodurre il comportamento di un sistema fisico . 
+O almeno, riprodurre quei comportamenti che sono di interesse ai fini della : analisi , simulazione e controllo.
+
+\vspace{0,5cm}
+\textbf{Esempio}: Se dobbiamo controllare la temperatura di un sistema termoelettrico , è sufficiente definire un modello che rappresenta bene l'andamento termico 
+
+\vspace{0,5cm} 
+\textbf{Come individuare un modello}
+\begin{itemize}
+    \item Identifica i fenomeni rilevanti al processo
+    \item Scegli il grado di dettaglio e approssimazione del modello
+    \item Scrivi un \textbf{modello matematico chiuso}, ossia che abbia tante equazione quante incognite
+\end{itemize}
+\subsubsection{Analisi e Simulazione}
+Una volta definito il modello ha senso parlare di :\\
+\textbf{Analisi}:\\
+E' utile per modelli lineari e linearizzabili in quanto permette di definire sistemi di controllo sul modello.\\
+\textbf{Simulazione}:\\
+Utile per studiare i comportamenti di modelli non lineari , in quanto non analizzabili dalla teoria lineare, non è comunque possibile studiare direttamente l effetto dei parametri sul modello , si parla quindi di approccio a scatola nera.\\
+\\
+\textit{Ulteriori considerazioni:}\\\\
+1) Per capire quale grado di dettaglio del modello è sufficiente per noi è sufficiente definirne vari , alcuni più ed altri meno raffinati, mettendoli a simulazione riusciremo a capire osservando le informazioni che ci forniscono ,la dimensione minima per la quale possiamo trarre informazioni utili dal modello .\\
+Tale risultato si ottiene dopo un processo iterativo di confronto tra i vari modelli ottenuti. \\\\
+2) Confrontando la soluzione analitica del modello e la simulazione di questo , si riesce a capire il grado di accuratezza dei metodi numerici di simulazione usati .\\ 
+\newpage
+\subsection{Classificazione dei modelli}
+1) \textbf{Stazionarietà}\\
+Formalmente si parla di modelli stazionari quando i parametri costituenti le variabili dello stato non dipendono dal tempo. \\Nella pratica ciò si traduce nel fatto che a parità di condizioni iniziali e di ingressi, l'evoluzione dello stato in un intervallo di tempo definito sarà uguale indipendentemente dall'istante di partenza scelto.\\\\
+\textit{Osservazione:}\\Assumendo di avere un modello non stazionario. Questo potrà essere trattato come stazionario soltanto se lo si considera per intervalli temporali molto limitati rispetto a quelli necessari per osservare una rilevante variazione nei parametri dello stato.\\\\
+
+\textbf{Tipologie di modelli stazionari} (anche detti causali)\\
+\begin{enumerate}
+    \item \textbf{Deterministici} : Caratterizzati da EDO o PDE 
+    \item \textbf{Stocastici} : Usati per rappresentare modelli intrinsecamente stocastici oppure modelli deterministici dalle dinamiche troppo complesse \\
+    \textit{esempio}: il lancio del dado , problema meccanico complesso a casua della forte variabilità  ma facilmente descirvibile da un processo stocastico.
+\end{enumerate}
+2) \textbf{Proprietà spazio-temporali}\\\\
+\begin{itemize}
+    \item \textbf{Modelli statici}: Rappresentati da equazioni algebriche\\ Non descrivendo finemente le dinamiche del sistema , risultano efficaci solo quando si studiano intervalli temporali grandi rispetto alle costanti temporali di evoluzione del sistema
+    \item \textbf{Modelli a costanti concentrate}: Rappresentati da EDO temporali , utili per avere una descrizione fine del sistema , specialmente quando si considera intervalli temporali comparabili alle costanti di tempo del sistema
+    \item \textbf{Modelli a costanti distribuite}: Rappresentati da PDE tempo-spaziali, anche questi usati per "tempi brevi"
+\end{itemize}
+\newpage
+\textit{Esempio:}\\
+Valutiamo il problema di modellazione di una massa sospesa da un soffitto  tenuta da una molla . Nota la massa m, la costante elastica k, e scelta come variabile di stato l'allungamento della molla x. Possiamo allora fare delle premesse:\\
+Volendo immaginare che in un primo momento il sistema massa molla oscilli , e dopo un periodo temporale limitato ( tempo di esaurimento del transitorio) questo si assesti rispetto un certo valore di x potremmo formulare:\\\\
+1) Modello matematico per tempi lunghi :
+\[ mg = Kx \iff x = \frac{mg}{K}\] Questo modello statico altro non fa che dirci che : " dopo un periodo nettamente piu lungo dele costanti temporali del sistema, lo stato assume il valore x\\\\
+2) Modello matematico per i tempi brevi :
+\[m\ddot{x} = mg-kx -A\dot{x} \iff \ddot{x} = -\frac{A}{m}\dot{x}-\frac{k}{m}x+mg\] E' infatti ben rappresentato da un modello a costanti concentrate.
+\subsubsection{Modelli lineari}
+I modelli lienari sono ben descritti da equazioni differenziali o sistemi di equazioni differenziali lineari. Si identifica infatti una forma ordinaria: 
+\[\begin{cases}\dot{x}= Ax+Bu \\ y = Cx +D u\end{cases}\] Ed una forma differenziale ordinaria:\[\sum_{i = 0}^na_i\frac{d^iy(t)}{dt^i} = u(t)\]In generale i modelli non lineari sono descritti dalla seguente forma : 
+\[\begin{cases}\dot{x} = f(x,u)\\y = h(t,u)\end{cases}\]
+\newpage
+\section{Limiti di validità dei modelli}
+È importante capire in quali processi fisici il nostro modello deve operare, così da scegliere il modello più adeguato.
+Solitamente, un modello lineare è una buona base di partenza.
+Un modello lineare però può descrivere il comportamento di un modello non lineare solo in particolare scenari operativi molto specifici
+\subsection{Definizione di linearità}
+si consideri l'equazione:
+\[Ty = u\]
+dove:
+\begin{itemize}
+    \item $T$ è un operatore algebrico
+    \item $u$ è un veettore noto
+    \item $y$ è un vettore incognito
+\end{itemize}
+Diremo che "$T$" è un operatore lineare se:
+\[Ty_1 = u_1 \quad \land \quad Ty_2 = u_2\]
+ne segue che:
+\[T(\alpha y_1 + \beta y_2) = (\alpha u_1 + \beta u_2)\] 
+con $\alpha,\  \beta \in \mathbb{R}$
+
+\subsection{Approssimazioni Locali}
+I modelli lineari, oltre che nella modellazione di processi fisici, possono essere usati per l'approssimazione locale di sistemi intrinsecamente non lineari.
+\newline
+Questa possibilità è permessa dalla serie di Taylor.
+\newline
+L'approssimazione locale però vale solo localmente, ovvero per variazioni piccoli tale da non portare lo stato del sistema fuori da un opportuno intorno del punto di lavoro scelto.
+\newline
+\newline
+Supponendo di avere il sistema
+\begin{align*} 
+\dot{x} = f(x, u) \\ 
+y = g(x, u) \\
+\end{align*}
+con $x \in \mathbb{R}$, $u \in \mathbb{R}^p$, $y \in \mathbb{R}^q$
+\newline
+Ci sono due casi possibili:
+\begin{itemize}
+    \item $(x_e, u_e): f(x_e, u_e) = 0 \qquad \qquad $ - punto di equilibrio controllato
+    \item $(x_e, u_e=0): f(x_e, u_e=0) = 0$ - punto di equilibrio statico del sistema
+\end{itemize}
+
+\begin{align*}
+    \dot{x} = f(x, u) &\approx f(x_e, u_e)\  +\   (\left.\frac{\partial f(x,u)}{\partial x}\right|_{x = x_e,\, u = u_e})(x-x_e)\  +\  (\left.\frac{\partial f(x,u)}{\partial u}\right|_{x = x_e,\, u = u_e})(u-u_e)\  +\  ... \\
+    &\approx 0\quad + \quad A(x-x_e)\quad + \quad B(u-u_e)  
+\end{align*}
+
+In questa formulazione, ogni addendo rappresenta rispettivamente:
+\begin{itemize}
+    \item "$f(x_e, u_e)$" - Valore del sistema nel punto di equilibrio
+    \item "$(\left.\frac{\partial f(x,u)}{\partial x}\right|_{x = x_e,\, u = u_e})(x-x_e)$" - Matrice "$A$" : Jacobbiana : $n\times n$
+    \item "$(\left.\frac{\partial f(x,u)}{\partial u}\right|_{x = x_e,\, u = u_e})(u-u_e)$" - Matrice "$B$" : $n \times p$
+    \item "$...$" - Termini di ordine superiore
+\end{itemize}
+
+Avendo dunque:
+$
+\begin{cases}
+    \Delta x = (x-x_e) \\
+    \Delta \dot{x} = \dot{x} \\
+    \Delta u = (u-u_e) \\
+    \Delta \dot{u} = \dot{u} \\
+\end{cases}
+$
+Possiamo definire la variazione della derivata dello stato ($\dot{x}$) come:
+\[ \Delta \dot{x} = A \Delta x + B \Delta u  \\\]
+
+posso quindi effettuare un'approssimazione locale con un sistema lineare.
+
+Supponiamo:
+\begin{align*}
+    h(x_e, u_e) = y_e \\
+     y = h(x, u) &\approx \frac{h(x_e, u_e)}{y_e} + \left.\frac{\partial h}{\partial x}\right|_{x = x_e,\, u = u_e}(x-x_e) + \left.\frac{\partial h}{\partial u}\right|_{x = x_e,\, u = u_e}(u-u_e) \\
+     & \approx \frac{h(x_e, u_e)}{y_e} + C + D
+\end{align*}
+Dove "$C$" rappresenta la matrice $q \times n$
+mentre "$D$" rappresenta la matrice $q \times p$
+
+Avendo dunque:
+\[\Delta y = y - y_e\]
+Allora si ha:
+\[\Delta \dot{y} = C\Delta x + D \Delta u\]
+
+
+\textit{Osservazione:}\\
+Le approssimazioni locali sono particolarmente buone per i sistemi a controreazione in quanto:
+\begin{itemize}
+    \item le grandezze di interesse cominciano ad avvicinarsi ai riferimenti (approssimazione locale o quasi)
+    \item è robusta rispetto ai disturbo, quindi il modello lineare non è troppo scostante
+\end{itemize}
+
+\textit{Osservazione:}\\
+Non è sempre possibile effettuare un'approssimazione lineare
+
+Per esempio:
+\begin{itemize}
+    \item sistemi a controllo parametrico (tipo l'apparecchio cocleare), perché sono scritti come: $\dot{x}(t) = A[u(t)]x(t)$. Non è possibile l'approssimazione locale perché "$u(t)$" dovrebbe variare poco invece qui varia di tanto. \\
+    
+    \item sistemi di controllo a relé (acecso / spento) - non hai vero controllo.
+\end{itemize}
+
+
+\textit{Osservazione:}\\
+I sistemi lineari hanno validità limitata anche per sistemi che si ritengono essere intrinsecamente lineari.
+\newline
+\newline
+\newline 
+
+\textit{Esempio:}\\
+    preso un filo conduttore che fa resistenza, vale la legge di Ohm:
+
+\begin{align*}
+    &V = RI \\
+    & \text{quindi vale: } \\
+    & R = \rho \cdot \frac{1}{S} \\
+    &\rho = \rho_{0} \cdot (1 + \alpha \Delta T) \\
+\end{align*}
+
+identificando ocome ingresso "$u$" la tensione "$V$" e come uscita "$y$" la corrente "$I$", si ha una rappresentazione del tipo:
+\[y(t) = \frac{1}{R} u(t)\]
+
+Per il caso NON induttivo quindi si osserva una rappresentazione della legge di Ohm nella forma:
+\[V = R(I) \cdot I\]
+In quanto la resistenza indotta, incrementata poi per effetto Joule, dipende dalla quantità di corrente che viene fatta passare all'interno del filo conduttore.
+\newline
+Per il caso induttivo incece vale;
+\[V = RI + \frac{dI}{dt}\] (Equazione differenziale di prim'ordine)
+
+identificando come variabile di stato "$x$" la corrente "$I$", ottengo la seguente rappresentazione nello spazio di stato:
+
+\begin{align*}
+    & \dot{x}(t) = \frac{R}{L} x(t) + \frac{1}{L} u(t) \\
+    & y(t) = x(t) \\
+\end{align*}
+
+Si va a studiare il sistema per trovare il valore di frequenza per il quale non è più valida la legge di Ohm classica, ma devo usare il modello non lineare.
+
+Per fare lo studio in frequenza trasformo del dominio di Laplace:
+
+\begin{align*}
+    V(t) &= R \cdot I(t) + L\frac{dI}{dt} \\
+    V(s) &= R\cdot I(t) + sLI(s) = (R + sL) \cdot I(t)
+\end{align*}
+
+Si osservano quindi la funzione di trasferimento:
+
+\begin{align*}
+    W(s) &= \frac{I(s)}{V(s)} = \frac{1}{R+sL} & \text{Funzione di trasferimento del sistema} \\
+    W( j \omega) &= \frac{1}{R + j \omega L} = \frac{1}{R} + \frac{1}{1 + j \omega \frac{L}{R}} & \text{Funzione di risposta armonica} \\
+\end{align*}
+
+Perciò per lo studio in frequenza della funzione di trasferimento si osserva che:
+\begin{itemize}
+    \item \text{se} $  \omega \frac{L}{R} << 1 \implies \omega << \frac{R}{L} \implies \frac{1}{1 + j \omega \frac{L}{R}} \xrightarrow{} \frac{1}{R} $ \newline \text{Allora la componente di induzione si annulla, avendo così un resistore ideale.} \newline \text{Quindi possiamo usare la legge di Ohm lineare.} \\
+
+    \item \text{se} $ \omega \frac{L}{R} >> 1 $ \newline \text{Allora il resistore ha delle componenti di induttanza non trascurabili.} \newline \text{Perciò il modello lineare non è sufficiente a poter studiare il fenomeno.} \\
+\end{itemize}
+\clearpage
+
+\subsection{Limiti di validità per i modelli dinamici a costanti concentrate}
+L'utilizzo di un modello a costanti concentrate a discapito di un modello a costanti distribuite 
+
+Dipende dall'osservazione:
+
+\begin{itemize}
+    \item se il processo si sta osservando ha dimensioni piccole rispetto alla lunghezza d'onda. \newline Allora c'é bisogno di un modello lineare a costanti concentrate. \\
+
+    \item se il processo si sta osservando ha dimensioni grandi o paragonabili rispetto alla lunghezza d'onda. \newline Allora c'é bisogno di un modello lineare a costanti distribbuite. \\
+\end{itemize}
+
+Un rapido esempio è quello di un circuito:
+
+Avendo un semplice circuito con un generatore di tensione "$V$" ed una resistenza "$R$".
+Supponendo di avere una frequenza $f = 100 \ kHz$.
+
+Si ha una lunghezza d'onda:
+\[\lambda = \frac{v}{f} \approx \frac{2 \cdot 10^8 \  \frac{m}{s}}{1 \cdot 10^5 \ \frac{1}{s}} \approx 2 \cdot 10^3 \ m = 2 \ Km \]
+\begin{itemize}
+    \item a) se si ha un circuito molto più piccolo rispetto alla lunghezza d'onda \newline
+    Allora si può usare un modello a costanti concentrate. \\
+    
+    \item b) se si ha un circuito paragonabile o più grande rispetto alla lunghezza d'onda \newline
+    Allora si deve usare un modello a costanti distribbuite. \\
+\end{itemize}
+\newpage
+
+\section{Equazioni Differenziali Ordinarie }
+\textbf{Generalità e metodi di calcolo}\\
+E' detta equazione differenziale ordinaria : un'equazione che lega i valori della variabile indipendente $x\in\mathbb{R}$ di una funzione $y(x)$ incognita alle sue derivate sino al grado n.\\
+Nella formulazione più generale tale idea è espressa nella seguente maniera : 
+\[x\in\mathbb{R}\quad y =f(x)\quad F(x,y,y',...,y^{(n)}) = 0 \quad t.c \quad F: A\subset \mathbb{R}^{n+2}\rightarrow \mathbb{R}\quad [1] \]
+L' \textbf{Ordine} di una edo è  l'ordine massimo n delle derivate di x che compaiono nell'equazione. \\
+Si parla di \textbf{Forma normale di una edo} quando è possibile esplicitare la derivata di ordine massimo della edo, ossia trovare una forma equivalente ad [1], tale per cui : \\
+\[y^{(n)} = f(x,y,y',...,y^{(n-1)} \quad con\quad f:B \subset \mathbb{R}^{n+1}\rightarrow \mathbb{R}\]\\
+\textit{Esempi \\
+\begin{enumerate}
+    \item $y' = y^2$ è una edo di primo ordine in forma normale
+    \item $y'' +\omega ^2y = 0$ è una edo del secondo ordine , dopo una semplice manipolazione si può portare in forma normale ossia $y'' = - \omega ^2 y$
+    \item $|y'|= 1$ non è in forma normale 
+\end{enumerate}
+}
+\textbf{Soluzione di una edo}\\
+Qualitativamente parlando la soluzione di una edo lineare è una funzione f definita , tale per cui sostituendo essa e le sue derivate nella edo si verifica che l'uguaglianza sia vera . \\ In altre parole presa la edo:\\
+\[y^{k}+a_{k-1}(t)y^{(k-2)}+....+a_o(t)y = g(t)\]
+allora \[\exists f:A\subset \mathbb{R}\rightarrow \mathbb{R} \quad t.c.\ f^{k}+a_{k-1}(t)f^{(k-2)}+....+a_o(t)f = g(t)\]
+Più formalmente si dice che :\\
+\newpage
+Dato un intervallo (a,b) della retta reale , diciamo che una funzione $y:x\in(a,b) \rightarrow y(x) \in \mathbb{R} $ è soluzione di una edo se:
+\begin{itemize}
+    \item $y\in C^n((a,b))$ ( all ' interno del dominio, f è derivabile fino all'ordine n ) 
+    \item $(x,y,y',...,y^{(n)}) \in A \quad \forall x \in (a,b)$ 
+
+    In altre parole c'è una relazione che lega la funzione e le sue derivate lungo il suo dominio , tale idea è una riformulazione del concetto che "la soluzione sostituita nella edo deve soddisfare l'uguaglianza rispetto a g(x)"
+    \item $F(x,y,y',...,y^{(n)})=0$ In soldoni qua stiamo dicendo che la soluzione deve esse conforme alla maniera in cui è stata definita la edo 
+\end{itemize}
+    \subsection{Problema di Cauchy}
+    Come prima accennnato , per trovare la soluzione di una edo , occore trovare una certa funzione f definita lungo un dominio.\\ E' essenziale soffermarsi proprio su questo punto in quanto ci troviamo davanti ad uno dei tanti casi dove matematica e fisica possono divergere, in quanto cio che può avere univocamente senso nel campo matematico può assumere interpretazioni variegate nel dominio della fisica.\\
+    Nello specifico:\\
+    Presa una edo , spesso esiste un'intera classe di funzioni che possono fungere da soluzione per essa, quale tra queste serve a noi?\\
+    Per visualizzare meglio cosa si intende per classe di funzioni-soluzione si riporta il seguente esempio:
+    \[y'(x) = y(x) \iff \frac{d}{dx}y(x) = y(x)\iff \frac{dy(x)}{y(x)}= dx \iff \frac{1}{y}dy = dx\]
+    \[\iff \int \frac{1}{y} dy = \int 1\cdot dx \iff \ln|y| = x+c\]
+    Dove c è una costante a noi non nota originata dallo sviluppo dell'integrale indefinito, ora:
+    \[ |y|= e^{x+c}= e^c\cdot e^x \quad sia \quad C : = \pm e^c \implies y = C\cdot e^x\]
+    Adesso è ben evidente che esistono infiniti valori che possiamo scegliere per C, ossia esistono infinite funzioni della stessa classe che fungono da soluzione per la edo studiata, l'idea di fissare un valore di C equivale a dire "fissare le condizioni iniziali", tale cosa può anche essere fatta nel seguente modo \[x_0 \in (a,b) \quad f(x_0) = y_0\] con $x_0$ e $y_0$ parametri scelti, così a proseguire fino al grado n-1.\\
+    \newpage
+    \textbf{Definizione formale problema di cauchy}\\
+Sia \[y^{(n)} = f(x,y,y',....,y^{(n-1)}) \quad t.c.   \quad f:B\subset \mathbb{R}^{n+1} \rightarrow\mathbb{R}    \]
+una edo in forma normale.\\
+Fissato $(x_0,y_0,y_1,...,y_{n-1})\in B $ E' detto problema di cauchy della edo (quella sopra ) e alle condizioni iniziali $(x_0,y_0,y_1,...,y_{n-1})$, il problema di determinare un intervallo a, b di $x_0$ ed una funzione $y:(a,b) \rightarrow\mathbb{R}$ tali che 
+\begin{itemize}
+    \item y è soluzione della edo nell'intervallo $(a,b)$
+    \item sono soddisfatte le condizioni iniziali : \\
+    $y(x_0) = y_0$\\
+    $y'(x_0) = y_1$\\
+    .....\\
+    $y^{(n-1)}(x_0) = y^{n-1}$
+\end{itemize}
+
+\textbf{Tipi di soluzione di una edo}
+\\ \\
+\textit{Soluzione locale}\\\\
+Una funzione y si dice soluzione locale di una edo se:
+\begin{itemize}
+    \item il suo dominio è un intervallo , ossia $ y:I \subseteq \mathbb{R}\rightarrow\mathbb{R}$
+    \item le condizioni formali di esistenza della soluzione di una edo espresse prima
+\end{itemize}
+\textit{Prolungamento di una soluzione:}\\\\
+Una funzione $z:J\subseteq\mathbb{R}\rightarrow\mathbb{R}$ è detta prolungamento della soluzione locale $ y:I \subseteq \mathbb{R}\rightarrow\mathbb{R}$ se:
+\begin{itemize}
+    \item z è una soluzione locale
+    \item $I \subseteq J$
+    \item $\forall t \in I : y(t) = z(t) $
+\end{itemize}
+Se $I \subset J$ (I sottoinsieme proprio di J ) allora z è detto prolungamento proprio.
+\\\\
+\textit{Soluzione massimale}
+Una funzione $ y:I \subseteq \mathbb{R}\rightarrow\mathbb{R}$ , si dice soluzione massimale se non esistono prolungamenti propri di y
+\\\\
+\textit{Soluzione Globale}\\\\
+$ y:I \subseteq \mathbb{R}\rightarrow\mathbb{R}$ è soluzione globale $\iff I= \mathbb{R}$
+
+    
+    
+    
+    
+    
+    
+    
+    \subsection{Teorema di Picard–Lindelöf }
+    Questo teorema ci dice che se troviamo una funzione che è soluzione in un intorno di $x_0$ allora essa è l'unica soluzione
+
+    
+    \textbf{Considerazioni ulteriori}
+    A questo punto è bene fare leva su 2 grandi distinzioni , la prima è che le edo possono essere lineari , ossia avere i termini associati ad'ogni derivata tutti del primo ordine , ed edo non lineari .\\
+    Da qui in poi tratteremo soltanto le edo lineari , in quanto le non lineari sono materia di studio della teoria dei sistemi non lineari.\\
+    Detto ciò è bene fare un ulteriore distinzione :\\
+    \textbf{edo a coefficienti costanti}: sono edo che associano soltanto coefficienti costanti ad ogni derivata che vi compare all'interno , es:
+    \[\sum_{i = 1}^na_i\cdot y(t)^{(i)}=0 \quad t.c \quad \forall i \in [1,n]\subset \mathbb{N} : a_i \in \mathbb{R}\]\\
+    \textbf{edo a coefficienti continui} Queste edo diventano già piu complicate , la cosa che le caratterizza è che i coefficienti associati ad ogni derivata ora sono funzioni reali , ossia :
+    \[\sum_{i = 1}^na_i(t)\cdot y(t)^{(i)}=0 \quad t.c \quad \forall i \in [1,n]\subset \mathbb{N} | a_i:A\subseteq \mathbb{R}\rightarrow\mathbb{R}\]
+    In generale nell'ingegneria queste sono viste solamente negli specifici ambiti di applicazione (un po come le pde) , per quanto tange il problema del controllo nasce un problema fondamentale.\\
+    Nella modellistica della matrice dinamica del sistema , partendo dal modello differenziale , i coefficienti tipicamente associati alle varie derivate diventano proprio i termini di questa matrice, se però questi termini sono funzioni reali , abbiamo una matrice che ha valori che variano nel tempo , per cui un sistema dinamico che non rispetta l'ipotesi di stazionarietà.  \\
+    \subsubsection{Generalità}
+    Tratteremo edo della seguente forma : \[\sum_{k = 0}^n a_k(t)\frac{d^ky(t)}{dt^k}= \sum_{h = 0}^m b_h(t)\frac{d^hu(t)}{dt^h}\]
+    Valuteremo $u(t)$ come una funzione nota e $y(t)$ come un'incognita. Come prima anticipato , per avere una edo lineare e stazonaria dobbiamo assume la seguente forma (con i coefficienti indipendenti rispetto al tempo) \[\sum_{k = 0}^n a_k\frac{d^ky(t)}{dt^k}= \sum_{h = 0}^m b_h\frac{d^hu(t)}{dt^h}\]
+\newpage
+Assumendo ora una generica $g(t)$ t.c. 
+\[g(t) = \sum_{h = 0}^m b_h\frac{d^hu(t)}{dt^h}\]
+e facendo un abuso di notazione tale per cui : 
+\[u(t) = g(t) \implies u(t) =\sum_{h = 0}^m b_h\frac{d^hu(t)}{dt^h} \iff \sum_{k = 0}^n a_k\frac{d^ky(t)}{dt^k}=u(t) \]
+tale manipolazione viene fatta al solo scopo di far vedere che la sommatoria al secondo membro è una funzione nota .\\\\
+\textit{Oss:\\
+Si parla di \textbf{edo lineare omogenea} quando trattiamo forme del tipo \[\sum_{k=0}^na_k\frac{d^ky(t)}{dt^k}=0\] Quando invece si presentano forme tali per cui il secondo membro dell'equazione è non nullo e non dipende direttamente da derivate di y(t) , si parala di \textbf{edo non omogenea} }
+Tornando adesso allo studio di \[\sum_{k = 0}^n a_k\frac{d^ky(t)}{dt^k}=u(t)
+\] Dall'analisi matematica sappiamo che la soluzione della edo è sempre scritta nella forma \[y(t) = y^0(t)+y^*(t) \] dove :\\
+$y^0(t)$ è la soluzione dell' equazione omogenea associata ossia \[\sum_{k=0}^na_k\frac{d^ky(t)}{dt^k}=0\] mentre $y^*(t)$ è detto \textbf{Integrale particolare}\\\\
+\textbf{Nel seguito tratteremo una strategia risolutiva che nell'analsi matematica è detta METODO DI SOMIGLIANZA}
+\newpage
+\subsection{Metodo di somiglianza}
+\textbf{Equazione omogenea associata}\\\\
+In generale può essere determinata per tentativi , scegliendo allora $y(t) = e^{\lambda t}$ si ha 
+\[
+\begin{cases}
+\sum_{k=0}^na_k\frac{d^ky(t)}{dt^k}=0 \\\\
+y(t) = e^{\lambda t}
+\end{cases}
+\;\Rightarrow\;
+\left ( \sum_{k=0}^na_k\lambda^k\right )e^{\lambda t}=0
+\]
+Tale equazione è sempre valida , purchè: \[\sum_{k=0}^na_k\lambda^k=0\]Per cui si può introdurre il concetto di polinomio caratteristico associato alla edo studiata il seguente \[D(\lambda ) =\sum_{k=0}^na_k\lambda^k=a_n\lambda ^n+a_{n-1}\lambda^{n-1}+...+a_0=0\]
+Per il teorema fondamentale dell'algebra sappiamo che $D(\lambda) = 0$ ha n soluzioni , limitando lo studio al caso in cui abbiamo radici a molteplicità strettamente pari ad uno , queste soluzioni o sono reali o complesse coniugate. //Concettualmente bisogna immaginarsi che note $\lambda_1,....,\lambda_n$ allora $e^{\lambda_1 t},...,e^{\lambda_n t}$ sono una collezione di n soluzioni per la edo omogenea . //
+E' bene adesso osservare che l'operatore differenziale \[S= \sum_{k = 0}^na_k\frac{d^k}{dt^k}\] è un operatore lineare per cui ogni combinazione lineare del tipo \[y^0(t) = c_1 e^{\lambda_1 t}+c_2e^{\lambda_2 t}+...+c_ne^{\lambda_n t} \]è una soluzione, si osservi che n costanti $c_1,..,c_n$ sono determinate in base alle n condizioni iniziali del problema di Cauchy.
+\newpage
+\textbf{Integrale Particolare} Posta la edo \[\sum_{k = 0}^n a_k \frac{d^k y(t)}{dt^k}=u(t)\]Determinare l'integrale particolare è ragionevolmente semplice qualora $u(t)$ rientri nelle 2 seguenti classi di funzione :
+\begin{itemize}
+    \item Polinomio \[u(t) = \sum_{h = 0}^NA_ht^h\]
+    \item funzione armonica \[u(t) = U_0sin( \omega t) \quad \vee \quad u(t) = U_0 e^{i \omega t} \]
+\end{itemize}
+\textbf{caso 1} Ingressi polinomiali : \\
+    Cerchiamo soluzioni nella forma \[y^*(t) =\sum_{h = 0}^N B_ht^h \] , sostituendo la soluzione in \[u(t) =\sum_{h = 0}^N A_ht^h\] si ha \[
+    \sum_{h = 0}^N C_h(B_1,...B_n)t^h = \sum_{h=0}^N A_ht^h
+    \] Per il principio di identità per polinomi \[C_h(B_1,...,B_n) = A_h \quad \forall h \in[0,n]\subset \mathbb{N}\]
+    Otteniamo un sistema non omogeneo lineare di n+1 equazioni nelle n+1 incognite $B_h$.
+    \\\\
+    \textbf{Integrale Particolare ingressi Sinusoidali}
+    \\\\
+    E' possibile cercare una soluzione nella forma \[y^*(t) = Asin(\omega t)+Bcos(\omega t)\] Sostituendo questa soluzione nell'equazione di partenza si ottiente \[C(A,B)sin ( \omega t) +D(A,B)cos (\omega t) = U_0sin (\omega t)\] segue per il principio di identità dei polinomi che : 
+   \[ \begin{cases}
+C(A,B) =U_0 \\
+D(A,B) = 0
+\end{cases}\]
+Essendo questo un sistema lineare non omogeneo di 2 equazioni in due incognite (in a e b) è considerato risolvibile
+\subsubsection{Caratterizzazione del problema di Cauchy}
+La soluzione di una Edo omogenea di ordine n  è definita a meno di n costanti di integrazione.\\
+Per determinare univocamente l'integrale generale di una edo non omogenea di ordine n è dunque necessario associare n condizioni iniziali.\\
+Tale idea è formalmente detta problema di cauchy
+il quale si espleta in un sistema di equazioni di questo tipo :
+\[
+\begin{cases}
+\sum_{k =0}^na_k \frac{d^k y(t)}{dt^k}=u(t) \\\\
+\frac{d^k y(t)}{dt^k} \Big|_{t=0}= y_{k0} \quad k=0,...,n-1
+\end{cases}
+\]
+A questo punto abbiamo un sistema lineare di n equazioni nelle n incognite $c_i$
+\subsection{Edo in Laplace}
+\textit{Osservazioni preliminari : \begin{enumerate}
+    \item \[\mathcal{L}[\frac{d^k}{dt^k}f(t)] = s^kF(s)-\sum_{i =0}^{k-1}s^i\frac{d^{k-1-i}f(t)}{dt^{k-1-i}}\Big|_{t=0}\]
+\end{enumerate}}
+Partiamo dalla edo nella seguente forma e facciamo delle manipolazioni : \[\sum_{k=0}^n\frac{d^ky(t)}{dt^k}=\sum_{h=0}^m b_h \frac{d^hu(t)}{dt^h}\iff \mathcal{L}\left[\sum_{k=0}^n\frac{d^ky(t)}{dt^k}\right]=\mathcal{L}\left[\sum_{h=0}^m b_h \frac{d^hu(t)}{dt^h}\right]\]
+\[\iff \sum_{k=0}^na_k\left[s^kY(s)-\sum_{i=0}^{k-1}s^i\frac{d^{k-1-i}y(t)}{dt^{k-1-i}}\Big|_{t=0} \right]=\sum_{h=0}^nb_h\left[s^hU(s)-\sum_{j=0}^{h-1}s^j\frac{d^{h-1-j}u(t)}{dt^{h-1-j}}\Big|_{t=0} \right]\]
+L'obiettivo ora è di individuare una forma dell'identità tale per cui $Y(S)$ sia in funzione di tutto il resto.
+\newpage
+\textbf{IPOTESI}\\\\
+Assumendo che : \[\forall j \in [1,...,m] : u(0) = \frac{du(t)}{dt}\Big|_{t=0}= \frac{d^{m-1}u(t)}{dt^{m-1}}\Big|_{t=0} =0\]
+\textit{Questa ipotesi non è da considerarsi restrittiva al fine della comprensione delle
+caratteristiche della soluzione y(t).}\\\\
+Segue che : \[
+\left [ \sum_{h=0}^n a_hs^h\right ]Y(s) = \left [\sum_{h=0}^m b_hs^h\right]U(s)+\sum_{k=0}^n a_k\sum_{i=0}^{k-1}s^i \frac{d^{k-1-i}y(t)}{dt^{k-1-i}}\Big|_{t=0}
+\]
+Isolando ora $Y(s)$ otteniamo :
+\[Y(s) = \frac{\sum_{h=0}^mb_hs^h}{\sum_{k=0}^na_ks^k}\cdot U(s)+\frac{\sum_{k=0}^n a_k\sum_{i=0}^{k-1}s^i\frac{d^{k-1-i}y(t)}{dt^{k-1-i}}\Big|_{t=0}-\sum_{h=0}^m b_h\sum_{j=0}^{h-1}s^j\frac{d^{h-1-j}u(t)}{dt^{h-1-j}}\Big|_{t=0}}{\sum_{k=0}^na_ks^k}\]\\Tenendo adesso conto delle ipotesi $u(0)=0 \quad u^{(m-1)}(0)=0$ allora \[Y(s) = \frac{\sum_{h=0}^m b_hs^h}{\sum_{k=0}^na_ks^k}U(s)+\frac{\sum_{k=0}^n a_k \sum_{i=0}^{k-1}s^i\frac{d^{k-1-i}y(t)}{dt^{k-1-i}}\Big|_{t=0}}{\sum_{k=0}^n a_ks^k}\]
+Per ispezione visiva si intuisce che :
+\begin{enumerate}
+    \item \[W(s)=\frac{\sum_{h=0}^m b_hs^h}{\sum_{k=0}^na_ks^k}\]
+    \item 
+    \[evoluzione \quad libera =\frac{\sum_{k=0}^n a_k \sum_{i=0}^{k-1}s^i\frac{d^{k-1-i}y(t)}{dt^{k-1-i}}\Big|_{t=0}}{\sum_{k=0}^n a_ks^k} \]
+\end{enumerate}
+\subsubsection{Considerazioni sull'evoluzione libera}
+Sempre al fine di dare una descrizione puramente qualitativa di ciò che questa evoluzione libera rappresenta , faremo l'ipotesi che : \textit{le radici associate al denominatore della $Y_l(s)$ siano tutte a molteplicità unitaria} segue che :\\\\
+(Per il teorema dei residui ) :\[Y_L(s)=\frac{\sum_{k=0}^n a_k \sum_{i=0}^{k-1}s^i\frac{d^{k-1-i}y(t)}{dt^{k-1-i}}\Big|_{t=0}}{\sum_{k=0}^n a_ks^k}= \sum_{i=1}^n\frac{R_i}{s-\lambda_i} \]
+\newpage
+Si osservi come : \[\mathcal{L}^{-1}[Y_L(s)]=Y_L(t)=\sum_{i=1}^n R_i\:e^{\lambda_it}\]
+Possiamo ora affermare che l'evoluzione libera è  una combinazione lineare di esponenziali , secondo dei coefficienti che dipendono dalle condizioni iniziali.
+
+
+\subsubsection{Considerazioni sull'evoluzione forzata}
+Mantenendo le ipotesi prima definitesi , osserviamo che :\[Y_F(s) = W(s)\cdot U(s) = \frac{\sum_{h=0}^m b_hs_h}{\sum_{k=0}^n a_ks^k}U(s) = \sum_{i=1}^n \frac{R_i}{s-\lambda_i}+\sum_{j=1}^p\frac{R_j}{s-\mu_j}\]
+
+Nella prima sommatoria viene evidenziata la presenza dei modi naturali nell'evoluzione forzata , \\mentre nella seconda esponiamo ciò che potremmo definire come i poli nati dall'interazione con l'ingresso $u(t)$\\\\
+Si osservi infine come : \[\mathcal{L}^{-1}[Y_F(s)]= Y_F(t) = \sum_{i=1}^n R_i\: e^{\lambda_it}+\sum_{j=1}^p R_j\: e^{\mu_jt}\]\\\\
+\textbf{Esempio}\\
+Dato il problema di cauchy 
+\[\begin{cases}
+    y''+3y'+2y=u\\
+    y(0)=0\\
+    y'(0) =0
+  \end{cases}
+  \Rightarrow s^2Y(s)-sy(0)-y'(0)+3sY(s)-3y(0)+2Y(s) = U(s)
+\]\[\iff Y(s) = \frac{U(s)}{(s+1)(s+2)}+\frac{sy(0)+y'(0)+3y(0)}{(s+1)(s+2)}\]
+Esplicitando termine noto e condizioni iniziali otteniamo :\[Y(s) = \frac{1}{(s+1)(s+2)}\frac{40}{s^2+4}+\frac{s+3}{(s+1)(s+2)}\]
+trovo la risposta libera \[
+\begin{cases}
+Y_L(s) =\frac{s+3}{(s+1)(s+2)}= \frac{A}{s+1}+\frac{B}{s+2}\\
+A = Y_L(s)(s+1)\Big|_{s=-1} = 2\\
+B = Y_L(s)(s+2)\Big|_{s=-2}=-1
+\end{cases}
+\implies y_L(t) = 2e^{-t}-e^{-2t}
+\]
+\newpage
+Similmente per la risposta forzata : \[ \begin{cases}
+ Y_F(s) = \frac{1}{(s+1)(s+2)}\frac{40}{s^2+4}= \frac{A}{s+1}+\frac{B}{s+2}+\frac{C}{s+2i}+\frac{D}{s-2i}\\
+ A= Y_F(s)(s+1)\Big|_{s=-1} = 8\\
+ B= Y_F(s)(s+2)\Big|_{s=-2} = -5 \\
+ C= Y_F(s)(s+2i)\Big|_{s=-2i} = -\frac{3+i}{2}\\
+ D= Y_F(s)(s-2i)\Big|_{s=+2i} = -\frac{3-i}{2} 
+\end{cases} \implies y_F(t) = 8e^{-t}-5e^{-2t}-sin(2t)-3cos(2t)
+\]
+allora:\[y(t)=y_L(t)+y_F(t) = 2e^{-t}-e^{-2t}+8e^{-t}-5e^{-2t}-sin(2t)-2cos(2t)\]
+I primi due termini appartengono alla risposta libera , gli ultimi 4 a quella forzata, i primi 4 alla transitoria , gli ultimi due alla permanente .\\\\
+\includegraphics[width=0.9\textwidth]{Xnip2025-10-25_22-07-10.jpg}
+\subsubsection{considerazioni finali}
+Dalla teoria dei sistemi sappiamo che il regime permanente è definito solamente   quando le radici del polinomio caratteristico sono a parte reale negativa  \[Re\{\mathcal{\lambda}_i\}<0 \quad \forall i \in [1,...,n]\]
+Qualora sia verificata la precedente condizione allora potremmo dire : 
+\begin{enumerate}
+    \item \textbf{risposta transitoria} = soluzione dell'equazione omogenea associata
+    \item \textbf{risposta a regime permanente} = integrale particolare
+\end{enumerate}
+\newpage
+\subsection{Trasformazione di ODE in RSS}
+La teoria dei sistemi nasce sul concetto di rappresentazioni con lo spazio di stato (rss) , fin da subito è dunque stato necessario definire metodi per ottenere queste rss.\\Nel seguito affronteremo il problema del passaggio da modelli ode a rss , ossia qualcosa del tipo : \[\sum_{k=0}^na_k\frac{d^ky(t)}{dt^k}= \sum_{h=0}b_h \frac{d^hu(t)}{dt^h}\quad\rightarrow \begin{cases}
+\dot{x}=Ax+Bu \\
+y=Cx +Du
+\end{cases}\]
+\textbf{Def 1}: E' detto grado relativo di una edo la differenza tra il grado massimo di derivazione della funzione incognita meno il grado massimo di derivazione della funzione $u(t)$ assegnata . Ossia: \[grado\:\:relativo = n-m\]
+A seguire affrontiamo due casi particolari : \begin{itemize}
+    \item \textbf{caso con grado relativo n} , ossia nell'equazione differenziale non compaiono le derivate del termine noto u(t) ,es:\[a_ny^{(n)}+a_{n-1}y^{(n-1)}+.....+a_0y = b_0u(t)\]
+    \item \textbf{compaiono le derivate del termine noto u(t) } ossia : $a_ny^{(n)}+⋯+a_0y=b_mu^{(m)}+⋯+b_0u$
+\end{itemize}
+
+\subsubsection{Caso con grado relativo n}
+Siano $y(t) ,u(t) \in \mathbb{R}$  \textit{(Considerazioni estensibili in $\mathbb{R}^n$}, posto : \[\sum_{k=0}^na_k\frac{d^ky(t)}{dt^k}=u(t)\] Introduciamo la variabile di stato $x_1(t):=y(t)$, segue dunque che : \[\sum_{k=0}^na_k\frac{d^kx_1(t)}{dt^k}=u(t) \iff\sum_{k=1}^n a_k\frac{d^kx_1(t)}{dt^k} + a_0x_1=u(t) \iff\sum_{k=1}^n a_k \frac{d^{k-1}}{dt^{k-1}}\frac{dx_1(t)}{dt}+a_0x_1(t) = u(t)\]
+Posto ora: \[x_2=\frac{dx_1}{dt}\implies\sum_{k=1}^na_k\frac{d^{k-1}x_2}{dt^{k-1}}+a_0x_1=u(t)\]
+Reiterando la procedura otteniamo: 
+\[\sum_{k=1}^na_k\frac{d^{k-1}x_2}{dt^{k-1}}+a_0x_1=u(t)\iff\sum_{k=2}^na_k\frac{d^{k-2}}{dt^{k-2}}\frac{dx_2}{dt}+a_1x_2+a_0x_1=u(t)\]
+Scelto quindi: \[
+x_3 = \frac{dx_2}{dt}\implies\sum_{k=2}^na_k\frac{d^{k-2}x_3}{dt^{k-2}}+a_1x_2+a_0x_1=u(t)
+\]
+Alla h-esima iterazione:\[\sum_{k=h}^na_k\frac{d^{k-h}x_{h+1}}{dt^{k-h}}+\sum_{m=1}^ha_{m-1}x_m=u(t)\]
+Proseguendo ora fino a che \textbf{h=n-1} si ottiene : \[\sum_{k=n-1}^na_k\frac{d^{k-(n-1)}}{dt^{k-(n-1)}}\frac{dx_{n-1}}{dt}+\sum_{m=1}^{n-1}a_{m-1}x_m=u(t)\] Definenendo : \[x_n= \frac{dx_{n-1}}{dt}\implies \frac{dx_n}{dt}+\sum_{m=1}^na_{m-1}x_m=u(t)\]
+A questo punto dovremmo aver ottenuto la seguente rappresentazione:
+$
+\begin{align*}
+    \begin{matrix}
+        	extit{nodi} & \textit{variabili note} & \textit{variabili sconosciute} & \textit{nome del problema} \\
+        	extit{Nodi di carico} & P, \ Q & V, \ \delta & \textit{PQ BUS} \\
+        	extit{Nodi dei generatori} & P, \ V & Q, \ \delta & \textit{PV BUS} \\
+        	extit{Nodi di slack} & V, \ \delta & P, \ Q & \textit{SLACK BUS} \\
+    \end{matrix}
+\end{align*}
+\end{aligned}
+$
+\newpage
+A questo punto è evidente che abbiamo trovato una rappresentazione con lo stato , per cui la possiamo rappresentare in forma compatta come :
+\[A =
+\begin{bmatrix}
+0 & 1 & 0 & ... &...& 0 \\
+0 & 0 & 1 & ... & ...&0 \\
+... & ... & ... & ... & ...&... \\
+0 & 0 & 0 & ... & 1&0 \\
+0 & 0 & 0 & ... & 0 &1\\
+-a_0 & -a_1 & -a_2 & ... & -a_{n-2}&-a_{n-1}
+\end{bmatrix}\quad B=\begin{bmatrix}
+    0\\0\\...\\0\\0\\1 
+\end{bmatrix}\quad \]\[C=\begin{bmatrix}1&0&0&...&0&0
+    
+\end{bmatrix}\]
+In generale per ottenere una forma esplicita occorre imporre uno stato iniziale , l'idea è dunque quella di imporre le n componenti iniziali e le n condizioni del problema di cauchy. Tale manipolazione ci ha portato da una edo di ordine n ad n derivate di ordine 1.\\
+Si osservi infine che lo stato è nascosto dietro la derivata di uscita\\\\
+\textit{\textbf{Oss}: qualora $n<m$ si ha che il sistema è strettamente causale }
+\\\\
+\subsubsection{Caso con grado relativo generico}
+Valutiamo ora il caso in cui compaiano anche derivate del segnale noto u(t). \[\sum_{k=0}^na_k\frac{d^ky(t)}{dt^k}= \sum_{h=0}^mb_h\frac{d^hu(t)}{dt^h}\]
+\textit{Strategia:
+\begin{itemize}
+    \item applico la precedente procedura (passaggio da un eq. con n derivate a n equazioni con una derivata)
+    \item faccio un cambio di cordinate nello spazio di stato dipendente dall'operatore di derivazione.
+\end{itemize}}
+\textbf{Notazione}: $\bm{D}$ denotà l'operatore di derivazione.\\\\
+\textbf{Svolgimento}
+\begin{enumerate}
+    \item Partiamo da una considerazione preliminare , nel caso base del problema di passaggio da ode a rss eravamo arrivati ad ottenere un modello del tipo :\[
+    \begin{cases}
+        \dot{x} = Ax+Bu\\
+        y= Cx
+    \end{cases}
+    \]
+    Nel dover tener conto delle derivate del termine $u(t)$ al posto di scrivere $Bu(t)$ occorrerà fare una lieve modifca al modello ossia:
+    \[\begin{cases}
+        \begin{bmatrix}
+            \dot{\xi}_1\\
+            \dot{\xi}_2\\
+            ...\\
+            \dot{\xi}_{n-2}\\
+            \dot{\xi}_{n-1}\\
+            \dot{\xi}_n
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            0&1&0&...&...&0\\
+            0&0&1&...&...&0\\
+            ...&...&...&...&...&...\\
+            0&0&0&...&1&0\\
+            0&0&0&...&0&1\\
+            -a_0&-a_1&-a_2&...&-a_{n-2}&-a_{n-1}\\
+        \end{bmatrix}
+        \begin{bmatrix}
+            \xi_1\\
+            \xi_2\\
+            ...\\
+            \xi_{n-2}\\
+            \xi_{n-1}\\
+            \xi_n\\
+        \end{bmatrix}
+        +
+        \left(
+            \begin{bmatrix}
+                0\\
+                0\\
+                ...\\
+                0\\
+                0\\
+                b_0
+            \end{bmatrix}
+            +
+            \begin{bmatrix}
+                0\\
+                0\\
+                ...\\
+                0\\
+                0\\
+                b_1
+            \end{bmatrix}\bm{D}
+            +
+            ...
+            +
+            \begin{bmatrix}
+                0\\
+                0\\
+                ...\\
+                0\\
+                0\\
+                b_m
+            \end{bmatrix}
+            \bm{D}^m
+            \right)\\
+            y(t)= \begin{bmatrix}
+                1&0&0&...&0&0
+            \end{bmatrix}
+            \begin{bmatrix}
+                \xi_1\\
+                \xi_2 \\
+                ...\\
+                \xi_{n-2}\\
+                \xi_{n-1}\\
+                \xi_{n}
+            \end{bmatrix}
+        \mathbf{u}
+    \end{cases}\]
+    Dove sono state fatte le seguenti sostituzioni :
+    \begin{gather*}
+y(t) = \xi_1(t) \\
+\dot{\xi}_1(t)=\xi_2(t)\\
+\dot{\xi}_2(t)=\xi_3(t)\\
+...\\
+\dot{\xi}_{n-1}(t)=\xi_n(t)
+\end{gather*}
+Si avrà dunque ottenuto una rappresentazione del tipo : 
+\[\begin{cases}
+    \dot{\xi}=A\xi+B(\bm{D})u\\
+    y= C\xi 
+\end{cases}\]
+dove:
+\begin{gather*}
+    
+B(\bm{D)}=B_0+B_1\bm{D}+...+B_m\bm{D}^m\\
+B_i=\begin{bmatrix}
+    0&0&...&0&b_i
+\end{bmatrix}^T
+\end{gather*}
+\newpage
+\item \\
+Effettuando ora un cambio di coordinate ,tale per cui $x= \xi -k(\bm{D})$, occorre dunque determinare $k(\bm{D})$,si ha allora : 
+\[
+    x= \xi -k(\bm{D}) \iff \dot{x}=\dot{\xi}-\bm{D}k(\bm{D})u =A\xi+B(\bm{D})u-\bm{D}k(\bm{D})u =\]\[=A\xi+B(\bm{D})u-\bm{D}k(\bm{D})u=Ax+[B(\bm{D})+Ak(\bm{D})-\bm{D}k(\bm{D)}]u
+    \]
+    \[y=Cx+Ck(\bm{D)}u\]\\\\
+    \mathbf{Def} (\textbf{Matrice di ingresso} ) = $[B(\bm{D})+Ak(\bm{D})-\bm{D}k(\bm{D)}]$
+    \\\\Occorre dunque scegliere $k(\bm{D}) $ in modo che  i termini associati ad u(t) in $\dot{x}$ ossia $[B(\bm{D})+Ak(\bm{D})-\bm{D}k(\bm{D)}]$ ed in $y$ ossia $Ck(\bm{D})$ siano indipendenti dall'operatore di derivazione.
+    \\\\
+    A fini didattici ci limiteremo a studiare due casi particolari della edo introdotta a inzio paragrafo ossia:\\\\
+    \textbf{Caso 1 : m=1} \\($\implies$ che al secondo membro della edo compaiono solo $u \:\:\dot{u}$)\\
+    Precedentemente abbiamo definito $B(\bm{D)}=B_0+B_1\bm{D}+...+B_m\bm{D}^m$ essendo ora m=1 si ha:
+    \[B(\bm{D})=B_0+B_1\bm{D}\] mentre la matrice di ingresso assume forma : \[B(\bm{D})+Ak(\bm{D})-\bm{D}k(\bm{D)}\]posto ora $K(\bm{D})=B_1$ la matrice di uscita assume forma : \[B_0+B_1\bm{D}+AB_1-B_1D = B_0+AB_1\]
+    ottenendo così l'indipendeza rispetto all'operatore $\textbf{D}$.\\\\
+    \newpage
+    \textbf{Caso 2 : m = 2}
+    \[B(\bm{D}) = B_0+B_1\bm{D}+B_2\bm{D}^2\implies matrice \:\:ingresso = B_0+B_1\bm{D}+B_2\bm{D}^2+Ak(\bm{D})-\bm{D}k(\bm{D})\] scelto dunque $k(\bm{D})=B_2\bm{D}+k_0$ dove $k_0$ è un parametro da me liberamente scelto , dunque la matrice di ingresso assume forma :
+    \[B_0+B_1\bm{D}+B_2\bm{D}^2+AB_2\bm{D}+Ak_0-B_2\bm{D}^2-\bm{D}k_0= B_0+B_1D+AB_2D+Ak_0-Dk_0\]
+    Si osservi come ci siamo levati la derivata seconda , \\posto ora $k_0= B_1+AB_2$, la formulazione precedente assume forma : 
+    \[=B_0+B_1D+AB_2D+AB_1+A^2B_2-DB_1-AB_2D= B_0+AB_1+A^2B_2\] Rendendo così l'equazione indipendente da $\bm{D}$.\\\\
+    \textit{Oss: il legame diretto ingresso uscita soffre di questa nuova rappresentazione? }\\
+    Posto $K(D)=B_2D+B_1+AB_2$ allora: 
+    \[CK(D)=CB_2D+CB_1+CAB_2=CAB_2=\begin{cases}
+        0 \iff n>m=2\\
+        b_2 \iff n=m=2
+    \end{cases}\]
+    L'annullamento di $CB_2D$ e $CB_1$ è interamente dovuto al fatto che 
+    \[\begin{bmatrix}
+        1 & 0
+    \end{bmatrix}\begin{bmatrix}
+        0\\ b_1
+    \end{bmatrix}=0\]
+    \textbf{Caso 3 : m = 3}
+    \[B(D) = B_0+B_1D+B_2D^2+B_3D^3\]
+    segue dunque che la matrice di ingresso vale :
+    \[B_0+B_1D+B_2D^2+B_3D^3+Ak(D)-Dk(D)\] Scelta dunque $k(D)=B_3D^2+k_1(D) $ allora la matrice di ingresso assume forma :
+    \[B_0+B_1D+B_2D^2+B_3D^3+A(B_3D^2+k_1(D))-D(B_3D^2+k_1(D)) = \]
+    \[= B_0+B_1D+B_2D^2+AB_3D^2+Ak_1(D)-Dk_1(D)\]
+    E già ci siamo tolti l'operatore di derivata terza, scegliendo ora $k_1(D) = B_2D+AB_3D+k_0$ osserviamo che : \newpage
+    
+    \[B_0+B_1D+B_2D^2+AB_3D^2+Ak_1(D)-Dk_1(D)=\]\[=B_0+B_1D+B_2D^2+AB_3D^2+A(B_2D+AB_3D+k_0) -D(B_2D+AB_3D+k_0)=\]\[=B_0+B_1D+AB_2D+A^2B_3D+Ak_0-Dk_0\]
+    E ci siamo tolti anche l'operatore di derivata seconda ,ora scegliendo $k_0=B_1+AB_2+A^2B_3$ osserviamo che la matrice di ingresso in :
+    \[B_0+B_1D+AB_2D+A^2B_3D+Ak_0-Dk_0=\]\[=B_0+B_1D+AB_2D+A^2B_3D+A(B_1+AB_2+A^2B_3)-D(B_1+AB_2+A^2B_3)=\]
+    \[=B_0+AB_1+A^2B_2+A^3B_3\]
+    rendendola dunque indipendente da D.\\
+    Scegliendo ora $k(D)=B_3D^2+(B_2+AB_3)D+B_1+AB_2+A^2B_3$otteniamo:
+    \[Ck(D)=CA^2B_3=\begin{cases}
+        0 \iff n>m=2\\
+        b_3 \iff n=m=3
+    \end{cases}\]
+    Ottenendo così una rappresentazione nella forma :
+    \[\begin{cases}
+        \dot{x}=Ax+(B_0+AB_1+A^2B_2+A^3B_3)u\\
+        y= Cx+CA^2B_3u
+    \end{cases}\]
+    \\\\
+    \textbf{Caso m generico}\\\\
+    Nel caso in cui m sia generico avremo : 
+    \[B(D)=B_0+B_1D+B_2D^2+....+B_mD^m\]
+    Scegliendo poi $k(D)=B_mD^{m-1}+(B_{m-1}+AB_m)D^{m-2}+...+(B_1+AB_2+...+A^{m-1}B_m)D^0$ otterremo la seguente rappresentazione :
+    \[\begin{cases}
+        \dot{x}=Ax+(B_0+AB_1+...+A^mB_m)u\\
+        y=Cx+CA^{m-1}B_mu
+    \end{cases}\]
+    Dove : \[CA^{m-1}B_m=\begin{cases}
+       0\iff n>m\\
+       b_m \iff n=m
+    \end{cases}
+    \]
+    
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+\newpage
+\clearpage
+% Appunti tib settimana 6-12/10/2025
+\section{Sistemi meccanici a costanti concetrate}
+\subsection{Oscillatore armonico}
+L'oscillatore armonico è il più semplice sistema meccanico oscillante. Il carattere di tale ogetto ben rapprensenta componenti dei modi naturali di sistemi fisici , spaziando dalla meccanica all'elettronica , passando per l'idraulica e giungendo infine a teorie quantistiche sulla materia.
+
+\subsubsection{Oscillatore armonico semplice}
+Il problema parte nel considerare un  corpo puntiforme di massa m , vincolato ad un solo grado di libertà , ossia la traslazione longitudinale. Tale corpo è connesso mediante una molla di costante elastica $k$ ad un altro corpo fisso avente massa infinita. Il carattere fenomenologico del sistema può essere in prima istanza modellato rispetto alla forza di richiamo : 
+\[F=-k(x)x \simeq -kx\]
+Si tenga presente che  qui $k(x)$ è rappresentato come funzione , ma per $\Delta x$ piccole $k(x)\simeq k \in \mathbb{R}$\\
+\begin{wrapfigure}{r}{0.35\textwidth}
+    
+    \centering
+    \includegraphics[width=0.33\textwidth]{oscillatoresemplice.png}
+    \vspace{-10pt} % opzionale
+\end{wrapfigure}
+Cominciamo con il definire un sistema di riferimento , nella fattispecie , avendo soltanto un grado di libertà la posizione del corpo sarà descrivibile da una sola coordinata (x) lungo la direzione di moto . Poniamo dunque l'origine del sistema di riferimento in corrispondenza della poszione di riposo della molla (dove la forza di richiamo è nulla) segue dunque  che dalla prima equazione di newton e dalla legge di hooke possiamo dire : 
+\[\begin{cases}
+    F = m\ddot{x}\\
+    F = -kx
+\end{cases}\iff m\ddot{x}= -kx \iff m\ddot{x}+kx=0\]
+\[\iff \ddot{x}+\frac{k}{m}x=\frac{0}{m}\iff \boxed{\ddot{x}+\omega_0^2x=0 \:\:\land\:\: \omega_0^2:=\frac{k}{m} }\]
+Si osservi che $\frac{k}{m}$ ha le dimensioni di una frequenza al quadrato , difatti:
+\[\left[\frac{k}{m}\right]=\left[\frac{FL^{-1}}{M}\right]=\left[\frac{MLT^{-2}L^{-1}}{M}\right]=\left[T^{-2}\right]\]
+Si osservi che questa è una edo lineare omogenea del secondo ordine , come la svolgiamo ?\newpage  Partiamo dall'equazione omogenea associata (la quale è una traduzione diretta della nostra equazione in quanto non ci sono ulteriori forze agenti sul sistema ) :
+\[\lambda^2+\omega_0^2=0\iff \lambda = \pm \omega_0i\] Dunque la soluzione assume forma del tipo : 
+\[x(t)= C_1e^{i\omega_0t}+C_2e^{-i\omega_0t}\]
+Poste quindi 
+\[C_1= \frac{A-iB}{2} \:\:\land\::C_2=\frac{A+iB}{2} \implies x(t)=\left[\frac{A}{2}+\frac{B}{2i}\right]e^{i\omega_0t}+\left[\frac{A}{2}-\frac{B}{2i}\right]e^{-i\omega_0t}= \]
+\[=\frac{A}{2}\left[e^{i\omega_0t}+e^{-i\omega_0t}\right]+\frac{B}{2i}\left[e^{i\omega_0t}-e^{-i\omega_0t}\right]= Acos\omega_0t+Bsin\omega_0t \]
+Posto quindi \[\begin{cases}
+    A= asin(\phi)\\
+    B=acos(\phi)\\
+    x(t) = Acos(\omega_0t)+Bsin(\omega_0t)
+\end{cases}\implies x(t) = a \cdot sin(\omega_0t+\phi)\]
+La soluzione alla edo dell'oscillatore armonico semplice assume dunque tre possibili forme: \[
+\begin{cases}
+    x(t) = c_1e^{i\omega_0t}+c_2e^{-i\omega_0t}\\
+    x(t) = Acos(\omega_0t)+Bsin(\omega_0t)\\
+    x(t) = asin(\omega_0t+\phi)
+\end{cases}
+\]
+E' interessante guardare la terza soluzione in quanto esprime bene la periodicità dell'oscillazione. \\
+Inoltre possiamo ricavare la formula del periodio grazie a questa semplice manipolazione :
+\[x(t+T)= asin(\omega_ot+\omega_0T+\phi) =x(t) \iff \boxed{T = \frac{2\pi}{\omega_0}}\]
+Dove $\omega_0$ è detta pulsazione naturale di oscillazione e rappresenta la frequenza naturale di oscillazione a meno di un fattore $2\pi$.
+\newpage
+\textbf{Formalizzazione problema di cauchy oscillatore semplice}
+\\\\
+Definiamo il problema di cauchy della edo prima trovata rispetto alle seguenti condizioni iniziali : 
+\[\begin{cases}
+    \ddot{x}+\omega_0^2x=0\\
+    x(0)=x_0\\
+    \dot{x}(0)=\dot{x}_0
+\end{cases}\]
+Segue che : 
+\[
+\begin{cases}
+    x(t) = asin(\omega_0t+\phi)\\
+    \dot{x}(t)= a\omega_0cos(\omega_0t+\phi)
+\end{cases}\implies
+\begin{cases}
+    x(0) = asin\phi = x_0\\
+    \dot{x}(0) = a\omega_0cos\phi = \dot{x}_0
+\end{cases}\implies 
+\]Manipolando le due equazioni otteniamo : 
+\[\frac{\dot{x}_0}{\omega_0}=acos\phi\quad x_0=asin\phi \implies \frac{asin(\phi)}{acos(\phi)}= \frac{x_0}{\frac{\dot{x}_0}{\omega_0}}= \frac{x_0\omega_0}{\dot{x}_0}= \frac{sin(\phi)}{cos(\phi)}= tan(\phi) \iff  \]
+\[tan(\phi) =\frac{x_0\omega_0}{\dot{x_0}} \iff \boxed{\phi = \arctan\left(\frac{x_0\omega_0}{\dot{x}_0}\right)}\]
+Con una manipolazione simile andiamo ad elevare al quadrato ed a sommare ambo i membri delle due equazioni di partenza , ottenendo così : 
+\[a^2sin^2\phi +a^2cos^2\phi =a^2(sin^2\phi +cos^2\phi ) = a^2 = x_0^2+\left(\frac{\dot{x}_0}{\omega_0}\right)^2 \iff \]
+\[\iff \boxed{a = \sqrt{x_0^2+\left(\frac{\dot{x}_0}{\omega_0}\right)^2}}\]
+\newpage
+\subsubsection{Oscillatore armonico smorzato }
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{oscillatoresmorzato.png}
+    
+\end{figure}
+
+Qui rispetto all'oscillatore semplice introduciamo una forza di attrito resistente , la quale rispetto alla equazione del moto armonico che abbiamo prima trovato si mette nella seguente relazione : 
+\[\begin{cases}
+    m\ddot{x}=F \\
+    F = -kx \:\: (hooke)\\
+    F_{att}= -A\dot{x}
+\end{cases}\iff m\ddot{x}= -kx -A\dot{x}\iff m\ddot{x}+A\dot{x}+kx = 0\] Introducendo i seguenti parametri : 
+\[\alpha = \frac{A}{2m}\quad \omega_0^2 = \frac{k}{m}\]
+Otteniamo l'\textbf{equazione dell'oscillatore armonico smorzato}:
+\[\boxed{\ddot{x}+2\alpha\dot{x}+\omega_0^2x=0
+}\]
+Volendo studiare l'evoluzione libera di questo sistema meccanico possiamo andarci a studiare l'equazione caratteristica associata :
+\[\lambda^2+2\alpha\lambda+\omega_0^2=0 \implies \lambda = -\alpha\pm i \sqrt{\omega_0^2-\alpha^2}= -\alpha \pm i \omega_d \:\: \land \: \: \omega_d = \sqrt{w_0^2+\alpha^2} \]
+Osserviamo inoltre che si possono distinguere 3 casi : 
+\begin{itemize}
+    \item $\alpha < \omega_0$ regime oscillatorio / pseudoperiodico
+    \item $\alpha = \omega_0$ smorzamento critico 
+    \item $\alpha > \omega_0$ sovrasmorzamento 
+\end{itemize}
+\\ Notiamo che nel caso pseudoperiodico la soluzione all'equazione è :
+\[x(t) = c_1 e^{(-\alpha +i\omega_d)t}+c_2e^{(-\alpha -i\omega_d)t}\] che in forma equivalente è : 
+\[x(t) = e^{-\alpha t }(A\cos\omega_dt + B\sin \omega_d t)\]
+\newpage
+Espongo  ora il modello di cauchy accompagnato da successive considerazioni 
+\[
+\begin{cases}
+    x(t) = e^{-\alpha t}(A\cos\omega_d t+ B\sin \omega_dt)\\
+    \dot{x}(t) = -\alpha x(t) +e^{-\alpha t}(-A\omega_d\sin\omega_dt+B\omega_d\cos\omega_dt)\\
+    x(0) = A = x_0\\
+    \dot{x}(0) = -\alpha A+ B\omega_d= \dot{x}_0
+\end{cases}\implies
+\begin{cases}
+    A = x_0\\
+    B = \frac{\dot{x}_0+\alpha x_0}{\omega_d}
+\end{cases}
+\]
+\[\iff \begin{cases}
+    A = x_0\\
+    B = \frac{\dot{x}_0+\alpha x_0}{\omega_d}\\
+    x(t) = e^{-\alpha t}(A\cos\omega_d t+ B\sin \omega_dt)
+    
+\end{cases}
+\iff 
+\boxed{x(t) = e^{-\alpha t}\left(x_0\cos\omega_dt+\frac{\dot{x}_0+\alpha x_0}{\omega_d}\sin\omega_dt\right)}\]
+Ci siamo trovati l'equazione dell'evoluzione libera dell'oscillatore armonico smorzato.
+\\\\
+\textit{Qual'è il senso di questa equazione nel piano complesso?}
+\\\\
+Posto $\lambda  = -\alpha \pm i\sqrt{\omega_0^2-\alpha^2}$ osserviamo che :
+\[\alpha \rightarrow0 \implies Re(\lambda)\rightarrow0 \:\: \land \:\: Im(\lambda)\rightarrow\omega_0i\] Inoltre  risulta che $|\lambda|= \omega_0$ ossia , al variare dell'attrito le 2 radici si muovono su delle semicirconferenze. Inoltre : 
+\[\alpha >> \implies Im(\lambda) \rightarrow0 \:\:\land  \:\:Re(\lambda ) = -\alpha \] In  questa situazione le radici tendono a sovrapporsi in $-\alpha $ e ciò induce lo smorzamento critico. 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{smorzamento.png}
+\end{figure}
+\newpage
+\textit{Cosa possiamo trarre da questa rappresentazione ?}\\\\
+Si possono preliminarmente fare 2 importanti considerazioni :
+\begin{enumerate}
+    \item $\alpha$ E' la velocità di smorzamento/ decadimento dell'oscillazione libera ( a meno di un segno ) 
+    \item $\omega_d$ E' la pulsazione di oscillazione ( Quanto effettivamente oscilla?)
+    \item $\tau = \frac{1}{\alpha}$ E' la costante di tempo con cui decade l'oscillazione 
+\end{enumerate}
+E' bene osservare che , $\omega_d$ tende a differire maggiormente da da $\omega_0$ a seconda di quanto  è smorzato il sistema :\\
+Maggiore è lo smorzamento ,maggiore la differenza tra le due grandezze, maggiore la distanza dall'asse immaginario.\\
+Per comodità di calcolo si può introdurre una grandezza per quantificare meglio questa caratteristica, il \textbf{Coefficiente di smorzamento }:
+\[\boxed{\xi = \sin \psi = \frac{\alpha}{\omega_0}}\]
+Si osservi che :
+\begin{itemize}
+    \item $\xi =1 \implies$ Smorzamento critico
+    \item $\xi=0 \implies$ Oscillatore armonico semplice
+\end{itemize}
+\vspace{1cm}
+\textbf{Fattore di merito dell'Oscillatore}\\\\
+Qui lo indichiamo in modo puramente nozionistico ( al solo fine di completezza dei contenuti)
+\[Q = \frac{|F_{Elastica\:max}|}{|F_{Attrito\:max}|}=\frac{kx_0}{A\dot{x}_0}=\frac{kx_0}{2\alpha m\dot{x}_0}= \frac{\omega_0^2x_0}{2\alpha\omega_0x_0}=\frac{\omega_0}{2\alpha}\]
+
+Si osservi inoltre che il fattore di merito è pari al rapporto tra l'energia immagazzinata e quella dissipata in un periodo , a meno di un fattore di merito , diffatti :
+\[Q = 2\pi\frac{E_{imm}}{E_{diss}}\]
+\newpage
+\subsection{Energia dell'Oscillatore}
+Vale : \[E= T+V= \frac{1}{2}m\dot{x}^2+\frac{1}{2}kx^2\]
+\textbf{Caso 1:}No attrito\\
+Il moto avviene su una curva di energia potenziale 
+\[V(x) = \frac{1}{2}kx^2\]
+Essendo il sistema conservativo , la somma tra energia potenziale e cinetica rimane invariata in qualunque istante di tempo.\\
+Segue dunque che :
+\[\frac{dE}{dt}= \frac{d}{dt}\left(\frac{1}{2}m\dot{x}^2+\frac{1}{2}kx^2\right)= m\dot{x}\ddot{x}+kx\dot{x}=\dot{x}(m\ddot{x}+kx)=0\]
+Ogni quarto di periodo l'energia potenziale si trasforma completamente in cinetica o viceversa.\\\\
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{energia_oscillatore.png}
+\end{figure}\\\\
+\textbf{Caso 2:}Oscillatore smorzato\\
+Il sistema non è conservativo e dissipa energi a causa dell'attrito
+\[\frac{dE}{dt}= \frac{d}{dt}\left(\frac{1}{2}m\dot{x}^2+\frac{1}{2}kx^2\right)= m\dot{x}\ddot{x}+kx\dot{x}=\dot{x}(m\ddot{x}+kx)=-A\dot{x}^2\]
+\textit{Osservazioni:}
+\begin{itemize}
+    \item la velocità di dissipazione dell'energia è proporzionale al quadrato delle velocità
+    \item l'energia comunque si converte continuamente da potenziale a cinetica , ma nel mentre tende complessivamente a diminuire 
+\end{itemize}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{smorzamento2.png}
+\end{figure}
+\newpage
+\subsubsection{Oscillatore Smorzato forzato}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{oscillatoresmorzatoforzato.png}
+\end{figure}
+Qui rispetto ai modelli precedenti compare sia una componente forzante ( che modellizziamo come una funzione reale non specificata) e una componente data dall'attrito sul sistema. La formula infatti assume forma 
+\[m\ddot{x}(t) +A\dot{x}(t)+kx(t)=f(t)\]
+\[\iff \ddot{x}(t) +\frac{2\alpha m}{m}\dot{x}(t)+\frac{k}{m}x(t)=\frac{f(t)}{m}\iff\]La forma equivalente rispetto alla pulsazione naturale ed al coefficiente di attrito $\alpha$ è : 
+\[\iff \boxed{\ddot{x}+2\alpha\dot{x}+\omega_0^2x=\frac{f}{m}}\]
+Volendo ora studiare il comportamento in frequenza del sistema, è necessario calcolare l'integrale particolare della edo caratterizzante il sistema rispetto ad ingressi armonici. Scegliendo dunque un forzamento armonico :
+\[\tilde{f}(t) = f_0e^{i\omega t}\implies \tilde{x}(t) = \tilde{A}e^{i\omega t}\]
+Tale soluzione è ammissibile grazie alla linearità del modello . Inoltre:
+\[\begin{cases}
+    \ddot{x}+2\alpha \dot{x}+\omega_0^2x = \frac{f}{m}\\
+    \tilde{x}(t) =\tilde{A}e^{i\omega t}
+\end{cases}\iff \ddot{\tilde{x}}= -\omega^2\tilde{A}e^{i\omega t}\land\:\: -\omega^2\tilde{A}e^{i\omega t}+2\alpha i\omega \tilde{A}e^{i\omega t}+\omega_0^2\tilde{A}e^{i\omega t}= \frac{f_0}{m}e^{i\omega t} \]
+\[\iff -\omega^2\tilde{A}+2\alpha i \omega\tilde{A}+\omega_0^2 \tilde{A}= \frac{f_0}{m}\]
+\newpage
+\[\tilde{A}(\omega_0^2-\omega^2+2\alpha\omega i)= \frac{f_0}{m}\iff\tilde{A}=\frac{\frac{f_0}{m}}{(\omega_0^2-w^2)+i2\alpha \omega}\implies \tilde{x}(t) =\frac{\frac{f_0}{m}}{(\omega_0^2-w^2)+i2\alpha \omega}e^{i\omega t} \]
+Si osservi che $\frac{\tilde{A}}{f_0}$ altro non p che la risposta in frequenza del sistema , infatti portando la edo del sistema in laplace e calcolando la funzione di trasferimento poer $s = i\omega$ osserviamo che :
+\[\ddot{x}(t)+2\alpha \dot{x}(t)+\omega_0^2x(t) = \frac{f_0}{m}\implies s^2X(s)+2\alpha s X(s)+\omega_0^2X(s)=\frac{F(s)}{m}\iff\]\[ W(s)=\frac{X(s)}{F(s)}=\frac{\frac{1}{m}}{s^2+2\alpha s +\omega_0^2}= \frac{\frac{1}{m}}{1+\frac{2\xi s}{\omega_0}+\frac{s^2}{\omega_0^2}}\]
+Posto ora $s = i\omega$:
+\[\implies W(i\omega) =\frac{\frac{1}{m}}{(\omega_0^2-\omega^2)+i2\alpha \omega} \]
+L'interpretazione fisica della risposta in frequenza è l'essere il coefficiente di proporzionalità tra ingresso e uscita in corrispondenza a un ingresso armonico .\\\\
+Il comportamento del sistema in regime oscillatorio è quello di un filtro passabasso del secondo ordine , a poli complessi e coniugati inoltre valgono le seguenti affermazioni :
+\[|A|=\frac{\frac{f_0}{m}}{\sqrt{(w_o^2-\omega^2)^2+4\alpha^2\omega^2}}\] inoltre : 
+\[\omega << \omega_0 \implies |\tilde{A}|\simeq\frac{f_0}{m\omega_0^2}=\frac{f_0}{k}=x_s\quad comportamento \:statico\]
+\[\omega= \omega_0 \implies |\tilde{A}|= \frac{f_0}{m2\alpha \omega_0}=\frac{f_0\omega_0}{m2\alpha \omega_0^2}=\frac{f_0}{k}\frac{\omega_0}{2\alpha}=x_sQ \quad Il fattore \: di\: merito \:funge \:da\:risonatore\]
+\[\omega >>\omega_0\implies |\tilde{A}|\simeq0 \quad Predominano \: gli \: effetti \: inerziali\]
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bode_modulo_smorzato_forzato.png}
+\end{figure}
+\newpage
+\textbf{La fase in Bode invece :}risulta che 
+\[\angle\tilde{A}= -\angle(\omega_0^2-\omega^2)+\angle(i2\alpha \omega)= -\arctan\left(\frac{2\alpha \omega}{\omega_0^2-\omega^2} \right)\]
+si ha che :
+\[\omega << \omega_0 \implies\angle \tilde{A} \simeq=0\]
+Ossia forzamento e spostamento sono in fase 
+\[\omega=\omega_0 \implies \angle \tilde{A}=- \frac{\pi}{2}\]
+Qui invece forzamento e spostamento sono in quadratura 
+\[\omega >> \omega_0 \implies \angle \tilde{A}\simeq -\pi \]
+Qui siamo nel regime della massa dove predominano gli effetti inerziali 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bode_fase_smorzatoforzato.png}
+\end{figure}
+\subsubsection{Potenza trasferita all'Oscillatore}
+Vogliamo ora trovare l'energia per unità di tempo ceduta dalla forzante all'oscillatore. Qui nuovamente conviene riportare i calcoli nel dominio del tempo. Dunque antitrasformiamo la soluzione , la forzante e i valori di alcuni parametri. 
+\[x(t) = a\cos(\omega t + \phi)\quad a = |\tilde{A}|\quad \phi = \angle \tilde{A}\]
+\[f(t) = f_0 \cos(\omega t) \]
+Dalla definizioe di lavoro e potenza segue che : 
+\[dL = fdx\implies P = \frac{dL}{dt}= \frac{fdx}{dt}= f\dot{x}\]
+Sapendo che $ \dot{x}(t) = -a\omega \sin (\omega t+\phi)$ segue dunque che : 
+\[P = -a \omega f_0\cos(\omega t) \sin(\omega t + \phi)\]
+Definitasi una legge istantanea sulla potenza , si osserva come essendo le funzioni periodiche sfasate, il prodotto dei loro contributi non è sempre nullo , per cui , noto il carattere delle funzioni goniometriche , si arriva a dedurre che la potenza istantanea può assumere valori negativi sia valori positivi .Segue dunque che vi saranno istanti in cui la forzante cede energia al sistema massa molla smorzatore , ed altri dove invece la riceve .\\\\
+Vista l'apparente aleatorità di tale legge è utile identificare una "\textit{potenza media lungo un periodo T }" dunque : 
+\[<P>= -\frac{1}{T}\int_0^Ta \omega f_0\cos(\omega t) \sin(\omega t + \phi)dt = -\frac{a\omega f_0}{T}\int_0^Ta\left[ \cos(\omega t)\sin(\omega t)\cos(\phi)+\cos^2(\omega t)\sin(\phi)\right]dt \iff \]
+\[<P> = -\frac{a\omega f_0}{T}\int_0^T \left[ \frac{1}{2}+\frac{1}{2}\cos(2\omega t)\right]dt \sin(\phi) \iff\]
+\[\boxed{<P> = -\frac{a\omega f_0}{2}\sin(\phi)}\]
+Questa grandezza è sempre positiva , in quanto la fase assume valori solo in $(-\pi, 0)$. Dove il massimo di potenza trasferita è in $-\frac{\pi}{2}$ ovvero in condizione di risonanza.\\\\
+\textbf{RSS oscillatore armonico smorzato forzato}\\\\
+Definendo $y = x$ l'equazione del sistema assume la seguente forma :
+\[\ddot{y}+2\alpha\dot{y}+\omega_0^2y= \frac{f}{m}\]
+Definendo ora $u(t) = \frac{f(t)}{m}$ e $ y = x_1$ proponendo dunque  una prima variabile di stato , segie che : 
+\[\ddot{x}_1+2\alpha\dot{x}_1+\omega_0^2x_1= u\]
+Definendo ora una seconda variabile di stato $x_2 = \dot{x}_1$ segue che :
+\[\dot{x}_2+2\alpha x_2+\omega_0^2x_1 = u\]Adesso abbiamo ottenuto la seguente RSS:
+\[\begin{cases}
+    \dot{x}_1
+= x_2 \\
+\dot{x}_2= - \omega_0^2x_1-2\alpha x_2+u\\
+y= x_1\\
+u = \frac{f_0}{m}\end{cases}\implies\begin{cases}
+    \dot{x}= Ax+ Bu\\
+    y = Cx+Du
+\end{cases} \iff\]
+\[A = \begin{pmatrix}
+    0 &1\\
+    -\omega_0^2& -2\alpha
+\end{pmatrix}\quad B = \begin{pmatrix}
+    0\\1
+\end{pmatrix}\quad C= \begin{pmatrix}
+    1 &0
+\end{pmatrix}\]
+\newpage
+\subsection{Pendolo }
+\subsection{Pendolo Semplice}
+E' il più semplice sistema oscillante di moto rotazionale , è interessante osservare come la presenza di seni e coseni nelle equazioni costituenti porterà alla formulazione di un modello non lineare. \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{pendolo.png}   
+\end{figure}
+Assumendo ora che il filo sia inestensibile e che la massa di questo sia trascurabile . 
+Si sà che il pendolo si muove grazie alla forza peso e alla tensione lungo il filo ,lungo una traiettoria pari ad una circonferenza di raggio l . Segue che 
+\[m\vec{a}= \vec{T}+m\vec{g}\]
+Al fine di semplificare il modello diciamo che : essendo questo modello meccanico un fenomeno nelle 2 dimensioni , fissiamo un sistema di riferimento bidimensionale solidale alla massa sospesa del pedolo, in particolare scegliamo una coppia di vettori uno lungo la direzione della tensione $\vec{r}$ , l'altro $\vec{n}$ perpendicolare a $\vec{r}$ , si osservi inoltre come $\vec{n}$ sia sempre tangenziale alla traiettoria del pendolo.
+Notiamo ora che la componente della forza peso direzionata lungo $\vec{r}$ si annulli rispetto alla tensione (in quanto la fune è collegata ad un vincolo olonomo fisso) . \\\\
+Dovendo studiare il sistema solo rispetto vettore normale abbiamo fattualmente eseguito una manipolazione che ci ha portati a studiare un fenomeno 2d con un modello monodimensionale : ) .
+\newpage
+Introduciamo preliminarmente questa approssimazione (valida per grandezze infinitesime ) al fine di semplificarci i calcoli .
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{approx_angoli.jpeg}   
+\end{figure}
+\[dn = ld\theta\] Dove $dn$ è un arco di circonferenza infinitesimo , $d\theta$ un angolo infinitesimo e l come la lunghezza del cavo del pendolo.\\\\
+A questo punto si può così esprimere l'accellerazione rispetto alla direzione normale : 
+\[dn = l d\theta \implies d^2n = ld^2\theta \implies \ddot{n}= l\ddot{\theta}\]
+Sappiamo che la forza lungo la direzione normale vale : 
+\[F_n=-mg\sin \theta \implies m\ddot{n}=F_n\implies ml\ddot{\theta}= -mg\sin \theta \implies ml\ddot{\theta} +mg\sin \theta =0\]
+Semplificando m e dividendo ogni membro per l otteniamo : 
+\[\ddot{\theta}+\frac{g}{l}\sin\theta=0\]Si osservi come :
+\[\left[\frac{g}{l} \right]= \left[ \frac{LT^{-2}}{L}\right] = \left[ T^{-2}\right]\]
+Intuisco che sia una frequenza al quadrato cui $\omega_0^2= \frac{g}{l}$ segue dunque che :
+\[\ddot{\theta}+\omega_0^2\sin \theta=0\]
+Secondo l'ipotesi delle piccole oscillazioni ( $\theta <<1\implies \sin \theta \simeq \theta $
+si ottiene l'equazione del pendolo semplice per piccole oscillazioni intorno alla configurazione di riposo : 
+\[\boxed{\ddot{\theta}+\omega_0^2\theta=0}\]
+Essendo questa la edo dell'oscillatore armonico è nota la soluzione , in particolare quella dell'evoluzione libera : 
+\[\theta(t) = a\sin ( \omega_0t+\phi)\]
+invece per quanto tange il periodo : 
+\[T = \frac{2\pi}{\omega_0}=2\pi\sqrt{\frac{l}{g}}\] Si noti come il periodo non dipende dall'ampiezza delle oscillazioni . Tale caratteristica è detta "isincronia delle oscillazioni".
+\newpage
+\subsubsection{Pendolo Inverso}
+Il pendolo inverso altro non è che lo studio del pendolo intorno al suo punto di equilibrio instabile $\theta = \pi$ allora si ha :
+\[\theta \sim \pi \implies \sin \theta \simeq \sin \pi +(-1)(\theta -\pi ) = \pi - \theta\] Segue allora che 
+\[\begin{cases}
+    ml \ddot{\theta}+mg\sin\theta = 0 \:\: ( eq \:\: pendolo)\\
+    \sin\theta \simeq \pi - \theta 
+\end{cases}\iff ml \ddot{\theta }+mg(\pi - \theta ) =0\implies \boxed{ml \ddot{\phi}-mg\phi=0 }\] Dove  $\phi = \pi - \theta $
+La variante forzata, nella quale compare una coppia $\tau $ è :
+\[ml \ddot{\phi}-mg\phi=\tau\]
+\newpage
+% Appunti set settimana 13-19/10/2025
+\subsection{Oscillatori accoppiati}
+si consideri 2 corpi, con la stessa massa $m$, legati fra loro da una molla $h$
+ed ognuno di loro legato a pareti attraverso le molle $k$.
+Ogni molla è accompagnata da uno smorzatore $A$.
+
+Supponendo di poter trattare le forze come forze centrali, di poter approssimare i due corpi come masse puntiformi (che equivale a trattare il loro moto come il moto del centro di massa).
+Possiamo quindi descrivere le equazioni di moto delle due masse come:
+
+\begin{align*}
+    m\ddot{x_1} &= -kx_1 - h(x_1 - x_2) - A\dot{x_1}-A(\dot{x_1} - \dot{x_2}) \\
+    m\ddot{x_2} &= -kx_2 - h(x_2 - x_1) - A\dot{x_2}-A(\dot{x_2} - \dot{x_1}) \\
+\end{align*}
+
+\subsubsection{Osservazione}
+Questa notazione è matematicamente corretta, ma non tiene conto della dimensione fisica delle molle. Questo significa che, per come è scritto, le due masse e le molle potrebbero sovrapporsi.
+Per evitare questo, basta considerare una distanza $l$, nella posizione delle masse.
+
+Al fine di evidenziare i comportamenti significativi del sistema, trascuriamo i termini di attrivo. Li valuteremo in seguito.
+\\ 
+Otteniamo dunque:
+\begin{align*}
+    m\ddot{x_1} &= -kx_1 - h(x_1 - x_2)\\
+    m\ddot{x_2} &= -kx_2 - h(x_2 - x_1)\\
+\end{align*}
+
+Come per l'oscillatore armonico semplice, la sua evoluzione libera è una funzione armonica. 
+La possiamo quindi rappresentare nel piano complesso come:
+\begin{align*}
+    \tilde{x}_1 = \tilde{A}_1 \ e^{i \omega t} \\
+    \tilde{x}_2 = \tilde{A}_2 \ e^{i \omega t} \\
+\end{align*}
+
+Le voglio sostituire nel mio sistema precedente, quindi calcolo:
+
+\begin{align*}
+    \tilde{x}_1 &= \tilde{A}_1 \ e^{i \omega t} \\
+    \dot{\tilde{x}_1} &= \tilde{A}_1 i \omega \ e^{i \omega t} \\
+    \ddot{\tilde{x}_1} &= - \tilde{A}_1  \omega^2 \ e^{i \omega t} \\
+    \tilde{x}_2 &= \tilde{A}_2 \ e^{i \omega t} \\
+    \dot{\tilde{x}_2} &= \tilde{A}_2 i \omega \ e^{i \omega t} \\
+    \ddot{\tilde{x}_2} &= - \tilde{A}_2  \omega^2 \ e^{i \omega t} \\
+\end{align*}
+
+Ora posso andare a sostituire:
+
+\begin{equation}
+    \begin{cases}
+        -m\omega ^2 \tilde{A}_1 = -k \tilde{A}_1 - h( \tilde{A}_1 - \tilde{A}_2 ) \\
+        -m\omega ^2 \tilde{A}_2 = -k \tilde{A}_2 - h( \tilde{A}_2 - \tilde{A}_1 ) \\
+    \end{cases}
+    \Rightarrow
+    \begin{cases}
+        (\omega^2 - \frac{k+h}{m})\tilde{A}_1 + \frac{h}{m}\tilde{A}_2 = 0 \\
+        \frac{h}{m}\tilde{A}_1 + (\omega^2 - \frac{k+h}{m})\tilde{A}_2 = 0 \\
+    \end{cases}
+    \Rightarrow
+    \begin{cases}
+        (\omega^2 - \omega_A^2 + \omega_B^2\tilde{A}_2 = 0 \\
+        \omega_B^2\tilde{A}_1 + (\omega^2 - \omega_A^2)\tilde{A}_2 = 0 \\
+    \end{cases}
+\end{equation}
+
+dove:
+
+\begin{align*}
+    \omega_A^2 &= \frac{k+h}{m} \\
+    \omega_B^2 &= \frac{h}{m} \\
+\end{align*}
+
+Allora il sistema ammette soluzione non banale, solo se la matrice di stato è nullo, ovvero se:
+\\
+
+$
+\begin{vmatrix}
+    \omega - \omega_A^2 & \omega_B^2 \\
+    \omega_B^2 & \omega - \omega_A^2 \\
+\end{vmatrix} = 0
+\Rightarrow
+\omega^4 - 2\omega_A^2\omega^2 + \omega_A^4 - \omega_B^4 = 0
+$
+
+Posto $\omega^2 = \Omega$
+Allora ottengo:
+
+\begin{itemize}
+    \item Se $\omega^2 = \omega_A^2 - \omega_B^2$ Allora $\omega_s = \sqrt{\frac{k + 2h}{m}}$ \\
+    \item Se $\omega^2 = \omega_A^2 + \omega_B^2$ Allora $\omega_a = \sqrt{\frac{h}{m}}$ \\
+\end{itemize}
+
+Nel primo caso, sostituendo "$\omega$" con "$\omega_A^2 - \omega_B^2$ si ottiene: $\tilde{A}_1 = \tilde{A}_2$
+Quindi le 2 masse si muovo in maniera sincrona, con pulsazione "$\omega_s$" in fase fra loro.
+\\
+
+\\
+
+Nel secondo caso, sostituendo "$\omega$" con "$\omega_A^2 + \omega_B^2$ si ottiene: $\tilde{A}_1 = - \tilde{A}_2$
+Quindi le 2 masse si muovo in maniera asincrona, con pulsazione "$\omega_s$" in opposizione di fase.
+
+La sua evoluzione libera può essere scritta come:
+\\ 
+$
+\begin{pmatrix}
+    \tilde{x}_1(t) \\
+    \tilde{x}_2(t) \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+    \tilde{A}_s \\
+    \tilde{A}_s \\
+\end{pmatrix} e^{i \omega_s t}
++
+\begin{pmatrix}
+    \tilde{A}_a \\
+    \tilde{A}_a \\
+\end{pmatrix} e^{i \omega_a t}
+=
+\begin{pmatrix}
+    \tilde{A}_s \\
+    \tilde{A}_s \\
+\end{pmatrix} e^{i(\omega_s t + \phi_s)}
++
+\begin{pmatrix}
+    \tilde{A}_a \\
+    \tilde{A}_a \\
+\end{pmatrix} e^{i(\omega_a t + \phi_a)}
+$
+
+Proietta sul piano reale la si può descrivere come:
+$
+\begin{pmatrix}
+    x_1(t) \\
+    x_2(t)
+\end{pmatrix}
+=
+\begin{pmatrix}
+    A_s \\
+    A_s \\
+\end{pmatrix}
+cos(\omega_s t + \phi_s)
++
+\begin{pmatrix}
+    A_a \\
+    A_a \\
+\end{pmatrix}
+cos(\omega_a t + \phi_a)
+\\
+\\
+$
+
+
+\textbf{Osservazione}\\
+Se nei calcoli viene introdotto l'attrito, vengono introdotte le parti reali degli autovalori
+
+Impongo ora il problema di Cauchi, andando a determinare le costanti di integrazione imponendo le condizioni inizialie.
+Le posizioni e le velocità degli oscillatori nel tempo sono:
+\begin{align*}
+    x_1(t) &= A_s \cos(\omega_s t + \phi_s) + A_a \cos(\omega_a t + \phi_a) \\
+    x_2(t) &= A_s \cos(\omega_s t + \phi_s) - A_a \cos(\omega_a t + \phi_a) \\
+    \dot{x_1}(t) &= - A_s \omega_s \sin(\omega_s t + \phi_s) - A_a \omega_a \sin(\omega_a t + \phi_a) \\
+    \dot{x_2}(t) &= - A_s \omega_s \sin(\omega_s t + \phi_s) + A_a \omega_a \sin(\omega_a t + \phi_a) \\ 
+\end{align*}
+
+Imponendo le condizioni iniziali, si ha:
+\begin{align}
+    x_1(0) &= A_s \cos(\phi_s) + A_a \cos(\phi_a) \\
+    x_2(0) &= A_s \cos(\phi_s) - A_a \cos(\phi_a) \\
+    \dot{x_1}(0) &= - A_s \omega_s \sin(\phi_s) - A_a \omega_a \sin(\phi_a) \\
+    \dot{x_2}(0) &= - A_s \omega_s \sin(\phi_s) + A_a \omega_a \sin(\phi_a) \\ 
+\end{align}
+
+\clearpage
+
+Per trovare la matrice "$A_s$" prendendo le equazioni 2 e 4 (cioè quelle relative alla somma delle componenti).
+Elevo al quadrato entrambi i membri, poi sommo membro a membro, ed infine ottengo:
+\\
+$A_s = \sqrt{(\frac{x_1(0) + x_2(0)}{2})^2 + (\frac{\dot{x}_1(0) + \dot{x}_2(0)}{2 \omega_s })^2}$
+\\
+Per trovare "$\phi_s$" faccio il rapporto membro a membro ed ottengo:\\
+\\
+$\phi_s = \arctan(\frac{\dot{x}_1(0) + \dot{x}_2(0)}{\omega_s (x_1(0) + x_2(0))})$
+\\
+\\
+\\
+Per trovare invece la matrice "$A_a$" prendendo le equazioni 3 e 5 (cioè quelle relative alla differenza delle componenti).
+Elevo al quadrato entrambi i membri, poi sommo membro a membro, ed infine ottengo:
+\\
+$A_a = \sqrt{(\frac{x_1(0) - x_2(0)}{2})^2 + (\frac{\dot{x}_1(0) - \dot{x}_2(0)}{2 \omega_s })^2}$
+\\
+Per trovare "$\phi_a$" faccio il rapporto membro a membro ed ottengo:\\
+\\
+$\phi_s = \arctan(\frac{\dot{x}_1(0) - \dot{x}_2(0)}{\omega_s (x_1(0) - x_2(0))})$
+\\ 
+\textbf{Osservazione}\\
+L'imposizione delle condizioni iniziali si può far apparire solo i modi naturali sincroni, asincroni, oppure entrambi.
+\\[12pt]
+
+\textbf{Esempio}\\
+Imponento per esempio come condizioni iniziali:
+\begin{align*}
+    & x_1(0) \ne 0 \\
+    & x_2(0) = \dot{x}_1(0) = \dot{x}_2(0) = 0
+\end{align*}
+
+si ottiene:\\
+\begin{align*}
+    & A_s = A_a = A \\
+    & \phi_s = \phi_a = 0
+\end{align*}
+
+mentre l'evuluzione libera diventa: \\
+\begin{align*}
+    x_1(t) &= A[\cos(\omega_st) + cos(\omega_at)] \\
+    x_2(t) &= A[\cos(\omega_st) - cos(\omega_at)] \\
+\end{align*}
+
+Per le formule di prostaferesi, possiamo riscrivere l'evuluzione libera in magniera più significativa, nel seguente modo:
+
+\begin{align*}
+    x_1(t) &= 2A\cos(\frac{\omega_a - \omega_s}{2}t)\cos(\frac{\omega_a + \omega_s}{2}t) \\
+    x_2(t) &= -2A\sin(\frac{\omega_a - \omega_s}{2}t)\sin(\frac{\omega_a - \omega_s}{2}t) \\
+\end{align*}
+
+Si osserva dunque che l'ampiezza del coseno è in funzione di un'altra funzione coseno.
+L'interazione fra le due genera un movimento oscillatorio nell'ampiezza della funzione.
+Lo stesso comportamento lo si osserva per un seno, in funzione di un'altra funzione seno.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{alterazioni_cos_sin_oscillatori_accoppiati.png} % nome identico al file caricato
+\end{figure}
+
+\textbf{Osservazione:}\\
+la pulsazione di entrambi gli stati è la media fra le due pulsazioni "$\omega_s$" ed "$\omega_a$"
+Questo fenomeno prende il nome di \textbf{BATTIMENTI}.\\
+
+\textbf{Osservazione:}\\
+Gli oscillatori accoppiati costituiscono il principio base delle sospensioni degli autoveicoli.
+
+\clearpage
+
+\subsubsection{Caso studio: sospensioni autoveicolo}
+Negli autoveicoli il sistemi degli oscillatori accoppiati si presta ad essere utilizzato per modellare il comportamento dinamico delle sospensoini del veicolo.
+Le dinamiche di interesse sono:
+\begin{itemize}
+    \item Pompaggio - oscillazione sull'asse verticale z; \\
+    \item Beccheggio: rotazione attorno all'asse x (muso su o giù) \\
+    \item Rollio: rotazione attorno all'asse y (lato dx su o lato sx su) \\
+    \item Imbardata: rotazione attorno all'asse y (avvitamento su se stessi) \\
+\end{itemize}
+
+Per non dover sviluppare o svolgere calcoli su un modello inutilmente complesso, a seconda delle dinamiche di interesse il veicolo può essere studiato attraverso 3 modelli:
+\begin{itemize}
+    \item "quarter car" - 1 sospensione - 2 gradi di liberta; (pompaggio + tempo) \\
+    \item "half car" - 2 sospensioni - 4 gradi di libertà. (3DOF + tempo) \\
+    \item "full car" - 4 sospensioni - 7 gradi di libertà. (6DOF + tempo) \\
+\end{itemize}
+
+\textbf{Esempio di controllo}\\
+Possiamo sfruttare il modello quarte car per introdurre il concetto di controllo nel modello matematico degli oscillatori accoppiati.
+Basta semplicemente introdurre, al modello che tiene conto del punto di contatto con il terreno, la variabile di controllo "$u$":
+\begin{align*}
+    m_s \ddot{z}_s &= -k_s(z_s - z_p) - A_s(\dot{z}_s - \dot{z}_p) + u \\
+    m_p \ddot{z}_p &= -k_s(z_p - z_s) - A_s(\dot{z}_p - \dot{z}_s) - k_p(z_p - d) + u \\
+\end{align*}
+Dove "$u$" rappresenta il controllo.\\
+Invece "$d$" rappresenta il punto di contatto con le ruote al terreno (trattabile come disturbo).\\
+
+\clearpage
+
+\subsubsection{Caso studio: Applicazioni Biologiche degli oscillatori accoppiati}
+Possiamo suddividere l'apparato uditivo umano in 3 sezioni:
+\begin{itemize}
+    \item ORECCHIO ESTERNO - Padiglione auricolare \\
+    \item ORECCHIO MEDIO   - Cavità, Timpano, Martello, Incudine, Staffa \\
+    \item ORECCHIO INTERNO - Coclea \\
+\end{itemize}
+
+Di particolare interesse per questa analisi è la coclea.
+Questa è costituita da una cavità ossea, che si avvolge per due giri e mezzo intorno ad un pilastro centrale detto mediolo.\\
+Questo canale è a sua volta diviso in 3 canali affiancati: scala vestibolare, scala media, scala timpanica.
+La prima e la terza sono in comunicazione fra loro attraverso un foro detto elicotrema, e sono riempite di un liquido detto perilinfa.
+Lo stesso liquido riempie la scala media, anche se non è in comunicazione diretta con le altre due.\\
+Questi liquidi sono rinchiusi senza poter fuoriuscire dalla coclea, perché le uniche due aperture (la finetra ovale e la finestra rotonda) sono chiuse con due membrane (la membrana in questione è detta MEMBRANA BASILARE) che oscillano concordemente con lo stimolo sonoro. \\
+La struttura interna della coclea quindi assomiglia a quella di uno xilofono:\\
+le terminazioni nervose hanno sede lungo il modiolo, verso la parete esterna. Verso la base sono più corte e sottili, mentre all'apice sono più lunghe e spesse.\\
+
+A questo si aggiunge l'organo del corti.
+Ad ogni membrana basilare è associato un un modulo di tale organo.
+Sopra ogni modulo poi vi è appoggiata una membrada gelatinosa della membrana tettoriale.
+Ogni modulo dell'organo del corti comprende cellule sensoriali (possono essere di due tipi: cellule ciliate interne IHC, cellule ciliate esterne OHC) e cellule di supporto.\\
+
+Le IHC generano un impulso elettrico per il cervello, \\
+mentre le OHC compensano le perdite per attrito del sistema.\\
+
+Di fatto si osserva che si ha una specie di panino traslato:
+alla base la membrana basilare, in cima la membrana tettoriale, ed a collegare le due membrane ci sono le OHC con l'ausilio delle cellule di supporto.
+Le OHC però non si trovano al centro fra le due membrane, bensì si trovano all'estremo opposto rispetto a dove le due membrane sono legate all'apparato.\\
+
+I problemi nell'ambito dell'apparato uditivo possono essere di due tipi:
+\begin{itemize}
+    \item Micromeccanica Cocleare - come si muove ogni singolo componente e come il segnale viene inviato al cervello. \\
+    \item Macromeccanica Cocleare - come tutte le componenti si muovono insime. \\
+\end{itemize}
+
+La dinamica dell OHC rappresenta una non linearità della rigidità elastica.
+Quindi un modello completo per rappresentare la partizione cocleare può essere il seguente:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{esempio_modello_partizione_cocleare.png} % nome identico al file caricato
+\end{figure}
+
+Per riuscire a fare uno studio del modello, nonostante la sua non linearità, possiamo effettuare un'approssimazione per piccole oscillazioni.\\
+Le equazioni del moto del modello per piccole oscillazioni sono:
+\begin{align*}
+    F_t &= m_t\ddot{x}_t + A_t\dot{x}_t + k_tx_t + A_c(\dot{x}_t - \dot{x}_b) + k_c(x_t - x_b) + \frac{A_s}{2}(\dot{x}_t + \dot{x}_b) + \frac{k_s}{2}(x_t + x_b) \\
+    F_b &= m_b\ddot{x}_b + A_b\dot{x}_b + k_b(x_b)x_b + A_c(\dot{x}_b - \dot{x}_t) + k_c(x_b - x_t) + \frac{A_s}{2}(\dot{x}_t + \dot{x}_b) + \frac{k_s}{2}(x_t + x_b) \\
+\end{align*}
+
+Questo modello descrive la Micromeccanica cocleare.\\
+
+\textbf{Osservazione}\\
+Come abbiamo osservato sia per gli oscillatori accoppiati come modello della sospensione di un veicolo, sia per l'apparato cocleare,\\ sistemi dinamici diversi ma descritti dalle stesse equazioni hanno lo stesso comportamento, anche se cambia la natura fisica delle variabili interne.\\
+
+\clearpage
+
+\subsubsection{Caso studio: Modelistica e controllo PID di un pendolo inverso}
+Vogliamo modellizzare e poi controllare un pendolo inverso attaccato ad un carrello.
+Considerando le variabili del sistema:
+\begin{itemize}
+    \item $\varphi$ - Angolo di rotazione della sbarra rispetto all'asse verticale.\\
+    \item $m$ - massa della sbarra. \\
+    \item $\theta$ - Angolo di rotazione della sbarra rispetto all'asse verticale. \\
+    \item $x(t)$ - posizione del centro di massa del carrello \\
+    \item $L$ - distanza tra il centro di massa dell'asta ed il punto di rotazione (braccio) \\
+\end{itemize}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{esempio_pid_pendolo_inverso.png} % nome identico al file caricato
+\end{figure}
+
+\clearpage
+
+Nel sistema sono presenti 4 contribbuti cinetici:
+\begin{itemize}
+    \item Cinetica translazionale del cg del carrello - equazione di Newton per il movimento del CG del carrello lungo x \\
+    \item Cinetica translazionale del cg del pendolo - equazione di Newton per il movimento del CG dell'asta lungo x \\
+    \item Cinetica translazionale del cg del pendolo - equazione di Newton per il movimento del CG dell'asta lungo y \\
+    \item Cinetica rotazionale del pendolo - equazione per la rotaziobe del CG dell'asta \\
+    
+\end{itemize}
+
+Considerando, oltre alle forze conservative, una forza di attrico con coefficiente "$b$", osserviamo che: \\
+
+Il moto del CG dell'asta è descritto da:
+
+
+\begin{align*}
+ & N(t) = m \frac{d^2}{dt^2}[x(t) - L\sin(\ \varphi(t)\ )] \\
+ & P(t) - mg = m\frac{d^2}{dt^2}[L \cos(\ \varphi(t) \ )] \\
+\end{align*}
+
+Mentre il moto del carrello è descritto da:
+
+\begin{align*}
+    & M \frac{d^2 x(t)}{dt^2} = -N(t) + u(t) - b \frac{dx(t)}{dt}
+\end{align*}
+
+Infine il moto di rotazione dell'asta rispetto al suo baricentro vale:
+
+\begin{align*}
+    & LP(t) \sin (\ \varphi(t) \ ) + LN(t) \cos(\ \varphi(t) \ ) = I \frac{d^2 \varphi(t)}{dt^2} \\
+\end{align*}
+
+Sostituendo i valori di "$P(t)$" ed "$N(t)$" dalle prime due equazioni relative al moto traslazionale del CG dell'asta, nelle ultime due equazione, ovvero le equazioni per il moto traslazionale del carrello e per la rotazione dell'asta, ottengo:
+
+\begin{align*}
+    & I: & L(mg + m \frac{d^2 L \cos(\varphi)}{dt^2}) \sin (\varphi) + L( m \frac{d^2}{dt^2}[x(t) - L \sin(\varphi) \ ]) \cos (\varphi) = I \frac{d^2 \varphi(t)}{dt^2} \\
+    & II: & M \frac{d^2x(t)}{dt^2} = -m \frac{d^2}{dt^2}[x(t) - L \sin(\varphi)] - b \frac{dx(t)}{dt} + u(t) 
+\end{align*}
+
+Questo due equazioni differenziali non lineari, accoppiate forzate, costituiscono il modello dinamico del pendolo sul carrello.\\
+In quanto non lineari hanno validità globale.\\
+Possiamo però assumere di voler controllare il pendolo per degli angoli piccoli, e quindi si può eseguire un'\textbf{approssimazioni lineare per piccole oscillazioni}.\\
+Si suppone quindi che: $\varphi << 1 \quad rad \approx 57^o$. \\
+Perciò possiamo considerare: $\sin(\varphi) \approx \varphi$ e $\sin(\varphi) \approx 0$. \\
+
+Posso riscrivere dunque le equazioni $I$ e $II$ come:\\
+\begin{align*}
+    & I: & (I+mL^2)\ddot{\varphi}(t) - mgL\varphi(t) = mL\ddot{x}(t) \\
+    & II: & (M+m)\ddot{x}(t) + b\dot{x} - mL\ddot{\varphi}(t) = u \\
+\end{align*}
+
+Mi interessa ora arrivare a studiare la funzione di trasferimento del mio sistema.\\
+Quindi procedo con il calcolare la trasformata di Laplace delle equazioni:
+
+\begin{align*}
+    & I: & ((I+mL^2)s^2 - Lmg)\Phi(s) = Lms^2\Phi(s) \\
+    & II: & (M+m)s^2X(s) - mLs^2\Phi(s) + bsX(s) = U(s) \\
+\end{align*}
+
+Dall'equazione $I$ ricaviamo il valore di $X(s)$ che vale:
+
+\begin{equation}
+    X(s) = \frac{[(I+mL^2)s^2 - mgL]}{Lms^2}\Phi(s)
+\end{equation}
+
+Andiamo poi a sostituire il valore appena trovato di $X(s)$ nell'equazione $II$, ottenendo:
+
+\begin{align*}
+    & (M+m)s^2X(s) - mLs^2\Phi(s) + bsX(s) = U(s) \\
+    & s[(M+m)s + b]X(s) - mLs^2\Phi(s) = U(s) \\
+    & s[(M+m)s + b] \frac{1}{Lms^2}[(I+mL^2)s^2 - mgL]\Phi(s) - mLs^2\Phi(s) = U(s) \\
+    & \frac{s[(M+m)s + b] \cdot [(I+mL^2)s^2 - mgL] - mLs^2 }{mLs} \cdot \Phi(s) = U(s)
+\end{align*}
+
+La nostra funzione di trasferimento ingresso-uscita del processo assume allora una forma del tipo:
+
+\begin{align*}
+    P(s) &= \frac{\Phi(s)}{U(s)} = \\
+    &= \frac{mLs}{s[(M+m)s + b] \cdot [(I+mL^2)s^2 - mgL] - mLs^2 } = \\
+    &= \frac{mLs}{[(M+m)(I+mL^2) - m^2L^2]s^3 + b(I+mL^2)s^2 - mgL(M+m)s - mgLb} = \\
+\end{align*}
+
+\textbf{Osservazione:}
+La funzione di trasferimento ingresso-uscita ha questa forma perché consideriamo come ingresso l'angolo di inclinazione del pendolo.\\
+Invece per uscita abbiamo lo spostamento orizzontale (rispetto all'asse x) del carrello.\\
+
+Si può notare che la funzione di trasferimento è della forma:
+\begin{equation}
+    P(s) = \frac{B_n \cdot s}{A_3 \cdot s^3 + A_2 \cdot s^2 + A_1 \cdot s + A_0}
+\end{equation}
+
+Ovvero abbiamo:\\
+uno zero: $m=1$\\
+tre poli: $n=3$\\
+
+Dato un polinomio di grado $n$, è necessario ma non sufficiente che i coefficienti abbiano tutti lo stesso segno per avere autovalori con parte reale negativa.
+La dimostrazione di stabilità per la permanenza dei segni può essere svolta attraverso il criterio di Routh:\\
+
+$
+\begin{array}{c|cc}
+3 & (M + m)(I + mL^2) - m^2L^2 & -mgL(M + m) \\[6pt]
+2 & b(I + mL^2) & -mgLb \\[6pt]
+1 & -\dfrac{m^3 L^3 g b}{b(I + mL^2)} & 0 \\[10pt]
+0 & -mgLb & 0
+\end{array}
+$
+
+\begin{align}
+\end{align}
+
+\clearpage
+
+\textbf{Esempio numerico}\\
+Se volessimo portare un esempio numerico, avendo una funzione di trasferimento $P(s)$ del tipo:
+\begin{equation}
+    P(s) = \frac{4.545\ s}{s^3 + 0.1818\ s^2 - 31.18\ s - 4.455}
+\end{equation}
+
+Il diagramma di Nyquist che dimostra la stabilità è il seguente:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{grafico_nyquist_esempio_pid_pendolo_inverso.png} % nome identico al file caricato
+\end{figure}
+
+\textbf{Controllo del modello}\\
+Si riscrive la funzione di trasferimento del processo in forma armonica, come:
+\begin{equation}
+    P(s) = K \cdot \frac{s}{(1+T_1s) \cdot (1+T_2s) \cdot (1+T_3s)}
+\end{equation}
+
+Prendiamo la funzione di trasferimento del controllore PID:
+\begin{equation}
+    G(s)_{PID} = K_d \cdot s + K_p + \frac{1}{s} \cdot K_I = \frac{K_d \cdot s^2 + K_p \cdot s + K_I}{s}
+\end{equation}
+
+Andiamo poi a riscrivere anche il controllore in forma armonica:
+\begin{equation}
+    G(s)_{PID} = K_I \cdot \frac{\frac{K_d}{K_I} \cdot s^2 + \frac{K_p}{K_I} \cdot s + 1}{s}
+\end{equation}
+
+Vado a scegliere i valori di $\frac{K_d}{K_I}$ e di $\frac{K_p}{K_I}$ tali che:
+\begin{equation}
+    \frac{K_d}{K_I} \cdot s^2 + \frac{K_p}{K_I} \cdot s + 1 = (1 + T_1 \cdot s)(1 + T_2 \cdot s) 
+\end{equation}
+
+In questo modo la funzione di trasferimento complessiva del sistema ad anello aperto avrà forma:
+\begin{equation}
+    F(s) = P(s) \cdot G(s) = K \cdot K_I \cdot \frac{1}{1-T_3s}
+\end{equation}
+
+Questa funzione di trasferimento presenta $1$ polo reale positivo.\\
+Assumendo quindi $K_I > 0 \quad t.c. \quad |K \cdot K_I| > 1$ Allora il diagramma di Nyquist è una curva chiusa che compie un giro antiorario attorno al punto $-1 + j$.\\
+La funzione di trasferimento complessiva del sistema ad anello chiuso con retroazione unitaria è certamente BIBO stabile. Infatti si trova:
+\begin{align*}
+    W(s) &= \frac{G(s)}{1 + G(s)} \\
+    &= \frac{K \cdot K_I \cdot \frac{1}{1-sT_3}}{1 + K \cdot K_I \cdot \frac{1}{1-sT_3}} \\
+    &= \frac{K \cdot K_I}{1 + K \cdot K_I - sT_3} \\
+    &= \frac{K \cdot K_I}{1 + K \cdot K_I} \cdot \frac{1}{1 + s \frac{-T_3}{1 + K \cdot K_I}}
+\end{align*}
+
+con:
+\begin{equation}
+    \frac{-T_3}{1 + K \cdot K_I} > 0
+\end{equation}
+
+Si osserva inoltre che scegliendo $K_I > 0 \quad e \ t.c. \quad |K \cdot K_I| >> 1  $ \\
+Assicura che il sistema retroazionato non presenta più poli nell'origine, e presenti comunque un errore di regime permanente al gradino molto piccolo.
+Inoltre, l'unico polo negativo diventa molto grande, assicurando piccoli tempi di salita nella riposta a gradino.
+
+\clearpage
+
+\section{Formalismo Lagrangiano}
+Un metodo alternativo all'uso delle equazioni dello specifico campo fisico, è quello che fa uso della funzione lagrangiana e delle equazioni di Lagrange.
+La determinazione delle equazioni del moto si basa sui seguenti 3 passaggi preliminari:
+\begin{itemize}
+    \item si individuano gli $n$ gradi di libertà del sistema; \\
+    \item si scelgono le $n$ coordinate "$q_1, q_2, ..., q_n$" dette \textbf{coordinate generalizzate}, che identificano univocamente il sistema; \\
+    \item si costruisce la \textbf{funzione lagrangiana} defitica come la differenza fra energia cinetica e l'energia potenziale del sistema, entrambe espresse in funzione delle coordinate generalizzate e delle loro derivate. \\
+\end{itemize}
+
+L'equazione Lagrangiana ha dunque questa forma:
+\begin{equation}
+    L(q_1,q_2,...,q_N,\dot{q_1}, \dot{q_2}, ..., \dot{q_N}) = T - V
+\end{equation}
+
+Quindi una volta nota "$L$", le equazioni che governano la dinamica del sistema sono le \textbf{Equazioni di Lagrange}, ovvero:
+\begin{align*}
+    \frac{d}{dt} \cdot \frac{\partial L}{\partial \dot{q_i}} - \frac{\partial L}{\partial q_i} = 0 & \qquad \textit{per "i" uguale a: }\quad i = 1, 2, ...,  N \\
+\end{align*}
+
+Scritte in questo modo semplice però, le equazioni di Lagrange permettono l'inclusione di forzanti esterne ed attriti solo dopo la scrittura delle equazioni.
+\\
+Si nota inoltre che se "$L$" è indipendente dalle "$q_i$" si ha che:
+
+\begin{align*}
+    \frac{\partial L}{\partial q_i} &= 0 \\
+    \Rightarrow \frac{d}{dt}\frac{\partial L}{\partial \dot{q_i}} &= 0 \\
+    \Rightarrow \frac{\partial L}{\partial \dot{q_i}} &= cost \\
+\end{align*}
+
+\textbf{Impulso Canonico}\\
+Prende il nome di "Impulso Canonico" il rapporto $\frac{\partial L}{\partial \dot{q_i}}$.
+Inoltre se "$L$" non dipende da "$q_i$", l'impulso canonico si conserva nel tempo.
+
+\vspace{2cm}
+
+\textbf{Osservazione}\\
+In particolare si nota che:
+
+\begin{itemize}
+    \item se \textbf{$q_i$} è una \textbf{variabile traslazionale} $\Rightarrow$ l'impulso canonico rappresenta una \textbf{quantità di moto} \\
+    \\
+    \item se \textbf{$q_i$} è una \textbf{variabile rotazionale} $\Rightarrow$ l'impulso canonico rappresenta una \textbf{momento angolare} \\
+    \\
+\end{itemize}
+
+\clearpage
+
+\textbf{Si presentano ora alcuni casi di studio già visti, per poter comprendere l'applicazione pratica della lagrangiana.}
+
+\subsubsection{Caso studio: Oscillatore Armonico}
+Scriviamo la funzione lagrangiana dell'oscillatore armonico nella forma:
+\begin{equation}
+    L(x, \dot{x}) = T-V \qquad \rightarrow \qquad  \textit{Funzione Lagrangiana}
+\end{equation}
+
+\begin{align*}
+    T &= \frac{1}{2}m\dot{x}^2 \\
+    V &= \frac{1}{2}kx^2
+\end{align*}
+
+Si ottiene allora:
+
+\begin{equation}
+    L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - \frac{1}{2}kx^2
+\end{equation}
+
+Ricaviamo ora le equazioni di moto attraverso l'equazione di Lagrange.
+
+\begin{align*}
+    \frac{d}{dt} \ \frac{\partial L}{\partial \dot{x}} - \frac{\partial L}{\partial x} &= 0 \\
+    \frac{\partial L}{\partial \dot{x}} &= m \dot{x} \Rightarrow \frac{d}{dt} \ \frac{\partial L}{\partial \dot{x}} = m \ddot{x} \\
+    \frac{\partial L}{\partial \dot{x}} &= -kx \\
+    \\
+    & \Rightarrow m \ddot{x} + kx = 0
+\end{align*}
+
+Quest'ultima è \textbf{l'equazione dell'oscillatore armonico semplice}
+
+\clearpage
+
+\subsubsection{Caso studio: Oscillatori Accoppiati}
+Andiamo a definire la funzione lagrangiana come:
+\begin{align*}
+    L(x_1, x_2, \dot{x_1}, \dot{x_2}) &= T - V = T_1 - V_1 + T_2 + V_2 - V_{12} \\
+    \\
+    L(x_1, x_2, \dot{x_1}, \dot{x_2}) &= \frac{1}{2}m\dot{x_1}^2 + \frac{1}{2}m\dot{x_2}^2 - \frac{1}{2}k\dot{x_1}^2 - \frac{1}{2}k\dot{x_2}^2 - \frac{1}{2}h(x_1 - x_2)^2
+\end{align*}
+
+Risolvendo poi le 2 equazioni di lagrange
+\begin{align*}
+    \frac{d}{dt}\frac{\partial L}{\partial \dot{x_1}} - \frac{\partial L}{\partial x_1} &= 0 \\
+    \\
+    \frac{d}{dt}\frac{\partial L}{\partial \dot{x_2}} - \frac{\partial L}{\partial x_2} &= 0 \\
+\end{align*}
+
+si ottengono rispettivamente:
+
+\begin{align*}
+    m \ddot{x_1} + k x_1 + h(x_1 - x_2) &= 0 \\
+    \\
+    m \ddot{x_2} + kx_2 + h(x_2 - x_1) &= 0 \\
+\end{align*}
+
+\clearpage
+
+\subsubsection{Caso studio: Pendolo semplice}
+\begin{align*}
+    L(\theta, \dot{\theta}) &= T-V \\
+    &= \frac{1}{2}m\dot{x}^2 + \frac{1}{2}m\dot{y}^2 - mgy = \\
+    &= \frac{1}{2}m[\frac{d}{dt}(l \ \sin\theta)]^2 + \frac{1}{2}m[\frac{d}{dt}(l \ \cos\theta)]^2 - mgl\cos\theta = \\
+    &= \frac{1}{2}ml^2 \dot{\theta}^2 + mgl \cos \theta \\
+\end{align*}
+
+per le equazioni di Lagrange si calcola:
+\begin{align*}
+     \frac{d}{dt}\frac{\partial L}{\partial \dot{\theta}} - \frac{\partial L}{\partial \theta} &= 0 \\
+     \frac{\partial L}{\partial \dot{\theta}} &= m l^2 \dot{\theta} \\
+     \rightarrow \frac{d}{dt}\frac{\partial L}{\partial \dot{\theta}} &= ml^2\ddot{\theta} \\
+     \frac{\partial L}{\partial \dot{\theta}} &= -m g l \sin \theta \\
+     \\
+     \Rightarrow I \ddot{\theta} + m g l \sin \theta &= 0 \\
+     & \textit{con $I = ml^2$ momento di inerzia del pendolo} 
+\end{align*}
+
+\clearpage
+
+\subsection{Caso studio: Pendolo Inverso su Carrello}
+\begin{align*}
+    L(x, \dot{x}, \varphi, \dot{\varphi}) &= T - V = \\
+    &= T_1 - V_1 + T_2 - V_2 = \\
+    &= \frac{1}{2}M\dot{x}^2 - 0 + \frac{1}{2}(I + ml^2)\dot{\varphi}^2 + \frac{1}{2}m \dot{x}^2 - m l \dot{x} \dot{\varphi} \cos \varphi - m g l \cos \varphi = \\
+    &= \frac{1}{2}(M+m)\dot{x}^2 + \frac{1}{2}(I + ml^2)\dot{\varphi}^2 - m l \dot{x} \dot{\varphi} \cos \varphi - m g l \cos \varphi \\
+\end{align*}
+Notiamo che in questo caso l'energia totale si compone di tre termini:
+\begin{itemize}
+    \item il primo termine è relativo all'energia cinetica traslazionale del sistema \\
+    \item il secondo termine è relativo all'energia rotazionale (dove il momento d'inerzia è relativo alla cerniera intorno alla quale il pendolo ruota) \\
+    \item il terzo è un termine di accoppiamento 
+\end{itemize}
+
+Le equazioni di Lagrange invece hanno forma,\\
+per la rotazione:
+\begin{equation}
+    (I + ml^2) \ddot{\varphi} - m l \ddot{x} \cos \varphi - m g l \sin \varphi = 0
+\end{equation}
+
+per la traslazione:
+\begin{equation}
+    (M + m) \ddot{x} - m l \ddot{\varphi} \cos \varphi - m l \dot{\varphi} \sin \varphi = 0
+\end{equation}
+
+Si nota che l'impulso canonico che esprime la quantità di moto del sistema si conserva, ed è quindi un integrale primo del moto.
+\subsection{Sfera su sbarra oscillante}
+Posta una sfera (corpo rigido ) che si muove lungo una sbarra oscillante ( corpo rigido ) ci chiediamo come studiare secondo il formalismo lagrangiano il seguente problema .\\
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{sfera_su_sbarra_1.jpeg} 
+\end{figure}
+Per prima cosa individuiamo i gradi di libertà , nel farlo andiamo ad identificare le variabili del sistema : 
+\begin{itemize}
+    \item Traslazione della sfera
+    \item Angolo della Sbarra 
+    \item Rotazione della sfera (Sotto l'ipotesi del puro rotolamento)
+\end{itemize}
+A questo punto è necessario definire una relazione cinematica (valida per gli infinitesimi ) relative alla rotazione della sfera .
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{sfera_su_sbarra_2.jpeg} 
+\end{figure}
+dove :\[dr = R\:d\theta \implies \dot 
+r = R \dot{\phi}\]
+Dalla meccanica sappiamo che l'energia cinetica rotante di un corpo rigido è data dalla seguente equazione $K_{rot}= \frac{1}{2}I\omega ^2 $, posto allora $J$ come il momento di inerzia della sfera e $\dot{\phi}^2$ come il quadrato della sua velocità angolare segue che :
+\[K_{rot\:\:sfera}=\frac{1}{2}J \dot{\phi}^2\] Volendo espriemere questa identità rispetto la traslazione della sfera lungo l'asse , segue :
+\[K_{rot\:\:sfera}=\frac{1}{2}J \frac{\dot{r}^2}{R^2}\]
+Assimilando la sbarra rigida ad una sbarra sottile (al fine di semplifare i conti relativi al momento di inerzia) abbbiamo :
+\[K_{rot\:\:sbarra}= \frac{1}{2}I\dot{\theta}^2\] Dove :
+\begin{itemize}
+    \item $\theta$ angolo di inclinazione della sbarra rispetto all'asse x
+    \item $r$ distinaza del centro di massa dal fulcro della sbarra
+    \item si ha un moto di puro rotolamento
+    \item la sfera non si stacca dalla sbarra e il CM della sfera rimane sempre sulla sbarra
+    
+\end{itemize}
+Posizione sfera 
+\[\begin{cases}
+    x = r \cos \theta \\
+    y = r \sin \theta 
+\end{cases}\]
+Segue che :
+\[T= \frac{1}{2}I \dot{\theta }^2+\frac{1}{2}\frac{J}{R^2}\dot{r}^2+\frac{1}{2}m\left[ \frac{d}{dt}\left( r \cos \theta \right)\right]^2+\frac{1}{2}m\left[ \frac{d}{dt}\left(r \sin \theta \right)\right]^2\] Facendo una rapida analisi dimensionale :
+\[\left[\frac{J}{R^2} \right]=\frac{[ml^2]
+}{[l^2]}=[m]\]Osserviamo che $\frac{1}{2}\frac{J}{R^2}\dot{r}^2$ la si può immaginare come una energia cinetica traslazionale relativa ad un corpo di massa $\frac{J}{R^2}$
+Sviluppando ulteriormente la formulazione dell'energia cinetica complessiva si ottiene :
+\[T = \frac{1}{2}I\dot{\theta}^2+\frac{1}{2}\frac{J}{R^2}\dot{r}^2+\frac{1}{2}m\left[ \dot{r}\cos\theta -r\dot{\theta}\sin\theta\right]^2+\frac{1}{2}m\left[ \dot{r}\sin\theta -r\dot{\theta}\cos\theta\right]^2=\]
+\[=\frac{1}{2}I \dot{\theta}^2+\frac{1}{2}\frac{J}{R^2}\dot{r}^2+\frac{1}{2}m\left[\dot{r}^2\cos^2 \theta +r^2\dot{\theta }^2\sin ^2 \theta -2r\dot{r}\theta \cos \theta \sin \theta +\dot{r}^2 \sin^2 \theta +r^2\dot{\theta}^2\cos^2\theta +2r\dot{r}\dot{\theta}\sin \theta \cos \theta \right]\]
+\[T=\frac{1}{2}I\dot{\theta}^2+\frac{1}{2}\frac{J}{R^2}\dot{r}^2+\frac{1}{2}m\dot{r}^2+\frac{1}{2}mr^2\dot{\theta}^2\]
+\[T=\frac{1}{2}(I+mr^2)\dot{\theta}^2+\frac{1}{2}(m+\frac{J}{R^2})\dot{r}^2\]
+Si osservi che :\\
+$(I+mr^2)$ = rappresenta qualitativamente la rotazione del corpo rispetto ad un polo (in questo caso il contributo dato dalla sbarra e dalla sfera insieme) , si consideri inoltre che essendo r una cordinata generalizzata , il momento di inerzia del sistema varierà nel tempo , ciò quindi implicherà delle non linearità nell'eq del moto.\\\\
+$\frac{J}{R^2}$ può essere interpretata come una "massa aggiunta" , in quanto una sfera in puro rotolamento è equivalente a livello dinamico ad un ogetto che non ruota ma trasla, avente una massa maggiore.\\\\
+\textbf{Energia Potenziale}\\
+\[V = mgr\sin \theta\]\\\\
+Segue la lagrangiana :
+\[L(r,\dot{r},\theta,\dot{\theta}) = T-V = \frac{1}{2}(I+mr^2)\dot{\theta}^2+\frac{1}{2}(m+\frac{J}{R^2})\dot{r}^2-mgr\sin\theta\]
+\newpage
+\textbf{1 eq di lagrange}\\
+\[\frac{d}{dt}\frac{dL}{d\dot{\theta}}-\frac{dL}{d\theta}=0\]
+Segue che:
+\[\begin{cases}
+    \frac{dL}{d\dot{\theta}}=(I+mr^2)\dot{\theta}\\
+    \frac{d}{dt}\frac{dL}{d\dot{\theta}}= (I+mr^2)\ddot{\theta}+2mr\dot{r}\dot{\theta}\\
+    \frac{dL}{d\theta}= -mgr\cos\theta
+\end{cases}\iff (I+mr^2)\ddot{\theta}+2mr\dot{r}\dot{\theta}+mgr\cos\theta=0\]
+Andando ad aggiungere un attribbuto  (dato dalla coppia meccanica di controllo) $\tau$ coppia di controllo e $-b\dot{\theta}$ la forza di attrito , otteniamo la 1 eq di lagrange completa.
+\[\boxed{(I+mr^2)\ddot{\theta}+2mr\dot{r}\dot{\theta}+mgr\cos\theta=\tau-b\dot{\theta}}\]
+\\\\
+\textbf{2 eq di lagrange}
+\[\frac{d}{dt}\frac{dL}{d\dot{r}}-\frac{dL}{dr}=0\]
+Segue:
+\[\begin{cases}
+    \frac{dL}{d\dot{r}}=(m+\frac{J}{R^2})\dot{r}\\
+    \frac{d}{dt}\frac{dL}{d\dot{r}}=(m+\frac{J}{R^2})\ddot{r}\\
+    \frac{dL}{dr}=-mg\sin\theta+mr\dot{\theta}^2
+\end{cases}\iff \boxed{(m+\frac{J}{R^2})\ddot{r}=mr\dot{\theta}^2-mg\sin\theta}\]
+Si osservi che $mr\dot{\theta}^2=mr\omega^2$ è una forza centrifuga, mentre l'altra componente è la forza peso lungo la sbarra
+\newpage
+\subsection{Modello Half Car}
+Questo modello è a 4 gradi di liberta , 3 traslazionali ed uno rotazionale.\\
+Il modello è composto da una massa sospesa $M_s$ 
+(massa derivante da
+carrozzeria, motore, passeggeri e trasmissione) e due masse non sospese
+$m_1$ e $m_2$ (elementi della sospensione, la ruota, lo pneumatico e i freni). Massa
+sospesa e masse non sospese sono connesse dalle sospensioni, modellate
+da una molla di costante elastica $k_s$ e da uno smorzatore viscoso con
+costante di smorzamento $c$.L’intero veicolo è poi separato dal manto stradale
+dagli pneumatici schematizzabili sempre attraverso uno smorzatore (di entità
+trascurabile) e una molla di constante elastica $k_p$.\\
+Con questo modello possiamo andare a studiare vari comportamenti meccanici quali :
+\begin{itemize}
+    \item pompaggio: oscillazioni del veicolo sull'asse z
+    \item Beccheggio : trasferimento di carico longitudinale
+    \item Rollio: trasferimento di carico trasversale
+\end{itemize}
+Difatti le variabili in gioco sono : 2 traslazionali per le dinamiche delle singole sospensioni, 1 rotazonale per il beccheggio del corpo dell'auto ed uno traslazionale per il pompaggio dell'auto
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{halfcar.png}
+\end{figure}
+Ipotesi semplificative:\\\\
+1) ignoriamo la forza peso , in quanto incide solamente sulla quota a riposo delle molle\\
+2)trascuriamo la componente smorzante degli pneumatici\\
+3)battistrada e asfalto toccano solo in un punto \\
+4)piccole oscillazioni\\\\
+Passando ora alle equazioni:\newpage
+Partiremo definendo due classi di equzioni, quelle relative alla massa sospesa  e quelle relative alla massa non sospesa, nello specifico :\\\\
+\textbf{Energie cinetiche}
+\[T_{ns}=\frac{1}{2}m_1\dot{z}_1^2+\frac{1}{2}m_2\dot{z}_2^2\]
+\[T_s= \frac{1}{2}M_s\dot{z}_s^2+\frac{1}{2}J\dot{\theta}^2\]
+\textbf{Energie potenziali}\\\\
+\[V_{ns}=\frac{1}{2}k_{p1}+\frac{1}{2}k_{p2}z_2^2\]
+\[V_s=\frac{1}{2}k_{s1}(z_s-z_1-l_1\theta)^2+\frac{1}{2}k_{s2}(z_s-z_2+l_2\theta))^2\]
+Andiamo dunque a ricavare la Lagrangiana:
+\[L(z_1,\dot{z}_1,z_2,\dot{z}_2,z_s,\dot{z}_s,\theta,\dot{\theta})=\frac{1}{2}(m_1\dot{z}_1^2+m_2\dot{z}_2^2+M_s\dot{z}_s^2+J\dot{\theta}^2)-\frac{1}{2}k_{s1}(z_s-z_1-l_1\theta)^2\]\[-\frac{1}{2}k_{s2}(z_s-z_2+l_2\theta))^2-\frac{1}{2}k_{p1}-\frac{1}{2}k_{p2}z_2^2\]
+\textbf{1 eq lagrange}\\\\
+\[\frac{d}{dt}\frac{dL}{d\dot{z}_1}-\frac{dL}{dz_1}=0\implies\begin{cases}
+    \frac{dL}{d\dot{z}_1}=m_1\dot{z}_1\\
+    \frac{d}{dt}\frac{dL}{d\dot{z}_1}= m_1\ddot{z}_1\\
+    \frac{dL}{dz_1}=k_{s1}(z_s-z_1-l_1\theta)-k_{p1}z_1
+\end{cases}\implies \boxed{m_1\ddot{z}_1-k_{s1}(z_s-z_1-l_1\theta)+k_{p1}z_1=0}\]
+\textbf{2 eq Lagrange}
+\[\frac{d}{dt}\frac{dL}{d\dot{z}_2}-\frac{dL}{dz_2}=0\implies\begin{cases}
+    \frac{dL}{d\dot{z}_2}=m_2\dot{z}_2\\
+    \frac{d}{dt}\frac{dL}{d\dot{z}_2}= m_2\ddot{z}_2\\
+    \frac{dL}{dz_2}=k_{s2}(z_s-z_2-l_2\theta)-k_{p2}z_2
+\end{cases}\implies \boxed{m_2\ddot{z}_2-k_{s2}(z_s-z_2-l_2\theta)+k_{p2}z_2=0}\]
+\textbf{3 eq Lagrange}
+\[\frac{d}{dt}\frac{dL}{d\dot{\theta}}-\frac{dL}{d\theta}=0\implies \begin{cases}
+    \frac{dL}{d\dot{\theta}}=J\dot{\theta}\\
+    \frac{d}{dt}\frac{dL}{d\dot{\theta}}=J\ddot{\theta}\\
+    \frac{dL}{d\theta}=k_{s_1}(z_s-z_1-l_1\theta)l_1-k_{s2}(z_s-z_2+l_2\theta)l_2
+\end{cases}\implies\]\[\implies \boxed{J\ddot{\theta}-k_{s_1}(z_s-z_1-l_1\theta)l_1+k_{s2}(z_s-z_2+l_2\theta)l_2=0}\]
+\newpage
+\textbf{4 eq Lagrange}
+\[\frac{d}{dt}\frac{dL}{d\dot{z}_s}-\frac{dL}{dz_s}=0\implies \begin{cases}
+    \frac{dL}{d\dot{z}_s}=M_s\dot{z}_s\\
+    \frac{d}{dt}\frac{dL}{d\dot{z}_s}=M_s\ddot{z}_s\\
+    \frac{dL}{dz_s}=-k_{s_1}(z_s-z_2-l_1\theta)-k_{s2}(z_s-z_2+l_2\theta)
+\end{cases}\implies\]\[\implies \boxed{M_s\ddot{z}_s-k_{s_1}(z_s-z_2-l_1\theta)+k_{s2}(z_s-z_2+l_2\theta)=0}\]
+Infine è bene osservare che le 4 equazioni anziche far riferimento a $z_1$ e $z_2$ possono fare riferimento alle asperità del terreno, in altre parole tratteremo le asperità su una ruota come una funzione :
+\[\begin{cases}
+    m_1\ddot{z}_1-k_{s1}(z_s-z_1-l_1\theta)+k_{p1}z_1=k_{p1}d_1+c_1(\dot{z}_s-\dot{z_1}-l_1\dot{\theta})=0\\
+    m_2\ddot{z}_2-k_{s2}(z_s-z_2-l_2\theta)+k_{p2}z_2=k_{p2}d_2+c_2(\dot{z}_s-\dot{z}_2+l_2\dot{\theta})=0\\
+    J\ddot{\theta}-k_{s_1}(z_s-z_1-l_1\theta)l_1+k_{s2}(z_s-z_2+l_2\theta)l_2=c_1(\dot{z}_s-\dot{z}_1-l_1\dot{\theta})l_1-c_2(\dot{z}_s-\dot{z}_2+l_2\dot{\theta)}l_2=0\\
+    M_s\ddot{z}_s-k_{s_1}(z_s-z_2-l_1\theta)+k_{s2}(z_s-z_2+l_2\theta)=-c_1(\dot{z}_s-\dot{z}_1-l_1\dot{\theta})-c_2(\dot{z}_s-\dot{z}_1+l_2\dot{\theta})=0
+\end{cases}\]
+\newpage
+\section{Sistemi Elettrici}
+\subsection{Bipoli Passivi}
+I bipoli passivi sono l'incipit alla teoria dei circuiti, in particolare partiremo dall'analisi delle versioni ideali seguendo poi con quelli reali.
+\subsubsection{Bipoli passivi Ideali}
+I bipoli reali sono dati dalle seguenti relazioni lineari:
+\begin{itemize}
+    \item \textbf{Resistore} : $v(t)=Ri(t)$, in laplace $V(s)=RI(s)$ ed in frequenza $V(i\omega)=RI(i\omega)$ dove ($sC$ e $i\omegaC$ sono le impedenze)
+    \item \textbf{Condensatore} $i(t)=C\frac{dv(t)}{dt}$, $I(s)=sCV(s)$ , $I(i\omega)=i\omega CV(i\omega)$ , \\(dove $\frac{1}{sC}$ e $\frac{1}{i\omega C}$ sono le impedenze caratteristiche del resistore)
+    \item \textbf{Induttore}: $v(t)=L\frac{di(t)}{dt}$,   $V(s) = sLI(s)$,   $V(i\omega) = i\omega L I(i\omega)$ , \\(dove $sL$ e $i\omega L$ sono le impedenze caratteristiche )
+\end{itemize}
+\\
+\textit{Approfondimento sulle impedenze :}\\
+\textit{E' una grandezza fisica che rappresenta la resistenza di un circuito (in ohm) al passaggio della corrente alternata. La cosa che la differenzia rispetto alla resistenza nei circuiti CC , è che questa varia a seconda della frequenza della corrente passante, (infatti è rappresentata da un numero complesso il che evidenzia la dipendenza rispetto a $\omega$)}
+
+
+
+\subsubsection{Bipoli passivi Reali}
+Nella realtà un bipolo passivo ha un comportamento simile a quello ideale soltanto in un range di grandezze limitato, al di là di questo tendono a prevalere comportamenti di tipo differente.
+\\
+Posto $sL=Z\implies \boxed{V(s)=ZI(s)}$ Ossia la \textbf{legge di Ohm generalizzata}\\\\
+\textbf{Ammettenza}\\
+L'ammettenza è una grandezza reciproca all'impedenza, è misurata in siemens .
+\[Y= \frac{1}{Z}\]
+\\\\
+\textbf{Relazione corrente tensione Bipoli passivi ideali}:
+\begin{itemize}
+    \item Resistore -> Corrente e tensione in fase
+    \item Condensatore -> V e I sono sfasate , poichè moltiplico i per un valore complesso , lo sfasamento vale 90 gradi , dunque la tensione V è in ritardo rispetto alla corrente
+    \item Induttore -> La tensione è in anticipo rispetto alla corrente 
+\end{itemize}
+\textbf{Resistore a filo} ( 10$\Omega$-20M$\Omega$)\\\\
+\begin{figure}[h] 
+    \centering
+    \includegraphics[width=0.5\textwidth]{resistenza_reale.png} 
+\end{figure}
+\[\frac{1}{Z(i\omega)}=\frac{1}{R+i\omega L}+i\omega C\]
+Qualora $\omega \rightarrow0$ ossia siamo in presenza di una corrente continua ,
+\[\frac{1}{Z(i\omega)}=\frac{1}{R}\], in altre parole l'impedenza è pari alla resistenza statica.\\\\
+Quando $\omega$ comincia a crescere cominciano a presentarsi comportamenti induttivi, quando invece $\omega$ diventa un fattore predominante si osserva una prevalenza di fenomeni capacitivi e poi di risonanza.\\\\
+\textbf{Impedenza Serie e Parallelo}\\\\
+\textit{Impedenza serie} :\[
+V_{tot}=V_1+V_2=Z_1(s)I+Z_2(s)I=(Z_1+Z_2)I=Z_{eq}I
+\implies Z_{eq}=Z_1+Z_2\]
+\\\\
+\textit{Impedenza parallelo}:\\
+Qua lavoriamo con i reciproci
+\[I = I_{eq}=I_1+I_2= \frac{V}{Z_1}+\frac{V}{Z_2}=(\frac{1}{Z_1}+\frac{1}{Z_2})V\implies Z_{eq}=\frac{Z_1+Z_2}{Z_1Z_2}\]
+\newpage
+\textbf{Condensatore} (per pF - 0.1 F)
+\begin{figure}[h] 
+    \centering
+    \includegraphics[width=0.5\textwidth]{condensatore_reale.png} 
+\end{figure}
+\[Z(i\omega)=R_j+i\omega L+ \frac{R_d}{1+i\omega R_d C}\]
+\[Z(0\cdot i)= R_j+R_d\]
+\[\lim_{\omega \rightarrow \infty}Z(i\omega)=\infty\]
+OSSERVAZIONI:
+\begin{itemize}
+    \item Alle basse frequenze il condensatore si comporta come una resistenza , infatti da fisica sappiamo che un condensatore statico non lascia passare 
+    \item C'è una banda di frequenze dove il condensatore ha comportamento capacitivo 
+    \item A frequenze molto alte il condensatore si comporta come un'induttore
+\end{itemize}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{grafico_condensatore_reale.png} 
+\end{figure}
+\newpage
+\textbf{Induttore}(mH-H)
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Induttore_reale.png} 
+\end{figure}
+L'induttore ideale è il componente che più si discosta dal comportamento reale , si dice che vi sono molti effetti parassiti
+\subsubsection{Leggi di Kirchhoff}
+\textbf{Legge delle maglie}:\\
+La soma delle tensioni ai capi di N bipoli costituenti una maglia è nulla.
+\[\sum_{k=1}^Nv_k(t)=0\]
+\textbf{Legge dei Nodi}:\\
+La somma delle correnti entranti in un nodo è nulla
+\[\sum_{k=1}^Ni_k(t)=0\]
+\subsubsection{Applicazioni}
+\textbf{Circuito RC}\\\\
+\begin{figure}[h]  
+    \centering
+    \includegraphics[width=0.5\textwidth]{RC.png} 
+\end{figure}
+L'unico elemento dinamico è il condensatore. Lavoreremo scrivendo l'equazione di maglia e la legge al nodo A.\\
+\[v_{in}(t)=v_r+v_c\implies v_r=v_{in}-v_c\]
+\[i_c-i_R=0\implies i_c=i_r \iff C\frac{dv_c}{dt}=\frac{v_r}{R}\iff\frac{dv_c}{dt}=-\frac{v_c}{RC}+\frac{v_{in}}{RC}\]
+Abbiamo un modello nello spazio di stato in cui :
+\[x=v_c \quad u=v_{in}\quad A = -\frac{1}{RC} \quad B =\frac{1}{RC}\]
+Il sistema ha un solo modo naturale aperiodico con costante di tempo $ \tau = RC$
+\\\\
+\textbf{RLC serie}\\\\
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{RLC_serie.png} 
+\end{figure}
+Opereremo scrivendo l'equazioni di maglia  e eguagliando le correnti che scorrono nei 2 elementi reattivi.
+\[v_{in}(t)= v_L(t)+v_R(t)+v_C(t)\implies v_{in}=L\frac{di}{dt}+Ri+v_c\]
+\[i_c-i_L=0\implies C\frac{dv_c}{dt}=i\]
+Posto :
+\[v_c=x_1\quad i=x_2\quad v_{in}=u\]
+Otteniamo la seguente RSS
+\[A=\begin{bmatrix}
+    0&\frac{1}{C}\\
+    -\frac{1}{L}&-\frac{R}{L}
+\end{bmatrix}\quad B = \begin{bmatrix}
+    0\\ \frac{1}{L}
+\end{bmatrix}\]
+\newpage
+\textbf{Circuito a 3 gradi di libertà} 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{circuito_3gradi.png} 
+\end{figure}
+\\\\Sfrutteremo  le leggi ai nodi A e B e la legge della maglia 2. Segue:
+\[\frac{1}{R_1}(v_{in}-v_{c1})-i_l=C_1\frac{dv_{c1}}{dt}\]
+\[i_l-\frac{1}{R_2}v_{c2}=C_2\frac{dv_{c2}}{dt}\]
+\[v_{c1}=L\frac{di_l}{dt}+v_{c2}\]
+Posto ora :
+\[v_{c1}=x_1\quad v_{c2}=x_2 \quad i_l=x_3\quad  v_{in}=u\] Segue che:
+\[A=\begin{bmatrix}
+    -\frac{1}{R_1C_1}&0&-\frac{1}{C_1}\\
+    0&-\frac{1}{R_2C_2}&\frac{1}{C_2}\\
+    \frac{1}{L}&-\frac{1}{L}&0
+\end{bmatrix}\quad B=\begin{bmatrix}
+    \frac{1}{R_1C_1}\\
+    0\\
+    0
+\end{bmatrix}\]
+Ponendo $R_1=R_2=\frac{R}{2}$ e $C_1=C_2=2C$ segue che:
+\[A=\begin{bmatrix}
+    -\frac{1}{RC}&0&-\frac{1}{2C}\\
+    0&-\frac{1}{RC}&\frac{1}{2C}\\
+    \frac{1}{L}&-\frac{1}{L}&0
+\end{bmatrix}\quad B=\begin{bmatrix}
+    \frac{1}{RC}\\
+    0\\
+    0
+\end{bmatrix}\]
+Calcoliamo gli autovettori:
+\[\lambda I-A=\begin{bmatrix}
+    \lambda+\frac{1}{RC}&0&\frac{1}{2C}\\
+    0&\lambda+\frac{1}{RC}&-\frac{1}{2C}\\
+    -\frac{1}{L}&\frac{1}{L}&\lambda
+\end{bmatrix}\implies rk (\lambda I-A)=(\lambda+\frac{1}{RC})(\lambda^2+\frac{1}{RC}\lambda+\frac{1}{LC})\]
+Segue che :
+\[\lambda_1=-\frac{1}{RC}\quad \lambda_{2,3}=-\frac{1}{2RC}\pm\sqrt{\frac{1}{4R^2C^2}-\frac{1}{LC}}\]
+Qualora $\frac{1}{2R}<\sqrt{\frac{C}{L}}$ (condizione per cui il determinante della eq di 2 grado abbia soluzione complessa)
+\newpage
+Segue che $\lambda_2$ e $\lambda_3$ sono radici complesse e coniugate, NON SO PERCHE' MA: la pulsazione naturale e il coefficiente di smorzamento sono:
+\[\omega_0=\sqrt{\frac{1}{LC}}\quad \xi=\frac{1}{2R}\sqrt{\frac{L}{C}}\]
+E' interessante osservare come classi di ingressi particolari possano andare ad eccitare il solo modo aperiodico o quello pseudoperiodico.\\
+A valle di una analisi dell'eccitabilità si osserva che :\\\\
+$v_{c1}(0)=v_{c2}(0) \:\land i_l(0)=0 \implies$ si eccità il solo modo aperiodico avente costante di tempo $\tau= RC$.\\\\
+Se $v_{c1}(0)=-v_{c2}(0) \:\land i_l(0)=k\in \mathbb{R} \implies$ si eccita il solo moto pseudoperiodico
+\\\\
+\subsubsection{Circuiti in Laplace}
+\textit{Per fornire una rappresentazione ingresso uscita del comportamento dinamico di un circuito è necessario trovare la funzione di trasferimento di quest'ultimo, a tal fine si può pensare di cominciare l'analisi di un circuito direttamente in Laplace}\\\\
+\textbf{Circuito RC}\\\\
+\[V_{in}(s)=Z_R(s)I(s)+V_c(s) \quad [1] \iff V_{in}(s)=Z_R(s)I(s)+Z_c(s)I(s) \iff I(s) = \frac{V_{in}(s)}{Z_r(s)+Z_c(s)} \quad[2] \]
+Sostituendo [2] in [1] segue che:
+\[V_{in}(s)=\frac{Z_r(s)}{Z_r(s)+Z_c(s)}V_{in}(s)+V_c(s) \implies W(s) = \frac{V_c(s)}{V_{in}(s)}=\frac{Z_c(s)}{Z_r(s)+Z_c(s)}\implies \boxed{W(s) = \frac{1}{1+sRC}}\]
+Segue che il quadripolo è sostanzialmente un partitore di tensione ,ossia un circuito costituito da due o più componenti passivi collegati in serie ,ai capi dei quali, se viene applicata una tensione, essa si ripartirà sulle stesse componenti in base al loro valore.\\
+IL circuito RC è anche noto come filtro passivo passa basso del primo ordine, avente costante di tempo $\tau = RC$\\\\
+\newpage
+\boxed{\textbf{Filtri }(Approfondimento)}\\\\
+I filtri sono in elettronica un particolare tipo di circuiti detti quadripoli, ossia circuiti aventi due ingressi e due uscite.\\\\
+I filtri presentano attenuazione
+differenziata in funzione della frequenza del segnale applicato in
+ingresso, in altre parole bloccano determinate frequenze rispetto ad altre.\\\\
+Sono detti \textbf{filtri passivi} quelli costituiti da soli bipoli elementari ( R, L , C) , sono invece \textbf{filtri attivi} quelli costituiti da transistor e circuiti integrati.\\\\
+\boxed{\textit{Filtri Passivi}}\\\\
+Non hanno nessun elemento di amplificazione , per cui nessun guadagno sul segnale , essi si suddividono in due categorie :
+\begin{enumerate}
+    \item Filtri del primo ordine: ricavabili dalle equazioni standard di maglia e di nodo
+    \item Filtri del secondo ordine : descritti da equazioni molto complesse
+\end{enumerate}
+Rispetto ai filtri attivi , quelli passivi hanno grandi vantaggi quali:
+\begin{itemize}
+    \item non sono alimentati
+    \item non hanno limiti di banda
+    \item lavorano bene alle alte frequenze
+    \item Possono gestire grandi livelli di tensione o corrente
+\end{itemize}
+\boxed{\textit{Filti Attivi}}\\\\
+Non contengono induttori, sono costituiti da Op-Amp, condensatori e resistenze , hanno il vantaggio di poter fornire guadagni molto elevati , sono più facili da progettare  e varie altre cose magiche
+\newpage
+\boxed{\textit{Frequenze passate dai filtri}}\\\\
+\textit{Filtri passa basso}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{passa_bass.png} 
+    \caption{In blu si osserva che la banda passante è quella tra $\omega \in[0,f_c]$ in quanto il guadagno è non negativo (ma comunque minore di 1 , per cui il segnale comunque viene abbattuto del 30), mentre per $\omega>f_c$ il segnale subisce un guadagno negativo , per cui si piò pensare come abbattuto}
+\end{figure}\\\\
+\textit{Filtri passa alto}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{passa_alto.png} 
+\end{figure}\\\\
+\textit{Filtri passa Banda}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{passa_banda.png} 
+\end{figure}\\\\
+\newpage
+\textbf{Circuito CR}\\\\
+E' lo stesso circuito di prima ma prendiamo la tensione in uscita ai capi del resistore.\\
+Applicando la regola del partitore segue che :
+\[W(s) = \frac{V_r(s)}{V_{in}(s)}=\frac{Z_r(s)}{Z_r(s)+Z_c(s) }\implies \boxed{W(s) = \frac{sRC}{1+sRC}}\]
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bode_cr_.pdf} 
+\end{figure}
+Si osservi dal diagramma come il quadripolo si comporta come un filtro passa bassa del primo ordine avente costante di tempo $\tau = RC$, il sistema appare come non strettamente proprio (nel caso ideale) , un modello reale invece includerebbe un altro polo ad alta frequenza , rendendo il sistema strettamente proprio.\\\\
+\textbf{Circuito LR}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.3\textwidth]{circuito_LR.png} 
+\end{figure}\\
+Assumendo l'uscita ai capi della resistenza ,dalla regola del partitore sappiamo che :
+\[W(s) = \frac{V_r(s)}{V_{in}(s)}=\frac{Z_r(s)}{Z_r(s)+Z_l(s)}\implies W(s) = \frac{1}{1+s\frac{L}{R}}\]
+Questo quadripolo si comporta come un filtro passabbasso del primo ordine.\\\\
+\textbf{Circuito RL}\\\\
+Sempre per la regola del partitore , volendo prendere come uscita la tensione ai capi dell'induttore segue che :
+\[W(s) =\frac{V_l(s)}{V_{in}(s)}=\frac{Z_l(s)}{Z_R(s)+Z_L(s)}\implies W(s) = \frac{s\frac{L}{R}}{1+s\frac{L}{R}}\] Questo quadripolo è un passa alto a costante di tempo $\tau=L/R$
+\newpage\textbf{RLC Serie}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.3\textwidth]{RLC_serie.png} 
+\end{figure}
+Siccome c'è una sola maglia si può applicare la regola del partitore per cui possiamo individuare filtri diversi a seconda di dove prendiamo i capi di tensione in uscita .\\\\
+Uscita in C:
+\[W_c(s)=\frac{V_c(s)}{V_{in}(s)}=\frac{Z_c(s)}{Z_c(s)+Z_R(s)+Z_l(s)} \implies \boxed{W(s)= \frac{1}{1+sRC+s^2LC}}\]
+Ossia un passabasso del secondo ordine.\\\\
+Uscita in R:
+\[W_R(s)=\frac{V_R(s)}{V_{in}(s)}=\frac{Z_R(s)}{Z_c(s)+Z_R(s)+Z_L(s)}\implies \boxed{W(s) = \frac{sRC}{1+sRC+s^2LC}}\]
+Con un comportamento passa banda.\\\\
+Uscita in L:
+\[W_L(s)=\frac{V_L(s)}{V_{in}(s)}=\frac{Z_R(s)}{Z_c(s)+Z_R(s)+Z_L(s)}\implies \boxed{W(s) = \frac{s^2LC}{1+sRC+s^2LC}}\]
+Comportamento passa alto del secondo ordine.
+\subsubsection{Teorema di Thevenin}
+Sia dato un circuito composto da diverse maglie, può essere comodo sostituire parti di essa con dei componenti equivalenti quali : un generatore ideale di tensione $V_{TH}$ ed un'impedenza serie $Z_{TH}$.\\\\
+L'approccio è quello di sostiuire la parte della rete di interesse con i componenti di thevenin. \\
+Il valore si determina così:
+\begin{itemize}
+    \item $V_{TH}$ è la tensione presente tra i capi A e B del taglio, trattando  questo come un circuito aperto.
+    \item $Z_{TH}$ è l'impedenza tra gli estremi A e B del taglio cortocircuitando i generatori di tensione e come circuiti aperti i generatori di corrente.
+\end{itemize}
+\newpage
+\textbf{Celle RC in cascata}\\\\
+Posto il seguente circuito:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.3\textwidth]{thevenin_1.png} 
+\end{figure}\\\\
+Assumiamo di voler studiare la tensione ai capi del condensatore $C_2$, per trovare la FDT applichiamo thevenin.\\\\
+1) Tracciamo il circuito equivalente
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.3\textwidth]{thevenin_2.png} 
+\end{figure}\\\\
+Secondo la regola del partitore:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.3\textwidth]{thevenin_3.png} 
+\end{figure}
+\[V_{TH}(s)=\frac{Z_{c1}(s)}{Z_{c1}(s)+Z_{r1}(s)}V_{in}(s)=\frac{1}{1+sR_1C_1}V_{in}(s)\]
+\newpage
+Per l'impedenza equivalente dobbiamo cortocircuitare il generatore di tensione 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.3\textwidth]{thevenin_4.png} 
+\end{figure}
+\[\frac{1}{Z_{TH}(s)}=\frac{1}{Z_{R1}(s)}+\frac{1}{Z_{C1}(s)}\implies Z_{TH}(s)=\frac{R_1}{1+sR_1C_1}\]
+Tornando ora al circuito equivalente, andiamo ad applicare la regola del partitore e otteniamo:
+\[V_{C2}(s)=\frac{Z_{C2}}{Z_{th}+Z_{r2}+Z_{c2}}V_{th}=\frac{\frac{1}{sC_2}}{\frac{R_1}{1+sR_1C_1}+R_2+\frac{1}{sC_2}}\frac{1}{1+sR_1C_1}V_{in}\]
+Segue dunque la funzione di traferimento:
+\[W(s)=\frac{V_{c2}(s)}{V_{in}(s)}=\frac{1}{1+(\tau_1+\tau_2+\tau_{12})s+\tau_1\tau_2s^2}\]
+Dove $\tau_1=R_1C_1$  $\tau_2=R_2C_2$   $\tau_{12}=R_1C_2$
+Da notare come la funzione di trasferimento non sia pari al prodotto delle singole ft, in quanto c'è un termine di accoppiamento $\tau_{12}$.
+\newpage
+\subsection{Amplificatori operazionali}
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+\section{Sistemi elettro-meccanici}
+Avendo studiato sia sistemi elettrici che meccanici, possiamo ora andare a studiare il comportamenti che presentano entrambe le proprietà.
+
+\subsection{Il motore elettrico a corrente continua}
+Il motore continuo a corrente continua viene contenuto in una cassa, solitamente di forma cilindrica. In una estremità troviamo l'albero motore, mentre in prossimità della base opposta sporgono due portaspazzole. Da qui sporgono anche i conduttori per l'alimentazione.
+\\
+\\
+La cassa rachiude lo statore, solitamente solidale alla cassa (fermo rispetto alla cassa) ed il rotore. Il primo produce un campo magnetico costante, che non varia nel tempo, può essere costituito da un magnete permanente oppure da un elettromagnete il cuo nucleo è cavo, con alcuni avvolgimenti di eccitazione, anche questa costante.
+\\
+\\
+Il rotore è calettato sull'albero, può ruotare libeeramente sui cuscineti fissati alle basi opposte della cassa, ed è costituito da un cilindro di materiale ferromagnetico realizzato da lamelle circolare elettricamente isolate tra di loro, per ridurre correnti parassite.
+La superficie laterale del rotore è incisa da numerose cave longitudinali equidistanti, nelle quali sono alloggiate numerose matasse di più spire che si estendono da una cava a quella opposta.
+Infine le matasse sono collegate alle lamelle del collettore, quindi sono in serie fra loro.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{foto_motore_cc.png} % nome identico al file caricato
+\end{figure}
+
+Per la comprensione del principio di funzionamento del motore è opportuno richiamare alcune leggi fondamentali dell'elettromagnetismo.
+\\
+\\
+\textbf{Seconda legge di Laplace}\\
+sia un filo di lunghezza $dl$, percorso da una corrente $I$, sottoposto all'azione di un campo di induzione magnetica $B$, risentirà di una forza del tipo:
+\begin{align*}
+    d \vec{F} &= I \cdot \vec{dl} \  \times \ \vec{B} \\
+    \Rightarrow |d \vec{F}| &= I \cdot dl \cdot B \cdot \sin \theta 
+\end{align*}
+Per la regola della mano destra questa forza è perpendicolare al piano individuato ed ha verso tale per cui la forza vede ruotare in sensore antiorario e per un angolo minore di 180 gradi il vettore di corrente per sovrapporsi al campo di induzione magnetica.
+\\
+\\
+\textbf{Teorema di equivalenza di Ampere}\\
+Una spira di area $S$ percosa da una corrente di intensità $I$ si comporta come un dipolo magnetico di momento:
+\begin{equation}
+    \vec{m} = I \cdot S \cdot \vec{n}
+\end{equation}
+dove $\vec{n}$ è il versore della normale alla spira, orientato in verso tale che esso veda circolare la corrente in verso antiorario.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{foto_teorema_di_equivalenza_di_ampere.png} % nome identico al file caricato
+\end{figure}
+
+\\
+\\
+\textbf{Legge di Faraday - Neumann (induzione elettromagnetica)}\\
+Se un circuito è immerso in un campo di induzione magnetica il cui flusso $\Phi(\vec{B})$ concatenato col circuito stesso sia variabile nel tempo, allora in esso si genera una forza elettromotrice $f.e.m$ data da:
+\begin{equation}
+    f.e.m. = - \frac{d \Phi(\vec{B})}{dt}
+\end{equation}
+
+il flusso è definito dalla relazione:
+
+\begin{equation}
+    \Phi(\vec{B}) = \int_S \vec{B} \cdot \vec{n} \ dS
+\end{equation}
+
+dove:\\
+$S$ è la superficie del circuito\\
+$\vec{n}$ è il versore normale alla superficie\\
+
+\subsubsection{Principio di funzionamento}
+Lo statore genera un campo magnetico stazionario che, in prima approssimazione, supporremo uniforme. Considerando una spira rettangolare disposat lunga una coppia di cave rotoriche e percorsa da corrente continua: su ogni lato della spira agisce una forza perpendicolare individuato dal campo e dalla corrente. Sui lati di lunghezza $l_2$ agisono due forze che si annullano poichè di uguale intensità e verso opposto. \\
+I lati paralleli all'asse di rotazione del rotore risentono di una coppia di forze che, avendo componente tangente al rotore di verso opposto, mettono in rotazione la spira.\\
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{foto_principio_funzionamento_motore_elettrrico_cc_singola_spira.png} % nome identico al file caricato
+\end{figure}
+
+\clearpage
+Considerando ora il caso in cui nel sistema è presente una seconda spira, posta simmetricamente alla prima rispetto all'asse $y$ e attraversata dalla stessa corrente.
+È facile rendersi conto che su essa agisce una coppia di forze opposta a quella agente sulla prima spira. Il sistema complessivamente è quindi a momento di forza nulla e non si ha rotazione.\\
+Per ottenere il movimetno, la corrente della spira $b$ deve avere verso opposto alla corrente nella spira $a$.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{foto_principio_funzionamento_motore_elettrrico_cc_doppia_spira.png} % nome identico al file caricato
+\end{figure} 
+
+
+Questo si ottiene con il collettore, che inverte il senso della corrente, come mostra la figura.
+Il collettore è costituito in modo tale che il piano delle spazzole divide l'avvolgimento d'armatura in due metà, percorse da correnti in verso opposto.
+In questo modo, tutti i momenti delle forze elettromagnetiche si sommano e al rotore viene applicata una coppia che causa la rotazione.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{foto_principio_funzionamento_motore_elettrrico_cc_tante_spire.png} % nome identico al file caricato
+\end{figure}
+
+Vogliamo ora approfondire cosa accade in presenza di un numero elevato di spire.
+Riconsideriamo il caso della singola spira:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{foto_riconsiderazioni_molte_spire_singola_spira.png} % nome identico al file caricato
+\end{figure}
+
+Il momento di forza agente su essa è:
+\begin{equation}
+    \vec{M_a} = \frac{\vec{l_2}}{2}\times F = (- \frac{\vec{l_2}}{2})\times (- \vec{F_a}) = \vec{l_2} \times \vec{F_a}
+\end{equation}
+La forza agente su lato della spiera nella posizione $a$ vale:
+\begin{equation}
+    \vec{F_a} = i \vec{l_1} \times \vec{B} = i l_1B\hat{y}
+\end{equation}
+Il momento è quindi:
+\begin{align*}
+    \vec{M_a} = \vec{l_2} \times \vec{F_a} = il_1l_2B \sin \theta \hat{z} = iSB \sin \theta \hat{z} \\
+\end{align*}
+avendo introdotto la superficie della spiera $S = l_1l_2$.\\
+Questa relazione può essere posta nella forma:
+\begin{align*}
+    \vec{M_a} = \vec{m} \times \vec{B}\\
+\end{align*}
+In cui si è introdotto il momento di dipolo magnetico 
+\begin{align*}
+    \vec{m} = i S \vec{n}
+\end{align*}
+
+Questi passaggi costituisono la dimostrazione del teorema di equivalenza di Ampere, nel caso particolare di una spiera rettangolare.
+A noi interessa che la spira può essere rappresentata da un vettore, il momento di dipolo magnetico, il quale tende ad allinearsi al campo di induzione magnetica. 
+La coppia massima si ha quando i du evettori sono perpendicolari tra loro.\\
+\\
+Fatte queste considerazioni aggiungiamo una seconda spira sul rotore analogamente a quanto fatto in precedenza e valutiamo la risultante del momento di dipolo magnetico.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{foto_riconsiderazioni_molte_spire.png} % nome identico al file caricato
+\end{figure}
+
+Le componenti dei dipoli magnetici lungo la direzione $x$ si annullano, mentre quelle lungo la direzione $y$ si sommano. In questo modo la risultante è perpendicolare al campo di induzione magnetica e la coppia a cui è sottoposto il rotore è massima.
+Per garantire queta condizione in corrispondenza ad ogni posizione del rotore si aumenta il nuimero delle spire, distribbuendole uniformemente sul rotore.\\
+In tal modo il dipolo risultante cresce in modulo e così la coppai motrice, mentre la direzione si assesta lungo l'asse $y$.\\
+\\
+I motori appena descritti possono erogare potenze in un range da pochi milliwatt ai megawatt.\\
+\\
+Ogni motore ha i seguenti limiti caratteristici:
+\begin{itemize}
+    \item limite massimo di velogià angolare, dovuto a problemi di commutazione sul collettore; \\
+    \item limite massimo di tensione d'alimentazione, dovuto all;isolamento dei conduttori e alla struttura del collettore; \\
+    \item limite massimo di coppia, dovuto alla saturazione del circuito magnetico d'armatura; \\
+    \item limite massimo di potenza elettrica assorbita, che dipende dalla velocità di rotazione e dalle modalità di raffreddamento.
+\end{itemize}
+
+Entro queste limitazioni, il motore elettrico trasforma l'energia elettrica in energia meccanica con un rendimento tipicamente molto alto, che in prima approssimazione si può assumere unitario.
+
+\subsubsection{Equazioni di Stato nel dominio del tempo}
+Per le equazioni di stato in merito alla parte meccanica, si ha che:
+\\
+Dato il momento di forza agente su ogni spira dell'armatura è:
+\begin{align*}
+    \vec{M_a} = \frac{\vec{l_2}}{2}\times F = (- \frac{\vec{l_2}}{2})\times (- \vec{F_a}) = \vec{l_2} \times \vec{F_a}
+\end{align*}
+Ed avendo la forza espressa dalla seguente equazione:
+\begin{align*}
+    \vec{F_a} = i\vec{l_1} \times \vec{B} = - i l_1 B \hat{\theta}
+\end{align*}
+Otteniamo che il momento di forza assume la forma:
+\begin{align*}
+    \vec{M_a} = \vec{l_2} \times \vec{F_a} = il_1l_2B\hat{z} = iSB\hat{z} = k_m i \hat{z}
+\end{align*}
+dove $k_m = SB$ è una costante caratteristica particolare del motore, e nel caso di $n$ spire assume forma: $k_m = nSB$.\\
+\\
+Sul rotore, oltre la coppia motrice $C_r$ è presente anche una coppia di disturbo (o resistente) $C_d$, proporzionale alla velocità angolare $\omega$, e calcolata come:
+\begin{align*}
+    \vec{C_r} &= - C_r \hat{z} \\
+    C_r &= C_d + F \omega \\
+\end{align*}
+
+sia $J$ il momento d'inerzia complessivo del rotore e del carico, l'equazione del moto per il rotore è:
+\begin{align*}
+    J \frac{d \omega}{dt} &= k_m i - F \omega - C_d \qquad \qquad \textit{con} \ \frac{d \theta}{dt} = \omega  \quad \textit{(velocità angolare)}
+\end{align*}
+\\
+Per quanto riguarda le equazioni di stato della parte elettrica, avendo resistenza $R$ ed induttanza $L$, l'equazione di maglia della spira vale:
+\begin{align*}
+    V &= RI = L\frac{DI}{Dt} + f.e.m.
+\end{align*}
+
+dove la $f.e.m.$ è la forza elettromotrice indotta dal taglio delle linee di campo da parte delle spire, durante la rotazione.
+Per valutare il contribbuto della $f.e.m.$ dobbiamo calcolare il flusso del campo magnetico concatenato con la spira.
+Avendo $dS$ l'infinitesimo elemento di superficie di statore, lo si può calcolare come: $dS = \frac{l_2}{2} d\theta dz$, con $\vec{n}$ la normale alla superficie.
+Perciò il flusso di campo magnetico ottiene come:
+\begin{align*}
+    \Phi(\vec{B}, \theta) &= \int_s \vec{B} \cdot\vec{n} \quad dS = \int_0^{l_1}\int_{\theta}^{\pi - \theta} B \frac{l_2}{2} \quad d\theta dz= Bl_1l_2(\frac{\pi}{2}-\theta)
+\end{align*}
+
+E di conseguenza si può calcolare il contribbuto della $f.e.m.$ come:
+\begin{align*}
+    f.e.m. &= - \frac{d \Phi}{dt} = l_1l_2B\dot{\theta} = SB\omega = k_b \omega
+\end{align*}
+
+Con $k_b = SB$, che per $n$ spire diventa $k_b = nSB \quad R=nR_{singola \ spira} \quad L = nL_{singola \  spira}$, costante caratteristica del particolare motore elettrica.
+L'equazione del circuito d'armatura vale quindi:
+\begin{align*}
+    v = RI + L \frac{dI}{dt} + k_b \omega
+\end{align*}
+
+Mettendo insieme le equazioni della parte meccanica e della parte elettrica, e notando che per costruzione $k_m = k_b = k$, si ottengono così le equazioni di stato del motore in corrente continua:
+\begin{align*}
+    L \frac{dI}{dt} &= - RI - k\omega + V \\
+    J \frac{d\omega}{dt} &= kI - C_d - F\omega \\
+    \frac{d \theta}{dt} &= \omega
+\end{align*}
+
+Volendo riscrivere il sistema nella rappresentazione spazio di stato, si ottiene:
+\begin{align*}
+    \begin{matrix}
+        x = 
+        \begin{bmatrix}
+        I \\ \omega \\ \theta    
+        \end{bmatrix}
+        & A = 
+        \begin{bmatrix}
+            -\frac{R}{L} & - \frac{k}{L} & 0 \\ \frac{k}{J} & - \frac{F}{J} & 0 \\ 0 & 1 & 0
+        \end{bmatrix}
+        & B = 
+        \begin{bmatrix}
+            \frac{1}{L} \\ 0 \\ 0
+        \end{bmatrix}
+        & P= 
+        \begin{bmatrix}
+            0 \\ - \frac{1}{J} \\ 0
+        \end{bmatrix}
+    \end{matrix}
+\end{align*}
+
+con: 
+\begin{align*}
+    u &= v \\
+    z &= C_d
+\end{align*}
+
+Graficamente, lo schema di controllo associato alle equazioni di stato è il seguente:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{foto_schema_di_controllo_motore_elettrico_corrente_continua.png} % nome identico al file caricato
+\end{figure}
+
+\subsubsection{Equazioni di Stato nel dominio di Laplace}
+Nel dominio di Laplace le equazioni di stato diventano:
+\begin{align*}
+    (Ls + R) \cdot I(s) &= V(s) - k \Omega(s) \\
+    (sJ + F) \cdot \Omega(s) &= kI(s) - C_d(s) \\
+    \Theta(s) &= \frac{\Omega(s)}{s}
+\end{align*}
+
+Che danno vita al seguente schema a blocchi:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{foto_schema_di_controllo_laplace_motore_elettrico_corrente_continua.png} % nome identico al file caricato
+\end{figure}
+
+Si può osservare che il legame fra velocità angolare $\omega$, tensione $V$ e coppia di disturbo $C_d$ è dato da:
+\begin{align*}
+    \Omega(s) &= P_1(s)P_2(s)k[V(s) - k\Omega(s)] - P_2(s)C_d(s) \\
+    &= \frac{P_1(s)P_2(s)k}{1 + P_1(s)P_2(s)k^2}V(s) - \frac{P_2(s)}{1+P_1(s)P_2(s)k^2}C_d(s)
+\end{align*}
+
+dove:
+\begin{align*}
+    \begin{matrix}
+        P_1(s) = \frac{1}{sL+R} & P_2(s) = \frac{1}{2J+F}
+    \end{matrix}
+\end{align*}
+
+e le funzioni di trasferimento sono:\\
+\\
+Tensione-Velocità:
+\begin{equation}
+    \frac{\Omega(s)}{V(s)} = \frac{k}{(sL+R)(sJ+F)+k^2}
+\end{equation}
+\\
+Disturbo-Velocità:
+\begin{equation}
+    \frac{\Omega(s)}{C_d(s)} = \frac{(sL+R)}{(sL+R)(sJ+F)+k^2}
+\end{equation}
+\\
+
+\textbf{Osservazione}\\
+Considerando il coefficiente d'attrito $F$ e l'induttanza $L$ trascurabili (plausibile in molti casi pratici), si ha uno schema a blocchi del tipo:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{foto_schema_di_controllo_semplificato_motore_elettrico_corrente_continua.png} % nome identico al file caricato
+\end{figure}
+
+In questo caso le funzioni di trasferimento diventano:
+\\
+Tensione-Velocità:
+\begin{equation}
+    \frac{\Omega(s)}{V(s)} = \frac{1}{k[1 + \frac{RJ}{k^2}s]}
+\end{equation}
+\\
+Disturbo-Velocità:
+\begin{equation}
+    \frac{\Omega(s)}{C_d(s)} = \frac{R}{k^2[1 + \frac{RJ}{k^2}s]}
+\end{equation}
+\\
+Tensione-Posizione:
+\begin{equation}
+    \frac{\Theta(s)}{V(s)} = \frac{1}{k[s + \frac{RJ}{k^2}]}
+\end{equation}
+\\
+Disturbo-Velocità:
+\begin{equation}
+    \frac{\Theta(s)}{C_d(s)} = \frac{R}{k^2[s + \frac{RJ}{k^2}]}
+\end{equation}
+
+\clearpage
+
+\subsection{Il potenziometro}
+Il potenziometro è costituito da un elemento resistivo su quale scorre un cursore.
+Ai suoi capi viene applicata una tensione $V_{AL}$, e tra uno di questi capi il cursore preleva la tensione di uscita $y$ dipendente dalla posizione $u$ del cursore, che valeç $y = \frac{r(u)}{R}V_{AL}$
+
+L'elemento resistivo può essere di forma lineare o circolare, ma sono possibili anche dipendenze non lineari.\\
+Nei sistemi di controllo sono usati esclusivamente potenziometri con caratteristica lineare, che però sono diversi dall'elettronica di consumo, perché l'elettronica di consumo non garantisce precisioni ed affidabilità tali.\\
+\\
+L'elemento resistivo può essere costituito anche da un filo avvolto su un supporto isolante.\\
+Solitamente è contenuto in una cassa cilindrica, dalle cui basi opposte fuoriescono rispettivamente i cavi, e l'asse di rotazione. L'asse ruota su dei cuscinetti per cui non può avere arresto, ed i valori della tensione si ripetono ogni $360^o$. Esiste una piccola zona morta di alcuni gradi, in cui il cursore non è in contatto con l'elemento resistivo, quindi l'uscita è nulla o inaffidabile.\\
+\\
+In quanto oggetti fisici però, il comportamento reale dei potenziometri si discorsta dal loro comportamento ideale,
+per esempio:
+\begin{itemize}
+    \item quando l'angolo di rotazione è nullo, l'uscita $y$ non è nulla ma dipende dalle resistenze di contatto e soluzioni costruttive; \\
+    \item quando l'angolo di rotazione è massima, l'uscita $y$ resta al di sotto della tensione di alimentazione $V_{AL}$ \\
+    \item altri discostamenti dell'uscita, rispetto all'ingresso, sono dovuti ad imprecisioni costruttive. \\
+\end{itemize}
+
+Ogni potenziometro ha una dissipazione massima, generalmente di pochi Watt ed una tensione di alimentazione $V_{AL}$ massima che può arrivare a centinaia di Volt.\\
+Il potenziometro è un trasduttore di posizione lineare o angolare.\\
+
+\subsubsection{Progettazione di un asservimento di posizione (Potenziometro)}
+La progettazione di un asservimento di posizione, viene svolta svolgendo i seguenti passi:
+\begin{enumerate}
+    \item scritture delle specifiche del progetto; \\
+    \item scelta e caratteristiche delle componenti; \\
+    \item sintesi del sistema di controlo; \\
+    \item validazione.\\
+\end{enumerate}
+
+Andiamo ad approfondire le varie fasi, attraverso un caso esempio numerico:\\
+\\
+\textbf{Esempio}\\
+\textbf{Specifiche}\\
+Si vuole progettare un asservimento di posizione con le seguenti caratteristiche:
+\begin{enumerate}
+    \item l'ingresso è una tensione compresa tra $\pm 10V$; \\
+    \item l'uscita è una posizione angolare di un'asse compresa tra $\pm \pi$ rispetto ad una posizione di riferimento; \\
+    \item il legame desiderato ingresso-uscita a regime permanente è di diretta proporzionalità, dove la massima escursione dell'uscita corrisponde alla massima escursione dell'ingresso; \\
+    \item sull'asse è calettato un carico con momento d'inerzia di $12 \ kg \cdot m,^2$; \\
+    \item il sistema deve essere di tipo $\ge 1$ con errore a regime $e_r \le 0.033 \ rad$; \\
+    \item il margine di fase deve essere: $m_\varphi \ge 40^o$.
+\end{enumerate}
+
+\textbf{Scelta e caratteristiche dei componenti}\\
+\\
+Si sceglie un motore elettrico a corrente continua con le seguenti caratteristiche:
+\begin{itemize}
+    \item potenza nominale: $100W$;\\
+    \item tensione nominale: $12V$;\\
+    \item tensione e corrente massimi> $18 \ V \ \  a \ \ 14 \ A$ per $20$ secondi (cioè rapporto di trasduttore del potenziometro deve essere $0.1 \cdot \pi \  \frac{rad}{V}$ );
+    \item momento d'inerzia rotorico: $J=8\ kg \cdot m^2$; \\
+    \item resistenza dell'armatura: $R = 0.5 \  \Omega$;
+    \item costante di amplificazione o attenuazione: $1 \ N \cdot \frac{m}{A}$;
+    \item induttanza dell'armatura: $L = 2.1 \ mH$;
+    \item coefficiente d'attrito: $F = 0.02 \ N \cdot m \cdot \frac{s}{rad}$
+\end{itemize}
+Possiamo quindi constatare che il motore scelto ha induttanza $L$ e coefficiente di attrito $F$ trascurabili.\\
+Quindi è modellato nel seguente modo:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{potenziometro_schema_blocchi.png} % nome identico al file caricato
+\end{figure}
+
+Ed ha una funzione di trasferimento tensione-posizione del tipo:
+\begin{align*}
+    P(s) = \frac{\Theta(s)}{V(s)} = \frac{1}{s(1 + 10s)}
+\end{align*}
+
+Mentre il trasduttore di posizione sarà un potenziometro con le seguenti caratteristiche:
+\begin{itemize}
+    \item resistenza: $10 \ k\Omega$;
+    \item dissipazione massima: $1 \ W$;
+    \item tensione massima: $100 \ V$;
+    \item precisione $0.01\%$ della portata;
+\end{itemize}
+
+Il potenziometro viene collegato elettricamente e meccanicamente come in figura:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{potenziometro_collegamento_potenziometro_motore.png} % nome identico al file caricato
+\end{figure}
+
+Dalla specifica 3 deduciamo che abbiamo bisogno che il potenziometro abbia un rapporto di trasduzione $K_d = 0.1 \cdot \pi \ \frac{rad}{V}$.\\
+Avendo differenza di potenziale pari a $ddp = 20V$, e supponendo di non prelevare corrente dal cursore, si ha una potenza continua dissipata pari a $P = \frac{4 \cdot 10^4}{10^2} = 0.04 W$.
+Quindi ci troviamo ampiamente sotto la dissipazione massima ammessa (stiamo rispettando molto bene la specifica).\\
+\\
+Per la specifica 2 dobbiamo limitare la rotazione del potenziometro a $\pm \pi$ dalla posizione centrale, abbiamo una funzione di trasferimento pari a:
+\begin{align*}
+    H = \frac{1}{K_d} \Rightarrow H = \frac{10}{\pi} \ \frac{V}{rad} 
+\end{align*}
+
+Questo combacia anche con la condizione 3, che ci impone di alimentare il potenziometro a $\pm 10 \ V$.\\
+Se avessimo alimentato il potenziometro ad un voltaggio  diverso, avremmo dovuto indurre un blocco amplificatore o attenuatore, per ottenere $K_d$.\\
+\\
+Per la specifica 4, va tenuto in considerazione il carico, con momento d'inerzia pari a $12 \ kg \cdot m^2$.
+\\
+Otteniamo così il seguente sistema di controllo:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{potenziometro_sistema_di_controllo_semplificato.png} % nome identico al file caricato
+\end{figure}
+
+Avendo risolto le specifiche 1-4, andiamo ora a valutare la specifica 5.\\
+Avendo il sistema già un polo nell'origine, dovuto al legame veloità-posizione, allora è di tipo 1.\\
+Per soddisfare l'errore a regime, dobbiamo avere $|\frac{W_e}{s}|_{s=0} \le e_{r\_max}$\\
+Perciò:
+\begin{align*}
+    \textit{avendo: }\\
+    W_e &= \frac{K_d^2}{K_d + PG} \\
+    \textit{Allora osserviamo: } \\
+    \Rightarrow |e_r| &= |\frac{W_e}{s}|_{s=0} \le e_{r\_max} \\
+    \textit{Quindi otteniamo: } \\
+    \Rightarrow K_G & \ge \frac{K_d^2}{e_{r\_max}} = \frac{0.01 \pi^2}{0.033} \approxeq 2.99
+\end{align*}
+
+Di conseguenza segliamo $K_d = 3$.\\
+\\
+La funzione di trasferimento ad anello aperto diventa:
+\begin{align*}
+    F(s) &= G(s) \cdot P(s) \cdot H(s) = \\
+    &= K_d \cdot \frac{1}{s(1 + 10s)} \cdot \frac{10}{\pi} \approxeq \\
+    &\approxeq 3 \cdot \frac{1}{s(1 + 10s)} \cdot \frac{10}{3} = \\
+    &= \frac{10}{s(1 + 10s)}
+\end{align*}
+
+Andiamo quindi a tracciare il diagramma di Bode:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{potenziometro_bode_pre_comensatrice.png} % nome identico al file caricato
+\end{figure}
+
+Dal grafico si può osservare che il margine di fase $m_\varphi$ vale $6^o$.\\
+Quindi per portarlo a valori maggiori di $40^o$ devo ricorrere ad una rete compensatrice che abbia $m = 4$, e che quindi produca un incremento di fase tale da raggiuungere $37^o$ in $\omega \tau = 2 $.\\
+Questo produce però anche un incremento del modulo pari a $6 \ dB$.\\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{potenziometro_rete_compensatrice.png} % nome identico al file caricato
+\end{figure}
+
+
+Quindi si può disporre la rete in maniera tale che l'anticipo di fase cada alla pulsazione in cui il modulo di $F(s)$ vale $-6\ dB$.\\
+In questo modo nel nuovo diagramma si osserva che, $M = -6\ dB$ si ha quando $\omega = 1.4 \ \frac{rad}{s}$, e quindi $1.4 \ \tau = 2 \Rightarrow \tau \approxeq2.43 \ s$.\\
+\\
+Il controllore risulta allora essere l'unione del parametro proporzionale e della rete compensatrice, avendo così una funzione di trasferimento pari a:
+\begin{align*}
+    G(s) = 3 \cdot \frac{1 + 1.43s}{1+0.36s}
+\end{align*}
+
+Tracciando il nuovo diagramma di bode rispetto a questo controllore, per la funzione di trasferimento ad anello aperto
+\begin{align*}
+    F(s) &= G(s) \cdot F(s) \cdot H(s) = \\
+    &= \frac{3 \cdot (1+1.43s)}{(1 + 0.36s)} \cdot \frac{1}{s(1 + 10s)} \cdot 3.18 = \\
+    &= \frac{3 \cdot (1 + 1.43s) \cdot 3.18}{s(1+0.36s)(1+10s)} \approxeq \\
+    & \approxeq \frac{10(1 + 1.43s)}{s(1+0.36s)(1+10s)}
+\end{align*}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{potenziometro_bode_post_compensatrice.png} % nome identico al file caricato
+\end{figure}
+
+Otteniamo così un margine di fase $m_\varphi = 41^o$, soddisfacendo tutte le specifiche.\\
+\\
+\textbf{Progetto del controllore}\\
+Se si vuole costruire un controllore elettronico per poter attuare questo controllo, dovrà essere composto da un amplificatore e da una rete elettrica anticipatrice, di valori tali da rispettare la nostra funzione di trasferimento del controllore.\\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{potenziometro_controllore_elettronico_fisico.png} % nome identico al file caricato
+\end{figure}
+
+Ci sono due buffer che sono inseguitori di tensione a guadagno unitario.\\
+Servono a offrire un'elevata impedenza ai segnali di riferimento $r$ e di retroazione $y$ proveniente dal potenziometro.\\
+\\
+
+La rete compensatrice ha funzione di trasferimento:
+\begin{align*}
+    - \frac{R_4}{R_3} \cdot \frac{1 + sR_3C}{1 + sR_4C}
+\end{align*}
+
+E si può scegliere, per esempio:
+\begin{align*}
+    \begin{matrix}
+        C=100\  \mu F & R_3 = 14.3 \ k\Omega & R_4 = 3.6 \ k\Omega
+    \end{matrix}
+\end{align*}
+Così viene introdotto un guadagno negativo pari a $- \frac{1}{4}$.\\
+Per risolvere il segno, si può porre il riferimento sull'ingresso invertente ed il segnale in retroazione sull'ingresso non invertente.\\
+L'amplificatore differenziale ha guadagno: $K = \frac{R_2}{R_1}$, quindi per otterene il guadagno desiderato $3$ scegliamo:
+\begin{align*}
+    \begin{matrix}
+        R_2 = 120 \ k\Omega & R_1 = 10 \ k\Omega
+    \end{matrix}
+\end{align*}
+
+\clearpage
+
+\section{Power Systems}
+\subsection{Introduzione ai Power Systems}
+I power sistem sono reti di componenti elettriche per generare, trasmettere ed usare energia elettrica.\\
+Sono definite \textbf{Power Systems} tutte quelle reti elettriche che rispettano le seguenti caratteristiche:
+\begin{itemize}
+    \item Grande: sono sistemi tri-fase a corrente alternata operati a voltaggio costante sotto condizioni controllate.
+    \item Macchine sincrone: la generazione dell'energia avviene grazie a macchine sincrone.
+    Si passa dal convertere l' energia da risorsa primaria in energia meccanica, poi riconvertita in energia elettrica grazie a generatori sincroni. \\
+    \item Affidabilità: la trasmissione della potenza su distanze significative, verso i clienti, deve essere garantita sempre (bilanciare domanda ed offerta di energia). \\
+\end{itemize}
+
+Oggi, a differenza del passato, anche le reti di distribbuzione hanno una loro complessità interna, il che le rende più complesse da studiare.\\
+Quindi si possono osservare:
+\begin{itemize}
+    \item Piccoli generatori vicino o direttamente all'interno delle reti di subtrasmissione o distribbuzione. \\
+    \item Le interconnessioni a power systems vicini (Power Systems di paesi diversi) si hanno a livello di trasmissione.
+\end{itemize}
+\\
+Solitamente quindi, nei power system, possiamo riconoscere le seguenti strutture:
+\begin{itemize}
+    \item Generatore $\Rightarrow$ tri-fase, medio voltaggio $ 11 \rightarrow 32 \ kV$; \\
+    \item Sistema di trasmissione $\Rightarrow$ tri-fase, alto voltaggio $> 235 \ kV$ \\
+    \item Sottosistema di trasmissione $\Rightarrow$ tri-fase, alto voltaggio $69 \rightarrow138 \ kV$
+    \item Sistema di distribbuzione $\Rightarrow$ 2 tipi: \\
+    tri-fase, medio voltaggio $4 \rightarrow 34.5 \ kV$ \\
+    tri-fase, basso voltaggio $120/240 \ V$; \\
+    \item Carico (Clienti e altro carico) $\Rightarrow$ 3 tipi: \\
+    Grandi Clienti Industriali $\Rightarrow$ tri-fase, alto voltaggio \\
+    Piccoli Clienti Industriali $\Rightarrow$ tri-fase, medio voltaggio \\
+    Clienti Commerciali o Residenziali $\Rightarrow$ singola-fase, basso voltaggio \\
+    \\
+\end{itemize}
+\\
+Possiamo dunque osservare graficamente un power system come una cosa di questo tipo:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{power_systems_esempio_rappresentazione_base.png} % nome identico al file caricato
+\end{figure}
+
+\subsection{Dettagli sui Power Systems}
+Un power system progettato ed operato correttamente dovrebbe essere in grado di rispondere al requisito fondamentale sul bilanciamento tra domanda ed offerta.\\
+Il sistema quindi, deve essere in grado di fornire o togliere potenza, reagendo a quelle che sono le richieste nel campio del consumo (carico).\\
+A differenza di altri tipi di energie, l'energia elettrica non può essere convertita o immagazzinata in sufficiente quantià.\\
+Perciò è fondamentale avere una riserva di potenza, che possa essere sprigionata per rispondere ad un aumento di richiesta, e mantenere sempre il controllo del sistema.\\
+\\
+È fondamentale dunque che i power system
+\begin{itemize}
+    \item Producano energia con il minimo costo ed impatto ecologico. \\
+    \item La qualità dell'energia prodotta deve rispettare standard minimi di: frequenza costante, voltaggio costante, affidabilità. \\
+\end{itemize}
+\\
+Per soddisfare questi criteri, entra in gioco il sistema di controllo dei power systems.
+
+\subsection{Controllo dei Power Systems}
+Lo schema di controllo dei power systems, è molto complesso e si compone di diversi elementi per poter lavorare al meglio.\\
+Possiamo quindi rappresentarlo con uno schema di questo tipo:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{power_systems_schema_di_controllo.png} % nome identico al file caricato
+\end{figure}
+
+Dallo schema possiamo individuare:
+\begin{itemize}
+    \item Scheduler: genera la lista dei segnali di riferimento che ogni generatore deve rispettare, aumentando o diminuendo la sua produzione di conseguenza. \\
+    \item System Generation Control: è il controllore principale dell'intero sistema, il suo ruolo è quello di bilanciare domanda ed offerta, in funzione dell'aumento o diminuzione del carico. Tra i suoi input ci sono il riferimento dallo scheduler, e ed il ritorno dal Trasmission Controll, per cambiare i riferimenti in maniera opportuna rispetto alle misure della rete. \\
+    \item Generating Unit Controls: attua il controllo all'interno del generatore, attraverso un doppio anello di controllo, per ogni processo. \\
+    \item Prime Mover Control: regola la velocità e la potenza dell'asta del generatore, per variare la corrente generata. \\
+    \item Excitation Control: regola il voltaggio del generatore, quindi indirettamente regola il potenza reattiva nell'output del generatore, attraverso un Automatic Voltage Regulator (AVR).
+    \item Trasmission Controll: è il controllore che controlla e gestisce il sistema di trasmissione sulla rete. Include sistemi di controllo del voltaggio e della potenza.
+\end{itemize}
+
+Storicamente, tutta l'infrastruttura, dalla generazione, alla trasmissione e poi la distribuzione, veniva operata da un unico operatore (ENEL), in quanto il mercato dell'elettricità veniva considerato un settore critico e perciò monopolio di stato.\\
+\\
+Viene poi cambiata questa regola, liberalizzando il mercato dell'elettricità.\\
+Attraverso un processo di \textbf{unbunding} (scorporamento) delle funzioni di rete, viene instaurato il mercato pubblico dell'energia.
+
+\subsection{Mercato Pubblico dell'Energia}
+Nel mercato pubblico dell'energia si distingue tra:
+\begin{itemize}
+    \item \textbf{GENCO} - Generation companies (ENEL, ecc) \\
+    \item \textbf{TSO} - Trasmission system operator (TERNA) \\
+    \item \textbf{DSO} - Distribbution system operator (DISTRIBBUTORI VARI) \\
+    \item \textbf{RIVENDITORI} - Retailers companies (RIVENDITORI VARI) \\
+\end{itemize}
+
+A capo di tutto il mercato si trova il \textbf{GME} ovvero il Gestore del Mercato Elettrico.\\
+Si occupa di gestire il \textbf{Mercato del Giorno Prima}.\\
+\\
+\subsubsection{Il Mercato del Giorno Prima}\\
+Il mercato del giorno prima apre una settimana prima del giorno interessato e finisce il giorno prima a mezzogiorno.\\
+\\
+I generatori propongono delle offerte, che vengono inserite in un ranking di merito, e vengono accettate tutte fino al completamento del fabisogno.\\
+Il prezzo dell'energia sarà il prezzo dell'offerta dell'ultimo generatore accettato.\\
+Questo metodo di prezzo viene detto \textbf{Meccanismo del Prezzo Marginale}.\\
+\\
+(Le offerte dei generatori si compongono di un vettore di 24 coppie di elementi, una per ogni fascia oraria. Per ogni coppia ci sono la quantità di energia che può essere prodotta ed il prezzo per la produzione in quella fascia oraria).\\
+\\
+Si ha una contrattazione fra generatori e distribbutori, basata sui criteri di quantità di energia prodotta e costo dell'energia, senza tenere conto dei limiti fisici per poter attuare quella scelta.\\
+\\
+Quanto una prima contrattazione viene concluso, sulle offerte scelte viene eseguita una \textbf{Power Flow Analysis} per capire se le scelte possono essere attuate e se soddisfano correttamente tutto il fabisogno.\\
+Se non viola nessun vincolo diventa operativo.\\
+Se l'equilibrio non è accettabile, si ripete la fase di contrattazione, e poi di power flow analysis, fino ad arrivare ad una soluzione attuabile.\\
+\\
+L'output della contrattazione accetabile viene poi inviato allo scheduloer, che gestisce la produzione per ogni generatore ed ogni fascia oraria.\\
+\\
+
+Possiamo quindi brevemente rappresentarla con uno schema di questo tipo:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{power_systems_mercato_del_giorno_prima.png} % nome identico al file caricato
+\end{figure}
+
+\clearpage
+
+\subsubsection{Mercato dei servizi ancillari (o servizi di dispacciamento)}
+In aggiunta al Mercato del Giorno Prima, c'è un mercato ausiliario detto Mercato dei servizi Ancillari.\\
+Serve a far fronte a imprevisi o malfuzionamenti su alcuni generatori.\\
+(I generatori che hanno prodotto meno di quanto pattuito verrano penalizzati sottoforma economica o eventualmente nella classifica di merito per il mercato del giorno dopo).
+\\
+\textbf{Come funziona}\\
+Il TSO acquistà la disponibilità dei generatori a modificare la potenza che avrebbero dovuto generare domani (aumentando o diminuendo).\\
+\\
+(Con questo mercato il TSO acquista solo la disponibilità dei generatori di variare la loro produzione. Se viene richiesto di generare più energia, la nuova energia prodotta dovrà essere pagata).
+\\
+Rientrano in questa categoria anche i progetti \textbf{Active Demand} che, negli ultimi anni, si pongono con l'obbiettivo di abbassare il fabisogno di alcuni clienti, per poter ribilanciare il fabisogno, senza dover generare altra energia.\\
+(Invece di usare il classico sistema per fasce orarie).\\
+\\
+Questo mercato è specialmente utile per coprire il GAP delle energie rinnovabili, data la loro natura dipendente dai fenomeni naturali, sono quelli che più possono alterare la generazione di energia promessa.\\
+(Maggiore il numero di rinnovabili, più difficile sarà la stima di energia sicuramente prodotta.
+Di conseguenza sarà maggiore l'utilizzo di servizi ancillari).\\
+\\
+
+\clearpage
+
+\subsection{Smart Grids Background Generale}
+Si utilizza il termine \textbf{Smart Grids} per definire una rete elettrica, unita a degli strati di telecomunicazione, informatica e di controllo, per garantire la corretta gestione fra domanda ed offerta.\\
+\\
+A questa definizione si aggiungono aspetti innovativi rispetto ad una tradizionale rete eletrica:
+\begin{itemize}
+    \item Fondi energetiche rinnovabili distribbuite: oltre ai grandi generatori sono presenti piccoli generatori, a livello dei consumatori.\\
+    \item Mobilità elettrica: va gestita la ricarica di veicoli elettrici, il cui punto di ricarica può variare.\\
+    \item Variazione attiva della domanda: dove i clienti non consumano una quantità prefisata di energia, ma possono far variare la domanda in tempo reale, dovendo così riequilibrare la rete in tempo reale.\\
+    \item Sistemi di stoccaggio: per poter immagazzinare quanta più energia possibile.
+\end{itemize}
+È quindi possibile rappresentare le smart grids con una schematica di questo tipo:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{power_systems_smart_grids.png} % nome identico al file caricato
+\end{figure}
+
+\subsubsection{Definizione Iniziale delle Variabili}
+Andando a parlare di Power Systems possiamo individuare delle variabili riccorrenti.\\
+Per poterlo fare, effettuiamo una trattazione lineare, per arrivare a definire tutte le variabili.\\
+\\
+Consideriamo le formule classiche per Voltaggio e Corrente, di un sistema a singola fase:
+\begin{align*}
+    I(t) &= I \cos (\omega t) \\
+    V(t) &= V \cos(\omega t + \phi) \\ 
+\end{align*}
+
+Definiamo quindi la potenza istantanea come:
+
+\begin{align*}
+    P(t) &= V(t) \cdot I(t) = \\
+    &= VI \cos(\omega t + \phi) = \\
+    &= VI (\frac{e^{i \omega t} + e^{- i \omega t}}{2})(\frac{e^{i (\omega t + \phi)} + e^{-i (\omega t + \phi)}}{2}) = \\
+    &= \frac{VI}{2}(\frac{e^{i (2 \omega t + \phi)} + e^{-i(2 \omega t + \phi)} + e^{i \phi} + e^{-i \phi}}{2}) = \\
+    &= \frac{VI}{2} \cos (\phi) + \frac{VI}{2} \cos(2 \omega + \phi) = \\
+    &= P + P_{fluttuante} \\
+\end{align*}
+Dove $P$ rappresenta la \textbf{Potenza Attiva} (che è indipendente dal tempo) e $P_{fluttuante}$ rappresenta la \textbf{Potenza Fluttuante}\\
+\\
+La formula della potenza istantanea può anche essere riscritta però in un'altro modo.\\
+\begin{align*}
+    P(t) &= \frac{VI}{2} \cos (\phi) + \frac{VI}{2} \cos(2 \omega + \phi) = \\
+    &= \frac{VI}{2} \cos (\phi) + \frac{VI}{2} [\cos(2 \omega t) \cdot \cos(\phi) - \sin(2 \omega t) \cdot \sin(\phi)] = \\
+    &= \frac{VI}{2} \cos (\phi) + \frac{VI}{2} \cos(2 \omega t) \cdot \cos(\phi) - \frac{VI}{2}  \sin(2 \omega t) \cdot \sin(\phi) = \\
+    &= \frac{VI}{2} \cos(\phi) (1 + \cos( 2 \omega t)) - \frac{VI}{2} \sin(\phi) \sin(2 \omega t) \\
+    &= P + Q \\
+\end{align*}
+Dove $P$ rappresenta sempre la \textbf{Potenza Attiva} mentre $Q$ rappresenta invece la \textbf{Potenza Reattiva}.\\
+\\
+La Potenza Attiva $P$ è la potenza media assorbita (quindi la potenza effettivamente generata) in quel periodo rispetto al dipolo.\\
+(ha oscillazione media non nulla, perché fluttua, ma su valori maggiori di zero)\\
+\\
+La Potenza Reattiva $Q$ è l'ampiezza della componente fluttuante della potenza istantanea, cioè la potenza non dissipata sul circuito.\\
+(ha oscillazione media nulla)\\
+\\
+
+Queste sono sono di fatto i modi naturali dei power systems:
+\begin{itemize}
+    \item se ho solo il resistore $\rightarrow$ ho solo il primo addendo $P$  \\
+    \item se ho solo induttore o solo capacitore $\rightarrow$ ho solo il secondo addendo $Q$ \\
+\end{itemize}
+
+Allora il $\cos \phi$ prende il nome di \textbf{Power Factor}\\
+\begin{itemize}
+    \item se $\cos \phi > 0 \rightarrow$ si dice che il Power Factor è di tipo \textbf{Lagging} \\
+    \item se $\cos \phi < 0 \rightarrow$ si dice che il Power Factor è di tipo \textbf{Leading} \\
+\end{itemize}
+
+Per avere un sistema elettrico stabile io voglio mantenere\\
+\begin{align*}
+    0.5 \le \cos \phi \le 1
+\end{align*}
+
+\subsubsection{Interpretazione Fisica dell'Energia Reattiva attraversi l'analogica con il circuito LRC ed il sistema Massa-Molla-Smorzatore}
+\\
+Per poter meglio comprendere il concetto dietro alla potenza reattiva $Q$ andiamo a studiarla attraverso l'analogia tra sistemi elettrici e meccanici, di 2 esempi già visti: il circuito LRC e l'oscillatore smorzato.\\
+\\
+Generalmente possiamo definire l'energia come la somma fra energia cinetica e potenziale:
+\begin{align*}
+    E = T + U
+\end{align*}
+Nel caso dell'oscillatore armonico (senza smorzatore), quindi con conservazione dell'energia, assume la forma:
+\begin{align*}
+    E = T + U = \frac{1}{2}m\dot{x}^2 + \frac{1}{2}k\dot{x}^2
+\end{align*}
+Quindi la componente cinetica $T$ e la componente potenziale $U$ continuano a scambiarsi energia.\\
+Analogamente questo accade nei circuiti LC, $L$ e $C$ continuano a scambiarsi energia fra loro.\\
+\\
+Se si introduce la componente di attrito, quindi il circuito LRC si ha che:\\
+mentre $R$ lavora, $L$ e $C$ continuano a scambiarsi energia fra loro.\\
+Questo quindi può essere riportato all'oscillatore smorzato, nel quale, mentre $T$ e $U$ scambiando energia, ne viene dissipata un pó.\\
+\\
+Questa è dunque l'interpretazione fisica della \textbf{Potenza Reattiva}.\\
+\\
+\textbf{Osservazione}\\
+Attaccando un capacitore al nostro contatore della corrente, la corrente consumata dal capacitore non verebbe letta, in quanto lui continua a scambiare corrente continuamente.\\
+
+\subsubsection{Definizione di Complessore e Fasore}
+
+Usare però funzioni reali per rappresentare quantità elettriche non è conviente, ed è altamente complesso.\\
+Per questo motivo andiamo a definire quindi 2 strumenti matematici estremamente utili.
+\\
+\\
+\textbf{Complessore}\\
+\begin{align*}
+    X(t) = X \cos(\omega t + \phi)
+\end{align*}
+posso rappresentarlo nello spazio complesso come:
+\begin{align*}
+    \tilde{X}(t) = X e^{i(\omega t + \phi)}
+\end{align*}
+definendo quindi con $\tilde{X}$ il \textbf{complessore}.\\
+Questa scrittura può essere interpretata come:\\
+all'avanzare del tempo $t$ il vettore $X$ ruota in senso antiorario ad una certa velocità.\\
+\\
+\\
+\textbf{Complessore}\\
+Posso poi riscrivere il complessore come:
+\begin{align*}
+    \tilde{X}(t) = \sqrt2 \frac{X}{\sqrt2} e^{i \phi} e^{i \omega t}
+\end{align*}
+Da qui estraggo la quantità indipendente dal tempo 
+\begin{align*}
+    \underline{X} = \frac{X}{\sqrt2}e^{i \phi}
+\end{align*}
+definendo così la quantità $\underline{X}$ come il \textbf{Fasore}.\\
+\\
+\textbf{Osservazione}\\
+Ovviamente, la scrittura del complessore e quindi anche del fasore ha senso solo a regime permanete. Questo perché solo a regime permanente tutti i complessori ruotano alla stessa velocità, permettendo così l'esistenza sia del complessore che del fasore $\underline{X}$.\\
+\\
+\\
+\textbf{Valore Efficace}
+Possiamo poi definire come Valore Efficace la quantità:
+\begin{align*}
+    X_{eff} = \sqrt{\int_0^T \frac{X^2(t)}{T} \ dt} = \frac{X}{\sqrt 2}
+\end{align*}
+\\
+\\
+Più semplicemente, possiamo dire che:
+\begin{itemize}
+    \item il \textbf{complessore} rappresenta il vettore $X$ che ruota in senso orario all'avanzare del tempo $t$ \\
+    \item il \textbf{fasore} rappresenta il vettore $X$ fermo. (per convenzione si prende fermo all'istante $t=0$). \\
+    \item il \textbf{valore efficace} rappresenta il modulo del fasore, ovvero la lunghezza del vettore fasore. \\    
+\end{itemize}
+
+Usando i fasori è possibile definire la \textbf{Potenza Complessa} come un fasore, ovvero:
+\begin{equation*}
+    \underline{S} = \underline{V} \cdot \underline{I}^*
+\end{equation*}
+
+dove:
+\begin{align*}
+    I(t) &= I \cos \omega t & \Rightarrow  \tilde{I}(t) &= I e^{i \omega t} & \Rightarrow \underline{I} &= I_{eff} \\
+    \\
+    V(t) &= V \cos (\omega t + \phi) & \Rightarrow  \tilde{V}(t) &= V e^{i (\omega t + \phi)} & \Rightarrow \underline{V} &= V_{eff} \ e^{i \phi} \\
+\end{align*}
+
+Quindi possiamo formulare la potenza complessa come:
+
+\begin{equation*}
+    \underline{S} = VI = V_{eff} \cdot I_{eff} \cdot e^{i\phi} = V_{eff} \cdot I_{eff} \cdot \cos \phi + i V_{eff} I_{eff} \sin \phi = P + i Q
+\end{equation*}
+
+Osservando quindi che:
+\begin{align*}
+    Re(\underline{S}) &= P \\
+    Im(\underline{S}) &= Q
+\end{align*}
+
+Si identificano poi:
+\begin{align*}
+    \textit{Potenza Apparente: } \qquad &\sqrt{P^2 + Q^2} \\
+    \textit{Fattore di Potenza: } \qquad & \phi \quad  \rightarrow \quad \textit{misurata in: } \quad  [V \cdot A] \\
+\end{align*}
+
+\subsubsection{Sistemi Trifase}
+I power system sono tipicamente operati in trifase, cioè il segnale elettrico viene ripetuto 3 volte (ogni linea presenta 3 cavi).\\
+I 3 segnali hanno tutti stessa ampiezza e stessa frequenza, e si distinguono solo per la fase: sono sfasate di $120^o$ uno dall'altro.\\
+\\
+I voltaggi sui cavi possono essere rappresentati da complessori come:
+\begin{align*}
+    & \tilde{V_a}(t) = Ve^{i(\omega t + \phi)} \\
+    & \tilde{V_b}(t) = Ve^{i(\omega t + \phi - \frac{2}{3}\pi)} \\
+    & \tilde{V_c}(t) = Ve^{i(\omega t + \phi - \frac{4}{3}\pi)} \\
+\end{align*}
+
+Oppure può essere equivalentemente rappresentata da fasori come:
+\begin{align*}
+    & \underline{V_a} = V_{eff} e^{i \phi} \\
+    & \underline{V_b} = V_{eff} e^{i (\phi - \frac{2}{3}\pi )} \\
+    & \underline{V_c} = V_{eff} e^{i (\phi - \frac{4}{3}\pi )} \\
+\end{align*}
+
+Questi 3 fasori costituiscono di fatto un set di 3 fasi simmetriche, che possono essere quindi rappresentate con un albero:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{power_systems_fasori_trifase.png} % nome identico al file caricato
+\end{figure}
+
+Dove definiamo:
+\begin{align*}
+     &\underline{V_a}\ , \underline{V_b}\ , \underline{V_c} \qquad \textit{sono dette Tensioni di Fase} \\
+    & \underline{V_{ab}}\ , \underline{V_{ac}}\ ,\underline{V_{bc}} \qquad \textit{sono dette Tensioni Fase-Fase} \\
+\end{align*}
+
+\subsubsection{Bilanciamento di sistemi ed analisi indipendente della trifase}
+Per effettuare l'analisi di sistemi trifase, si svolge con un metodo chiamato: \textbf{Analisi fase-fase}.\\
+Cioè, analizzando il seguente circuito in cui il nodo di riferimetno dei generatori ha potenziale zero, si presentano in successione: stessa $V_{eff}$, una stessa impedenza di sorgente, e 3 utilizzatori diversi sulle 3 reti, con 3 diverse impedenze di carico, per poi ricongiungersi nel nodo di riferimento delle 3 linee.\\
+Il circuito chiude l'anello con il filo di neutro, che presenta una sua impedenza.\\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{power_systems_analisi_fase_fase_circuito_semplice_trifase.png} % nome identico al file caricato
+\end{figure}
+
+Possiamo descrivere il comportamento del circuito con le leggi di Kirchoff per tutte e 3 le maglie:
+\begin{align*}
+    & \underline{V_a} - \underline{I_a} \cdot  Z_s - \underline{I_a} \cdot Z_{La} - I_n \cdot Z_n = 0 \\
+    & \underline{V_a} - \underline{I_a} \cdot  (R_S + jX_S) - \underline{I_a} \cdot (R_{La} - j X_{La}) - I_n \cdot (I_n - jX_n) = 0 \\
+    \\
+    & \underline{V_b} - \underline{I_b} \cdot  Z_s - \underline{I_a} \cdot Z_{Lb} - I_n \cdot Z_n = 0 \\
+    & \underline{V_b} - \underline{I_b} \cdot  (R_S + jX_S) - \underline{I_a} \cdot (R_{Lb} - j X_{Lb}) - I_n \cdot (I_n - jX_n) = 0 \\
+    \\
+    & \underline{V_c} - \underline{I_c} \cdot  Z_s - \underline{I_c} \cdot Z_{Lc} - I_n \cdot Z_n = 0 \\
+    & \underline{V_c} - \underline{I_c} \cdot  (R_S + jX_S) - \underline{I_c} \cdot (R_{Lc} - j X_{Lc}) - I_n \cdot (I_n - jX_n) = 0 \\
+\end{align*}
+
+Perciò la corrente sul filo di neutro vale:
+\begin{equation*}
+    \underline{I_n} = \underline{I_a} + \underline{I_b} + \underline{I_c}\\
+\end{equation*}
+
+Possiamo quindi ottenere le formule della corrente:
+
+\begin{align*}
+    \underline{I_a} = \frac{\underline{V_a} - \underline{I_n}(R_n + jX_n)}{(R_S + jX_s) + (R_{La} + jX_{La})} \\
+    
+    \underline{I_b} = \frac{\underline{V_b} - \underline{I_n}(R_n + jX_n)}{(R_S + jX_s) + (R_{Lb} + jX_{Lb})} \\
+    
+    \underline{I_c} = \frac{\underline{V_c} - \underline{I_n}(R_n + jX_n)}{(R_S + jX_s) + (R_{Lc} + jX_{Lc})} \\
+\end{align*}
+
+Assumiamo delle semplificazioni per il nostro sistema trifase.\\
+Nello specifico consideriamo impedenza all'origine uguale, consideriamo un sistema trifase simmetrico, cioè $\underline{V_a} + \underline{V_b} + \underline{V_c} = 0$, e consideriamo le 3 impedenze di carico uguali, cioè $\underline{Z_{La}} = \underline{Z_{Lb}} = \underline{Z_{Lc}} = \underline{Z_{L}}$\\
+\\
+Otteniamo così la formula:
+
+\begin{align*}
+    & \underline{V_a} + \underline{V_b} + \underline{V_c} - \underline{I_n}[(R_s + jX_s) + (R_L + jX_L) + (R_n + jX_n)] = 0 \\
+    \\
+    & \textit{Però sappiamo che:} \\
+    & \underline{V_a} + \underline{V_b} + \underline{V_c} = 0 \\
+    \\
+    & \textit{Allora:} \\
+    & (\underline{I_a} +\underline{I_b} + \underline{I_c})Z_s = I_n Z_s \qquad 
+    \Rightarrow \qquad 
+    I_n = 0 \\
+\end{align*}
+
+Avendo quindi la corrente di neutro nulla, significa che le 3 linee sono disaccoppiate fra loro, quindi lavorano in maniera indipendente.\\
+Di conseguenza il sistema può essere considerato bilanciato.\\
+I valori delle 3 correnti diventano:\\
+
+\begin{align*}
+    \underline{I_a} = \frac{\underline{V_a}}{(R_s + jX_s) + (R_L + jX_L)} \\
+    \underline{I_b} = \frac{\underline{V_b}}{(R_s + jX_s) + (R_L + jX_L)} \\
+    \underline{I_c} = \frac{\underline{V_c}}{(R_s + jX_s) + (R_L + jX_L)} \\
+\end{align*}
+
+Per sistemi bilanciati possiamo osservare che la tensione complessa vale:
+\begin{equation*}
+    \underline{S_3} = \underline{V_a} \underline{I_a} + \underline{V_b} \underline{I_b} + \underline{V_c} \underline{I_c} = 3(P + iQ)\\
+\end{equation*}
+
+Quando si ha un sistema equilibrato nelle tensioni, significa che stiamo in un caso di bilanciamento perfetto (sistema ideale).\\
+Quindi posso studiare il sistema trifase come 3 sistemi a singola fase indipendenti.\\
+(Osserviamo anche che è ragionevole considerare l'impedenza uguale sulle 3 fasi, in quanto ciò che può variare è il consumo. Però è ragionevole approssimare anche il consumo, in quanto, alternando ripetutamente le 3 tensioni fra i consumatori, le statistiche di consumo si approssimano uguali fra le 3 linee).\\
+\\
+Il bilanciamento salta quando si perde la simmetria fra le 3 linee (per esempio a causa di un guasto solo su una delle 3 linee).\\
+Quindi avrò una corrente di neutro non nulla.\\
+Di conseguenza, nel caso di un sistema in condizione di guasto, non può più essere fatto indipendente sulle 3 linee, però va svolto con il sistema tri-fase.\\
+\\
+Generalmente i tipi di guasto che si possono avere sono di tipo:
+\begin{itemize}
+    \item Guasto Fase-Ground: Una delle linee è collegato al filo di neutro prima del punto di intersezione con le altre linee.\\
+    \item Guasto Fase-Fase: una delle linee è direttamente collegata al filo di un'altra linea. \\
+    \item Guasto Doppia Fase-Ground: due linee sono collegate tra loro, che poi vanno al neutro, prima del punto di intersezione con le altre linee.
+\end{itemize}
+
+\subsubsection{Comportamento a Regime Permanente di un power system}
+
+\textbf{Osservazione}\\
+Per lavorare con i fasori, dobbiamo necessariamente trovarci in una fase di regime permanente del sistema (se così non fosse, non avremmo i complessori che ruotano tutti alla stessa velocità e quindi non avremmo i fasori).\\
+\\
+Possiamo studiare il comportamento a regime permanente di un power system, partendo da un esempio:\\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{power_system_esempio_analisi_trifase_regime_permanente.png} % nome identico al file caricato
+\end{figure}
+
+Per modellizziamo il power system dovremmo usare un modello a costanti distribbuite.\\
+Possiamo però approssimarlo ad un modello a costanti concentrate (così da avere una EDO).\\
+\\
+Nella figura possiamo osservare i due capi del circuito ovvero i nodi sending (che invia) e receiving (che riceve).\\
+Caratterizzati dalle loro correnti e tensioni ($I_s$, $I_r$, $V_s$, $V_r$).\\
+\\
+Andiamo anche a definire degli strumenti utili per la modellazione:
+\begin{itemize}
+    \item Coinduttanza $b = \ohm \cdot C$: modellizza le perdite che si possono avere con gli isolatori presenti sul traliccio.\\
+    \item Resistenza $R$ \\
+    \item Induttanza $L$ \\
+    \item Reattanza $X = \ohm \cdot L$ \\
+    \item Impedenza $z = r + ix$: impedenza serie per unità di lunghezza (x), per rappresentare elementi in serie (del circuito). \\
+    \item Conduttanza $g$ \\
+    \item Suscettenza $b$ \\
+    \item Ammettenza $y = g + ib$: ammettenza serie per unità di lunghezza (b), per rappresentare elementi in parallelo (del circuito). \\
+\end{itemize}
+
+Sviluppiamo quindi un circuito equivalente, che possa descrivere il nostro circuito ma in maniera semplificata.\\
+
+Per linee di lunghezza cortaa (< 80 Km) possiamo approssimare:
+\begin{align*}
+    & \underline{Z_L} = \underline{Z} \\
+    & \underline{Y_L} = 0 \\
+\end{align*}
+Questo perché possiamo distanze piccole ($\approx0$) si ha lunghezza tendente a zero, e quindi anche conduttanza tendente a zero. Perciò l'ammettenza è approssimabile nulla.\\
+\\
+Per linee di lunghezza media (80-200 Km) possiamo approssimare:
+\begin{align*}
+    & \underline{Z_L} = \underline{Z} \\
+    & \underline{Y_L} = \underline{Y}
+\end{align*}
+
+Dunque, il nostro circuito equivalente avrà una forma di questo tipo:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{power_systems_circuito_equivalente_analisi_trifase.png} % nome identico al file caricato
+\end{figure}
+
+Supponiamo inoltre che la linea sia un cavo ideale (no resistenza sul cavo).\\
+Si ha quindi $\underline{E}$ la tensione del generatore e $\underline{V}$ l'impedenza del consumatore.\\
+\\
+Ci troviamo allora in una situazione di questo tipo:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{power_systems_rappresentazione_fasori_circuito_equivalente.png} % nome identico al file caricato
+\end{figure}
+
+Lo studio del circuito equivalente può avvenire in questo modo:\\
+
+Scelgo $\underline{V}$ come fasore che ha fase pari a zero.\\
+Chiamo $\varphi$ lo sfasamento fra i fasori $\underline{V}$ ed $\underline{I}$ (cioè $\underline{V}$ è in ritardo di fase di $\varphi$ rispetto a  $\underline{V}$).\\
+($\underline{V}$ rappresenta il fasore di tensione, mentre $\underline{I}$ rappresenta il fasore di corrente).\\
+\\
+Quindi la tensione del generatore $\underline{E}$ vale:
+\begin{align*}
+    \underline{E} &= \underline{V} + i\underline{X}\underline{I} = \\
+    &= \underline{V} + (Z_{\underline{X} \cdot I_{\underline{X}}}) = \\
+    &= \underline{V} + (\ohm \cdot L \cdot I)
+\end{align*}
+
+Definiamo poi con \textbf{l'angolo di carico} come: $\delta$.\\
+L'angolo di carico rappresenta lo sfasamento di $\underline{E}$ rispetto a $\underline{V}$, cioè, lo sfasamento tra il nodo sending ed il nodo receiving.\\
+(In questo caso $\delta$ rappresenta anche la fase di $\underline{E}$ dato che la fase di $\underline{V}$ vale $0$.)\\
+\\
+Devo quindi mettere in relazione gli angoli $\varphi$ e $\delta$ per trovare un'equazione che mette in relazione la potenza trasferita fra i 2 nodi.\\
+\\
+Osservo quindi che l'angolo $\delta$ è in stretta relazione con il generatore (quindi $\delta$ rappresenta una variabile di stato del generatore).\\
+Quindi io posso fare lo studio della mia rete in funzione della variabile del generatore.\\
+\\
+Sfruttando il $1^o$ teorema dei triangoli rettangoli, ottengo che:
+\begin{align*}
+    |\overline{BC}| &= X \underline{I} \cos \varphi = E \sin \delta \\
+    |\overline{AC}| &= X \underline{I} \sin \varphi = E \cos \delta - V \\
+\end{align*}
+\textbf{Osservazione: }\\
+Il modulo di questi valori fornisce come risultato sempre dei valori efficaci.\\
+\\
+
+Allora si ha:
+\begin{align*}
+    I \cos \varphi &= \frac{E}{X} \sin \delta \\
+    I \sin \varphi &= \frac{E}{X} \cos \delta - \frac{V}{X}\\
+\end{align*}
+
+Quindi ottengo la \textbf{relazione potenza-angolo} che vale:
+\begin{equation*}
+    P = \frac{EV}{X} \sin \delta
+\end{equation*}
+Questa equazione chiamata relazione potenza-angolo è un'espressione della potenza attiva trasferita al receiving-end in funzione di $\delta$ ovvero la differenza di fase fra i nodi sending e receiving.\\
+\\
+\textbf{Osservazione: }\\
+Lo studio viene svolto considerando $E$, $V$ costanti, in quanto le loro variazioni sono piccole tali da poterle approssimare a costanti.\\
+Questo ci permette di concentrare il nostro studio sulla connessione fra $P$ ed $S$.\\
+\\
+Il valore masismo dell'angolo di carico $\delta$ è: $\delta = \frac{\pi}{2}$.\\
+Cioè quando $\delta$ assume valore $\frac{\pi}{2}$ non abbiamo margine di stabilità.\\
+Allora per essere stabile devo avere: $-\frac{\pi}{2} < \delta < \frac{\pi}{2}$.\\
+\\
+Inoltre osserviamo che $X$ aumenta all'aumentare della lunghezza della linea.
+Perciò per linee molto corte avremmo una potenza maggiore, a parità di fasori di tensione ed angolo di carico.\\
+\\
+Possiamo quindi esprimere la potenza reattiva che lascia l'elemento come:
+\begin{equation*}
+    Q = \frac{EV}{X} \cos \delta - \frac{V^2}{X} \\
+\end{equation*}
+
+Possiamo inoltre esprimere la potenza reattiva in funzione della relazione potenza-angolo invece che dell'angolo di carico, ottenendo la formula:
+\begin{equation*}
+    Q = \sqrt{(\frac{EV}{X})^2 - P^2} - \frac{V^2}{X}
+\end{equation*}
+
+\subsection{Power Flow Analysis}
+La power flow analysis è l'analisi dei flussi di potenza su grafi di reti con un numero generico di nodi.\\
+In pratica calcoliamo il comportamento a regime permanente della rete, cioè vediamo il pundo di lavoro della rete, quando sta a regime.\\
+\\
+Dato che si tratta di un sistema non lineare, per poter rappresentare il sistema con equazioni a costanti concentrate (EDO), è neccessario fare una linearizzazione.\\
+Dalla legge di Lyapunov però la linearizzazione di un sistema non lineare può avvenire solo attorno al punto di equilibrio del sistema.\\
+(A seconda del punto di lavoro della rete, attorno al si linearizza il sistema, l'analisi del sistema linearizzato cambia).\\
+
+\subsubsection{Definizione del problema di Power Flow Analysis}
+Data una power network con carichi di potenza complessi e noti (noto il fabisogno) e con set di specifiche o restrizioni sui generatori e sui voltaggi (noti i vincoli sui parametri e sui generatori), calcola il voltaggio sui cavi, sui generatori e sui nodi, per soddisfare il fabisogno.\\
+\\
+Questo problema prende il nome di problema di power flow analysis, o anche di problema del load flow.\\
+\\
+In pratica il problema della power flow analysis richiede di:
+\begin{itemize}
+    \item determinare il flusso di consumo sui nodi; \\
+    \item determinare il voltaggio che i generatori devono fornire; \\
+    \item determinare il votaggio che ci deve stare su ogni linea. \\
+\end{itemize}
+
+Tutti questi criteri devono essere scelti tali da rispettare il fabisogno, ma allo stesso tempo non devono rompere la linea.\\
+\\
+La risoluzione di questo tipo di problema avviene svolgendo i seguenti passi:
+\begin{enumerate}
+    \item Determinare il valore degli elementi passivi della rete; \\
+    \item Determinare le posizioni ed i valori di tutte le potenze complesse sulla rete; \\
+    \item Determinare specifiche e vincoli sui generatori; \\
+    \item Sviluppare un modello matematico che descriva la potenza sulla rete (il modello che sviluppiamo descrive solo il comportamento a regime della rete);\\
+    \item Determinare le tensioni sulla rete; \\
+    \item Determinare le potenze sulla rete. \\
+    \item Vedere se la soluzione va a violare qualche input. \\
+\end{enumerate}
+
+Raggruppando gli step in macroclassi, la risoluzione del problema avrà un procedimento di questo tipo:
+\begin{enumerate}
+    \item Reperimento delle informazioni; \\
+    \item Modellazione; \\
+    \item Calcolo della soluzione; \\
+    \item Verifica che l'equazione sia una soluzione valida. \\
+\end{enumerate}
+
+\subsubsection{Caso studio power flow analysis}
+I modelli individuali delle linee di trasmissione sono combinate in un modello della rete rappresentata dalla seguente equazione:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{power_systems_power_flow_analysis_caso_studio.png} % nome identico al file caricato
+\end{figure}
+
+Dall'equazione possiamo quindi rappresentare la rete con un grafo di questo tipo:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{power_systems_power_flow_analysis_caso_studio_rappresentazione_grafo.png} % nome identico al file caricato
+\end{figure}
+
+In questa rappresentazione abbiamo:
+\begin{itemize}
+    \item $\underline{V}$ il vettore delle tensioni (voltaggi) sui nodi; \\
+    \item $\underline{I}$ il vettore delle correnti entranti nei nodi (rispetta la legge dfi Kirkchoff); \\
+    \item $\underline{Y}$ la matrice della ammettenze. \\
+\end{itemize}
+
+Possiamo quindi sviluppare un'equazione nella forma:
+\begin{equation}
+    \underline{I_i} = \underline{Y_{i\theta}} \cdot \underline{V_i} + \sum_{j=1\ ;\  j\ne i}^N \underline{Y_{ij}} \cdot (\underline{V_i} - \underline{V_j})
+\end{equation}
+
+espressione della i-esima componente del vettore.
+Dove
+\begin{itemize}
+    \item $\underline{Y_{i\theta}}$ è l'ammettenza che collega il nodo "$i$" con il nodo riferimento "$\theta$". \\
+    \item $\underline{Y_{ij}}$ è l'ammettenza della linea di trasmissione.
+    \item $\underline{V_i} - \underline{V_j}$ sono le generiche correnti delle tensioni e correnti sul bus "$i$".
+\end{itemize}
+
+Riscriviamo quindi l'equazione $(33)$ nella forma:
+\begin{equation}
+    \underline{I_i} = (\underline{Y_{i\theta}} + \sum_{j\ne i}\underline{Y_{ij}}) \underline{V_i} + \sum_{j \ne i}(-\underline{Y_{ij}}) \underline{V_j}
+\end{equation}
+
+Poniamo quindi:
+\begin{align*}
+    & \underline{Y_{ii}} = \underline{Y_{i\theta}} + \sum_{j \ne i} \underline{Y_{ij}} \\
+    & \underline{Y_{ij}} = - \underline{Y_{ij}}
+\end{align*}
+
+Allora ottengo l'equazione:
+\begin{equation}
+    \underline{I_i} = \underline{Y_{ii}} \underline{V_i} + \sum_{i \ne j} \underline{Y_{ij}} \underline{V_j}
+\end{equation}
+
+Ottenendo così una equazione di Ohm che descrive il legame fra le correnti entranti e quelle uscenti, in relazione con le tensioni.\\
+Abbiamo così di fatto scritto un'equazione con cui generiamo una matrice di ammettenze che mi rappresenta il grafo di rete.\\
+\\
+Andiamo ora a calcolare la potenza complessa sui bus "$i$":
+\begin{equation}
+    \underline{S_i} = \underline{V_i} \  \underline{I_i}^* = \underline{V_i} \ (\underline{Y_{ii}}^* \ \underline{V_i}^* + \sum_{j \ne i}\underline{Y_{ij}}^* \ \underline{V_j}^*)
+\end{equation}
+
+Ora andiamo a scrivere il fasore di tensione in forma polare, mentre il fasore ammettenza lo esprimo con la rappresentazione rettangolare.\\
+
+\begin{align*}
+    & \underline{V} = V \ e^{i \delta} \\
+    & \underline{Y} = G + iB
+\end{align*}
+
+\textbf{Osserazione: }\\
+Uso 2 rappresentazioni diverse per un problema pratico-fisico:\\
+il dataset del cavo viene fornito in forma rettangolare, mentre al NMS (Network Management System) la tensione serve in forma polare (di modulo e fase).\\
+\\
+
+Riprendendo quindi l'equazioe $(36)$ con le nuove rappresentazioni la scriviamo come:
+\begin{align*}
+    \underline{S_i} &= V_ie^{i\delta_i}[(G_{ii} - iB_{ii})V_ie^{-i\delta_i} + \sum_{j \ne i}(G_{ij} - iB_{ij})V_je^{-i\delta_j}] = \\
+    &= V_i^2(G_{ii} - iB_{ii}) + \sum_{j \ne i} V_iV_j(G_{ij} - B_{ij})e^{i(\delta_i - \delta_j)} = \\
+    &= V_i^2(G_{ii} - iB_{ii}) + \sum_{j \ne i} V_iV_j(G_{ij} - iB_{ij})[\cos(\delta_i - \delta_j) + i\sin(\delta_i - \delta_j)] \\
+    & \textit{separando la parte reale dalla parte immaginaria si ha:} \\
+    &= V_i^2G_{ii} + \sum_{j \ne i}V_iV_j[G_{ij} \cos (\delta_i - \delta_j) + B_{ij} \sin( \delta_i - \delta_j)] + \{ -V_i^2B_{ii} + \sum_{j \ne i}V_iV_j[G_{ij} \sin (\delta_i - \delta_j) - b_{ij} \cos(\delta_i - \delta_j)] \} = \\
+\end{align*}
+
+Otteniamo così i valori della potenza attiva e reattiva che sono rispettivamente:
+\begin{align*}
+    P_i = V_i^2G_{ii} + \sum_{j \ne i}V_iV_j[G_{ij} \cos (\delta_i - \delta_j) + B_{ij} \sin (\delta_i - \delta_j)] \\
+    Q_i = -V_i^2B_{ii} + \sum_{j \ne i} V_iV_j [G_{ij} \sin (\delta_i - \delta_j) - B_{ij} \cos (\delta_i - \delta_j)]
+\end{align*}
+
+Le equazioni appena trovate prendono il nome di \textbf{Hybrid Network Equations} e rappresentano il bilancio di potenza sul generico bus "$i$" della rete.\\
+
+\textbf{Osservazioni: }\\
+Possiamo fare delle considerazioni sulle equazioni che abbiamo appena ricavato:
+\begin{itemize}
+    \item Sono equazioni algebriche \\
+    \item Sono non lineari (quadratiche sulle tensioni e trigonometriche sugli angoli di carico) \\
+    \item Le nostre grandezze di interesse sono: $P$, $Q$, $\delta$, $V$. Quindi se conosciamo queste grandezze sappiamo anche il punto di carico della rete. (Ho $4_n$ variabili indipendenti e $2_n$ potenziali equazioni). \\
+    \item Abbiamo perso il concetto di receiving, dato che ora abbiamo un numero indefinito "$n$" di nodi sulla rete. \\
+    \item Gli angoli di carico "$\delta$" non appaiono mai da soli, ma appaiono sempre come differenza: questo perché si sceglie sempre un nodo di riferimento rispetto al quale si valutano tutti gli altri nodi, come differenza rispetto al riferimento. \\
+\end{itemize}
+
+Quindi, in funzione delle variabili che conosciamo, quando andiamo a svolgere il nostro problema di power flow analysis, in funzione di quale coppia di variabili conosciamo, classifichiamo i nodi della rete:\\
+\\
+\begin{align*}
+    \begin{matrix}
+        	extit{nodi} & \textit{variabili note} & \textit{variabili sconosciute} & \textit{nome del problema} \\
+        	extit{Nodi di carico} & P, \ Q & V, \ \delta & \textit{PQ BUS} \\
+        	extit{Nodi dei generatori} & P, \ V & Q, \ \delta & \textit{PV BUS} \\
+        	extit{Nodi di slack} & V, \ \delta & P, \ Q & \textit{SLACK BUS} \\
+    \end{matrix}
+\end{align*}
+\\
+\\
+
+\textbf{Esempio: }\\
+Di "$n$" nodi generatori, "$n-1$" hanno $P$, $V$ noti, mentre $1$ nodo ha $V$ imposto e $\delta = 0$.\\
+\\
+
+\textbf{Osservazione: }\\
+Non posso imporre una potenza attiva su tutti i nodi di generazione, perché ci sono le perdite di rete.\\
+Quindi non posso imporre una potenza di riferimento a priori su tutti i nodi.\\
+Perciò ho almeno un generatore con "$P$" ignota (nodo di slack).
+Quindi posso imporgli il valore della tensione "$V$", e poi posso imporre la differenza sull' angololo di carico $\delta = 0$ non fisicamente ma matematicamente: perché mi interessa la differenza dei delta, quindi se il suo angolo di carico vale zero, lui diventa il nodo di riferimento.\\
+Cioè: $\delta_{SLACK} = \delta_{RIF} = 0$
+(Non posso imporre "$P$" ne "$Q$" perché non ho un loop di controllo per poterli imporre).\\
+
+\textbf{Osservazione: }\\
+Per la risoluzione della scelta delle offerte dei fornitori nel mercato del giorno dopo, o anche per risolvere eventuali cambia effettuati, si usa il \textbf{Metodo Newton-Rapsol}.
+
+\subsection{Dinamica Power Systems}
+\subsubsection{Classificazione delle dinamiche dei Power System}
+I power system sono oggetti estesi, composti da vari elementi connessi fra loro.\\
+Questo significa che i power systems presentano tante dinamiche diverse, perciò sarebbe eccessivamente complesso modellare e studiare tutte le dinamiche insieme.\\
+Per questo motivo si preferisce modellare i sottoproblemi di interesse per l'analisi.\\
+\\
+Le macromeccaniche che compongono i power systems sono 4, che si sovrappongono fra di loro in punti specifici in funzione della scala della grandezza del tempo:
+\begin{itemize}
+    \item fenomeno d'onda \\
+    \item fenomeno elettromagnetico \\
+    \item fenomeno elettromeccanico \\
+    \item fenomeno termodinamico \\
+\end{itemize}
+
+Che si dispongono in questo ordine sul piano del tempo:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{power_systems_classificazione_macromeccaniche.png} % nome identico al file caricato
+\end{figure}
+
+\subsubsection{Stabilità dei Power Systems}
+La stabilità, nei power system, è una proprietà che gli permette di operare in equilibrio (in condizioni normali) e di mantenere uno stato di sufficiente equilibrio in caso di disturbi.\\
+\\
+Le tipologgie di problemi che possono presentarsi sono di vario tipo:
+\begin{enumerate}
+    \item problemi sulla potenza attiva, che comprende: stagilità dell'angolo di carico, stabilità della frequenza. \\
+    \item problemi sulla potenza reattiva, che comprende: stabilità del voltaggio.
+\end{enumerate}
+
+Anche l'entità dei disturbi può variare tanto:
+\begin{itemize}
+    \item Piccoli Disturbi (il sistema si trova ancora in un intorno del punto di lavoro, e quindi può ancora essere linearizzato).\\Qui ricadono i problemi di stabilità sull'angolo di carico e sul voltaggio \\
+    \item Grandi Disturbi (es: perdità di una linea, perdità di un generatore, ecc...) (il sistema non è più in un intorno del punto di lavoro).\\Qui ricadono i problemi di stabilità sul transiente e sul voltaggio \\
+\end{itemize}
+
+\printindex
+
+\end{document}
