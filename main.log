@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.30)  30 DEC 2025 21:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.30)  31 DEC 2025 00:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -4723,29 +4723,130 @@ Underfull \hbox (badness 10000) in paragraph at lines 3468--3469
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 3472--3483
 
-[125]
-runsystem(makeindex main.idx)...executed safely (allowed).
+ []
 
- (./main.ind) (./main.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 3472--3483
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3472--3483
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3472--3483
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3472--3483
+
+ []
+
+<power_systems_grafico_macchine_sincrone.png, id=548, 724.7075pt x 268.00125pt>
+File: power_systems_grafico_macchine_sincrone.png Graphic file (type png)
+<use power_systems_grafico_macchine_sincrone.png>
+Package pdftex.def Info: power_systems_grafico_macchine_sincrone.png  used on input line 3486.
+(pdftex.def)             Requested size: 345.0pt x 127.58408pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3489--3490
+
+ []
+
+
+
+[125 <./power_systems_grafico_macchine_sincrone.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 3496--3497
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3497--3498
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3500--3503
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3500--3503
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3505--3507
+
+ []
+
+<power_systems_macchine_sincrone_angolo_di_carico.png, id=554, 740.7675pt x 274.02374pt>
+File: power_systems_macchine_sincrone_angolo_di_carico.png Graphic file (type png)
+<use power_systems_macchine_sincrone_angolo_di_carico.png>
+Package pdftex.def Info: power_systems_macchine_sincrone_angolo_di_carico.png  used on input line 3510.
+(pdftex.def)             Requested size: 345.0pt x 127.6246pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3513--3514
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3527--3532
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3527--3532
+
+ []
+
+
+
+[126 <./power_systems_macchine_sincrone_angolo_di_carico.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 3533--3539
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3533--3539
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3545--3546
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3546--3547
+
+ []
+
+
+
+[127] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3753 strings out of 473190
- 67769 string characters out of 5715800
+ 3761 strings out of 473190
+ 68459 string characters out of 5715800
  455539 words of memory out of 5000000
- 26965 multiletter control sequences out of 15000+600000
+ 26976 multiletter control sequences out of 15000+600000
  569057 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,19n,65p,594b,289s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (127 pages, 10132830 bytes).
+Output written on main.pdf (129 pages, 10223982 bytes).
 PDF statistics:
- 637 PDF objects out of 1000 (max. 8388607)
- 344 compressed objects within 4 object streams
+ 647 PDF objects out of 1000 (max. 8388607)
+ 348 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 321 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 331 words of extra memory for PDF output out of 10000 (max. 10000000)
 

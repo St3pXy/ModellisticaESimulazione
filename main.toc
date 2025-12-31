@@ -81,3 +81,4 @@
 \contentsline {subsection}{\numberline {8.7}Dinamica Power Systems}{123}{}%
 \contentsline {subsubsection}{\numberline {8.7.1}Classificazione delle dinamiche dei Power System}{123}{}%
 \contentsline {subsubsection}{\numberline {8.7.2}Stabilità dei Power Systems}{124}{}%
+\contentsline {subsubsection}{\numberline {8.7.3}Rotor Angle Stability (piccoli disturbi)}{125}{}%

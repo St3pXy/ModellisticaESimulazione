@@ -3458,8 +3458,8 @@ La stabilità, nei power system, è una proprietà che gli permette di operare i
 \\
 Le tipologgie di problemi che possono presentarsi sono di vario tipo:
 \begin{enumerate}
-    \item problemi sulla potenza attiva, che comprende: stagilità dell'angolo di carico, stabilità della frequenza. \\
-    \item problemi sulla potenza reattiva, che comprende: stabilità del voltaggio.
+    \item problemi sulla potenza attiva (classici problemi sulla stabilità, per mantenere le operazioni sincrone), che comprende: stagilità dell'angolo di carico, stabilità della frequenza. \\
+    \item problemi sulla potenza reattiva ( quando si presenta instabilità senza avere perdità di sincronismo), che comprende: stabilità del voltaggio.
 \end{enumerate}
 
 Anche l'entità dei disturbi può variare tanto:
@@ -3468,6 +3468,86 @@ Anche l'entità dei disturbi può variare tanto:
     \item Grandi Disturbi (es: perdità di una linea, perdità di un generatore, ecc...) (il sistema non è più in un intorno del punto di lavoro).\\Qui ricadono i problemi di stabilità sul transiente e sul voltaggio \\
 \end{itemize}
 
-\printindex
+\subsubsection{Rotor Angle Stability (piccoli disturbi)}
+La rotor angle stability (o stabilità dell'angolo di carico) è la capacità di macchine sincrone dentro un power system di rimanere in sincronia. \\
+La stabilità del problema include le oscillazioni elettromeccaniche intrinseche dei power systems. \\
+\\
+Una macchina sincrona è composta essenzialente da due elementi: un campo (rotore) ed un'armatura (statore). \\
+L'avvolgimento del rotore è eccitato da corrente continua. Quindi quando il motore, collegato ad una turbina, viene messo in moto, nell'avvolgimento del campo vengono indotte tensioni alternate nella trifase dell'avvolgimento dell'armatura. \\
+\\
+Quando un carico viene collegato al circuito (e quindi collegato alla macchina sincrona), una corrente indotta scorre nell'avvolgimento dello statore. \\
+La frequenza delle tensioni alternate indotte e della corrente risultate dipende dalla velocità di rotazione. \\
+\\
+Il motore prende il nome di "macchina sincrona" perché la frequenza della quantità elettrica nello statore è sincronizzato con la velocitò di rotazione meccanica del rotore. \\
+\\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{power_systems_grafico_macchine_sincrone.png} % nome identico al file caricato
+\end{figure}
+
+Per le macchine sincrone, l'offerta è la rotazione, mentre la domanda è la coppia elettromagnetica che si viene a creare, del tipo:\\
+\begin{equation*}
+    J \frac{d\omega_m}{dt} = T_m - T_e - D(\omega_m - \omega_{m0})
+\end{equation*}
+
+Dove:
+\begin{itemize}
+    \item $\tau_t$ è la coppia di turbina. \\
+    \item $\tau_e$ è la coppia elettromagnetica. \\
+\end{itemize}
+
+Abbiamo dei rotori in rotazione e la loro posizione rispetto ad un sistema di riferimetno sincrono (cioè che si muove a $50Hz$) è proprio l'angolo di carico.\\
+\\
+In condizione di regime, cioè quando $\frac{d \omega_m}{d t} \rightarrow 0$ ho che:\\
+\begin{equation}
+    D_d \omega_m = \tau_t - \tau_e
+\end{equation}
+dove $\omega_m$ corrisponde alla velocità angolare di sincronismo, quindi per evitare confusione con i nomi, prenderà il nome di $\omega_{sm}$ \\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{power_systems_macchine_sincrone_angolo_di_carico.png} % nome identico al file caricato
+\end{figure}
+
+Perciò posso riscrivere l'equazione $(37)$ come: \\
+\begin{equation}
+    \tau_t = \tau_e + D_d \omega_{sm}
+\end{equation}
+
+Possiamo così ricavare la coppia di turbina necessaria che va a bilanciare la domanda:
+\begin{equation*}
+        tau_m = \tau_t - D_d \omega_{sm} = \tau_e 
+\end{equation*}
+\begin{align*}
+    & \textit{se: } \tau_m > \tau_e & \rightarrow \textit{il rotore accellera} \\
+    & \textit{se: } \tau_m < \tau_e & \rightarrow \textit{il rotore decellera} \\
+\end{align*}
+
+Quindi possiamo affermare che $\tau_m$ è un controllo, \\
+cioé se $\tau_e$ aumenta perché il fabisogno aumenta, quindi $\tau_m$ deve aumentare per poter soddisfare il fabisogno. \\
+\\
+(Un esempio più banale che può essere fatto per meglio spiegare questo concetto è quello della bicicletta: \\
+Per mantenere la velocità di rotazione delle ruote costante, nel caso di una salita, devo auentare il momento della coppia.) \\
+
+Se il rotore accellera, la sua posizione angolare cambia rispetto allo slack, quindi cambia la sua posizione rispetto alle altre macchine. \\
+Questo fa cambiare l'angolo di sfasamento che quindi fa cambiare il fasore. \\
+\\
+Ci troviamo quindi in un regime transitorio t.c. dobbiamo controllare gli elementi affinché nessuno diventi instabile, ma che, allo stesso tempo, tutti tendano a diventare asintoticaente stabili. \\
+\\
+Posso scrivere:
+\begin{equation}
+    \omega_m = \omega_{sm} + \Delta \omega_m = \omega_{sm} + \frac{d \delta_m}{dt}
+\end{equation}
+
+Dove:
+\begin{itemize}
+    \item $\Delta \omega_m$ è la perturbazione sul rotore \\
+    \item $\frac{d \delta_m}{dt}$ è la variazione di angolo del rotore rispetto al sistema di riferimento sincrono \\
+\end{itemize}
+
+
+
+
 
 \end{document}

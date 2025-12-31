@@ -1,12 +1,12 @@
 # Fdb version 4
-["makeindex main.idx"] 1767124403.63772 "main.idx" "main.ind" "main" 1767124856.82958 0
-  "main.idx" 1767124853.52391 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1767139027.11573 "main.idx" "main.ind" "main" 1767139050.18858 0
+  "main.idx" 1767139046.74926 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1767124853.3772 "/Users/step/File/Universita/ModellisticaESimulazione/main.tex" "main.pdf" "main" 1767124856.82966 2
-  "/Users/step/File/Universita/ModellisticaESimulazione/main.tex" 1767124853.13321 186993 db66b2eb6ae9a7a412037b8226a5c575 ""
+["pdflatex"] 1767139046.59603 "/Users/step/File/Universita/ModellisticaESimulazione/main.tex" "main.pdf" "main" 1767139050.18866 2
+  "/Users/step/File/Universita/ModellisticaESimulazione/main.tex" 1767139040.64529 191139 f4f7757720126a6b3cb5d6d763aadb4a ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -118,10 +118,10 @@
   "grafico_condensatore_reale.png" 1767123664.19087 305596 d3a7cfb602a137752850e723b3aac6d6 ""
   "grafico_nyquist_esempio_pid_pendolo_inverso.png" 1767123664.19367 163492 3258b10fd0ee5796fc43422964f110d2 ""
   "halfcar.png" 1767123664.19527 187217 3788bb4f94a022e49f400343e44e1f08 ""
-  "main.aux" 1767124856.65294 10898 1fb1e5dcfa0bf98ff3894c9cbc375263 "pdflatex"
-  "main.ind" 1767124856.65192 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.tex" 1767124853.13321 186993 db66b2eb6ae9a7a412037b8226a5c575 ""
-  "main.toc" 1767124856.65409 7059 3a02c5df9e0a94f9304fe390ec5537b2 "pdflatex"
+  "main.aux" 1767139050.01751 11038 3c47494153e767e65e2c25b415b865c5 "pdflatex"
+  "main.ind" 0 -1 0 "makeindex main.idx"
+  "main.tex" 1767139040.64529 191139 f4f7757720126a6b3cb5d6d763aadb4a ""
+  "main.toc" 1767139050.01862 7158 1cc23934a3e21f9d31bb518ab811e963 "pdflatex"
   "oscillatoresemplice.png" 1767123664.19981 62383 7268a250f71dbe7b1d0263b3dac2fa32 ""
   "oscillatoresmorzato.png" 1767123664.20274 68101 631baf8908b77d49baa6799d010a28e9 ""
   "oscillatoresmorzatoforzato.png" 1767123664.20452 68863 d8c955fcb6a77b0a84a0a8e6e4c903a0 ""
@@ -142,6 +142,8 @@
   "power_systems_classificazione_macromeccaniche.png" 1767123664.24398 199229 da6d5e038431c2669b388b64f9304410 ""
   "power_systems_esempio_rappresentazione_base.png" 1767123664.24559 160685 b468a436009a24aba47885217329144e ""
   "power_systems_fasori_trifase.png" 1767123664.24726 47031 c46d2009745318ac01562c15ee0ccbb5 ""
+  "power_systems_grafico_macchine_sincrone.png" 1767138723.63643 78409 990951b14aee3b3d295db373a0f8ac62 ""
+  "power_systems_macchine_sincrone_angolo_di_carico.png" 1767138820.53543 71943 6e280f917cbff7641ef936468045b24d ""
   "power_systems_mercato_del_giorno_prima.png" 1767123664.24867 68469 697645b45de8eb16a7c2f20f6d0a8de2 ""
   "power_systems_power_flow_analysis_caso_studio.png" 1767123664.2529 111157 26940f509b30d215016b6a18aff73572 ""
   "power_systems_power_flow_analysis_caso_studio_rappresentazione_grafo.png" 1767123664.25019 40708 73566c65bbf522fc6461166cb63b7c8f ""
