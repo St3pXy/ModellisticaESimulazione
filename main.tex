@@ -2189,17 +2189,98 @@ Dove $\tau_1=R_1C_1$  $\tau_2=R_2C_2$   $\tau_{12}=R_1C_2$
 Da notare come la funzione di trasferimento non sia pari al prodotto delle singole ft, in quanto c'è un termine di accoppiamento $\tau_{12}$.
 \newpage
 \subsection{Amplificatori operazionali}
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{op_amp_1.png}
+\end{center}
+Gli amplificatori operazionali sono dei componenti in silicio , detti anche componenti attivi , in quanto vanno alimentati
+da una corrente di almeno 15V di tensione .\\
+Questi disposistivi presentano solitamente 2 ingressi $V_1$ e $V_2$ ambedue gli ingressi subiscono un guadagno molto elevato $10^5$ , uguale per entrambi in modulo.\\
+Nello specifico $V_1$ è detto ingresso invertente, ed è soggetto ad un guadagno di -G, mentre $V_2$ è detto
+ingresso non invertente ed ha guadagno G.\\\\
+La relazione che lega i 2 ingressi all uscita è la seguente:
+\[V_{out}= G(V_2-V_1)\]
+Si noti che G è detto \texit{guadagno in anello aperto} ed è specifico dell'op-amp considerato.
+\\
+\textbf{Osservazione}:Da qui in avanti dobbiamo fare uno shift di mentalità, nello sviluppare circuiti con Op amp , più 
+che stare a pensare in maniera orientanta (ossia che partiamo dai due ingressi a sinistra e andiamo verso destra verso l'uscita), dobbiamo
+invece ragionare rispetto alla relazione che prima ho messo in evidenza. Nel seguito tutto avrà piu senso 
+\\\\
+\textbf{Amplificatore operazionale Ideale}\\\\
+\begin{itemize}
+    \item Impedenza in ingresso infinita $\implies$ non assorbe corrente
+    \item impedenza d'uscita nulla $\implies V_{out}$ non dipende dal carico
+    \item Guadagno infinito : siccome il guadagno è infinito deve essere che $V_{in}-V{out}\simeq 0$ altrimenti $V_{out}$ schizza positivamente o negativamente (questo problema lo risolveremo con la retroazione)
+    \item larghezza di banda a catena aperta infinita : ossia G e tutte le altre caratteristiche dell'op-amp rimangono  uguali per tutti i segnali  in ingresso , indipendentemente dalla frequenza 
+    \newpage
+    \item Ha reiezione di modo comune infinita: \\ La reiezione di modo comune è la capacità di un op-amp a ignorare segnali in ingresso uguali tra loro  e amplificare solo le differenze tra questi , in altre parole posto:\\\\ 
+    $A_d= V_2-V_1$ come guadagno differenziale  e $A_{cm}$ come guadagno del modo comune segue che:
+    \[reiezione\:\:del\:\:modo\:\:comune=\frac{A_d}{A_{cm}}\]
+    Siccome un op-amp ideale ha $A_{cm}=0$ allora la sua reiezione del modo comune sarà infinita.
+    \item Ha caratteristiche indipendenti dalla temperatura
+\end{itemize}
+\textbf{Amplificatore operazionale reale}
+\begin{itemize}
+    \item guadagno e impedenza in ingresso sono molto alti ma non infiniti
+    \item l'impedenza in uscita è bassa ma non nulla 
+    \item la banda passante è di pochi MHz (in altre parole solo alcuni segnali aventi frequenze in un certo range godono del comportamento ad alto guadagno dell' op-amp)
+    \item E' presente una tensione di offset (visibile ponendo entrambi i piedi a 0), dovuta all'alimentazione del componente (in quanto attivo)
+    \item il guadagno dei due ingressi non è mai esattamente lo stesso
+    \item gli ingressi non devono avere un voltaggio che si discosta troppo l'uno rispetto all'altro , ed ambedue le tensioni devono comunque essere minori di quella di alimentazione 
+    altrimenti  accadono fenomeni di saturazione 
+\end{itemize}
+L'op-amp prende il suo nome grazie alla capacità di costituire circuiti utili per fare calcoli , esso è inoltre utilizzato per implementare controllori 
+\\
+\textbf{Oss}:Quando si dice che gli ingressi di un op-amp costituiscono un nodo virtuale, si intende che:
 
+Gli ingressi non sono fisicamente cortocircuitati, cioè non sono collegati tra loro direttamente.
 
+Ma in condizioni di retroazione negativa, la tensione al terminale invertente $V_-$ è praticamente uguale alla tensione al terminale non invertente 
+$V_+$
 
+Quindi il nodo è “virtuale” perché:
 
+\[V_-\approx V_+\]
 
+ma nessuna corrente scorre tra gli ingressi, perché l’op-amp ideale ha resistenza di ingresso infinita.
+\newpage
 
+\subsubsection{Op-amp in configurazione invertente}
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{op-amp_invertente.png}
+\end{center}
 
+Il piedino non invertente è collegato a massa , dunque ha tensione nulla , siccome l'op-amp ideale ha differenza di tensione tra $V_1$ e 
+$V_2$ praticamente nulla , allora anche la tensione sul capo invertente sarà nulla.\\
+Tale implicazione è dovuta al fatto che si dice che "gli ingressi dell'operazionale costituiscono un nodo virtuale", questo perchè retroazionando
+l'uscita rispetto a $V_-$ ,forziamo quest'ultimo a seguire l'andamento di $V_+$\\\\
+Nella teoria dei circuiti si definisce un nodo virtuale come , nodo che :
+\begin{itemize}
+    \item ha una tensione ben definita nota (nel nostro caso sappiamo che $V_+$ è a terra)
+    \item non è collegato fisicamente a un generatore di tensione
+    \item non può assorbire corrente (l'op-amp ideale non assorbe corrente)
+\end{itemize}
+Siccome l'operazionale non assorbe corrente , per la prima legge di Kirchhoff allora tutte le correnti che arrivano
+al nodo devono sommarsi a zero , per cui: \\\\
+Ricaviamo la corrente che passa per $Z_1$ tramite la legge di ohm generalizzata:
+\[I_{in}Z_1=V_{in}-V^* \iff I_{in}=\frac{V_{in}-V^*}{Z_1}\]
+Per $Z_2$ invece :
+\[I_2Z_2=V_{out}-V^* \iff I_2=\frac{V_{out}-V^*}{Z_2}\]
+La legge al nodo risulta essere :
+\[I_1+I_2=0\implies \frac{V_{in}-V^*}{Z_1}+\frac{V_{out}-V^*}{Z_2}=0\]
+\[\implies \frac{V_{in}}{Z_1}+\frac{V_{out}}{Z_2}=V^*\left (\frac{1}{Z_1}+\frac{1}{Z_2}\right )\]
+Siccome $V^*=0$ segue che:
+\[\frac{V_{in}}{Z_1}+\frac{V_{out}}{Z_2}=0 \implies \boxed{W(s)=\frac{V_{out}(s)}{V_{in}(s)}=-\frac{Z_2(s)}{Z_1(s)}}\]
 
-
-
-
+Supponendo ora che le due impedenze siano puramente resistive segue che : $Z_1=R_1$ e $Z_2=R_2$\\
+Per cui si ha un amplificatore invertente di guadagno $\frac{R_2}{R_1}$ e sfasamento $\pi$.
+\\\\
+Valutiamo ora l'impedenza in ingresso all'amplificatore :
+\[Z_{in}=\frac{V_{in}}{I_{in}}=\frac{V_in}{\frac{V_{in}}{Z_1}}=Z_1 \implies \boxed{Z_{in}=Z_1}\]
+L'impedenza in ingresso dell'amplificatore deve essere grande rispetto a quella in uscita , in modo che il segnale passi inalterato 
+tra i due dispositivi.\\
+Per un amplificatore di guadagno 10 , solitamente $R_1=10k\Omega$ e $R_2=100k \Omega$
+\\\\
+\subsubsection{Op-amp configurazione non invertente}
 \clearpage
 
 \section{Sistemi elettro-meccanici}
