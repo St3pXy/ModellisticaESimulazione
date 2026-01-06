@@ -78,9 +78,9 @@
 \contentsline {subsubsection}{\numberline {8.5.5}Bilanciamento di sistemi ed analisi indipendente della trifase}{115}{}%
 \contentsline {subsubsection}{\numberline {8.5.6}Comportamento a Regime Permanente di un power system}{117}{}%
 \contentsline {subsection}{\numberline {8.6}Power Flow Analysis}{121}{}%
-\contentsline {subsubsection}{\numberline {8.6.1}Definizione del problema di Power Flow Analysis}{121}{}%
+\contentsline {subsubsection}{\numberline {8.6.1}Definizione del problema di Power Flow Analysis}{122}{}%
 \contentsline {subsubsection}{\numberline {8.6.2}Caso studio power flow analysis}{123}{}%
-\contentsline {subsection}{\numberline {8.7}Dinamica Power Systems}{126}{}%
-\contentsline {subsubsection}{\numberline {8.7.1}Classificazione delle dinamiche dei Power System}{126}{}%
+\contentsline {subsection}{\numberline {8.7}Dinamica Power Systems}{127}{}%
+\contentsline {subsubsection}{\numberline {8.7.1}Classificazione delle dinamiche dei Power System}{127}{}%
 \contentsline {subsubsection}{\numberline {8.7.2}Stabilità dei Power Systems}{127}{}%
 \contentsline {subsubsection}{\numberline {8.7.3}Rotor Angle Stability (piccoli disturbi)}{128}{}%

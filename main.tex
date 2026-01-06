@@ -2962,10 +2962,11 @@ Definiamo quindi la potenza istantanea come:
 
 \begin{align*}
     P(t) &= V(t) \cdot I(t) = \\
-    &= VI \cos(\omega t + \phi) = \\
+    &= VI \cos(\omega t) \cos(\omega t + \phi) = \\
     &= VI (\frac{e^{i \omega t} + e^{- i \omega t}}{2})(\frac{e^{i (\omega t + \phi)} + e^{-i (\omega t + \phi)}}{2}) = \\
     &= \frac{VI}{2}(\frac{e^{i (2 \omega t + \phi)} + e^{-i(2 \omega t + \phi)} + e^{i \phi} + e^{-i \phi}}{2}) = \\
     &= \frac{VI}{2} \cos (\phi) + \frac{VI}{2} \cos(2 \omega + \phi) = \\
+    &= P_{attiva} + P_{fluttuante} \\
     &= P + P_{fluttuante} \\
 \end{align*}
 Dove $P$ rappresenta la \textbf{Potenza Attiva} (che è indipendente dal tempo) e $P_{fluttuante}$ rappresenta la \textbf{Potenza Fluttuante}\\
@@ -3014,7 +3015,7 @@ Generalmente possiamo definire l'energia come la somma fra energia cinetica e po
 \end{align*}
 Nel caso dell'oscillatore armonico (senza smorzatore), quindi con conservazione dell'energia, assume la forma:
 \begin{align*}
-    E = T + U = \frac{1}{2}m\dot{x}^2 + \frac{1}{2}k\dot{x}^2
+    E = T + U = \frac{1}{2}m\dot{x}^2 + \frac{1}{2}kx^2
 \end{align*}
 Quindi la componente cinetica $T$ e la componente potenziale $U$ continuano a scambiarsi energia.\\
 Analogamente questo accade nei circuiti LC, $L$ e $C$ continuano a scambiarsi energia fra loro.\\
@@ -3102,7 +3103,7 @@ Osservando quindi che:
 
 Si identificano poi:
 \begin{align*}
-    \textit{Potenza Apparente: } \qquad &\sqrt{P^2 + Q^2} \\
+    \textit{Potenza Apparente: } \qquad &\sqrt{P^2 + Q^2} \qquad \textit{(il modulo della potenza complessa)} \\
     \textit{Fattore di Potenza: } \qquad & \phi \quad  \rightarrow \quad \textit{misurata in: } \quad  [V \cdot A] \\
 \end{align*}
 
@@ -3168,9 +3169,9 @@ Possiamo quindi ottenere le formule della corrente:
 
 \begin{align*}
     \underline{I_a} = \frac{\underline{V_a} - \underline{I_n}(R_n + jX_n)}{(R_S + jX_s) + (R_{La} + jX_{La})} \\
-    
+    \\
     \underline{I_b} = \frac{\underline{V_b} - \underline{I_n}(R_n + jX_n)}{(R_S + jX_s) + (R_{Lb} + jX_{Lb})} \\
-    
+    \\
     \underline{I_c} = \frac{\underline{V_c} - \underline{I_n}(R_n + jX_n)}{(R_S + jX_s) + (R_{Lc} + jX_{Lc})} \\
 \end{align*}
 
